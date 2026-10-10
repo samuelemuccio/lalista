@@ -13,14 +13,15 @@ const TRACK_DATA = {
         {
           "youtubeId": "FGG5K1XLgkA",
           "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/FGG5K1XLgkA?si=6u1Sj-TNxlEKCUUF\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>",
-          "label": "Versione album"
+          "label": "Album"
         },
         {
           "youtubeId": "FngDSOuCNAA",
           "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/FngDSOuCNAA?si=GsTOlJKDgZp951ld\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>",
-          "label": "Live in session"
+          "label": "Session"
         }
-      ]
+      ],
+      "note": "È semplicemente stupenda, non so quante volte io l'abbia ascoltata, mi ricorda molto i Pink Floyd ma con una veste black."
     },
     {
       "id": "top-02",
@@ -43,7 +44,8 @@ const TRACK_DATA = {
           "album": "Let’s Start Here.",
           "youtubeId": "IwyjxAWsUtM"
         }
-      ]
+      ],
+      "note": "Quest'album in generale è stato una svolta totale, nessuno si aspettava da Lil Yachty un cambio di rotta del genere, tutto suonato con strumenti veri e psichedelia pura. La voce celestiale di Diana Gordon poi è la ciliegina sulla torta."
     },
     {
       "id": "top-03",
@@ -53,7 +55,7 @@ const TRACK_DATA = {
       "title": "ミッドナイト・ランデブー (Midnight Rendezvous)",
       "album": "CASIOPEA",
       "youtubeId": "4Hvvltt7d-U",
-      "note": "Fanno un jazz-fusion giapponese assurdo, con un tiro che ti mette una carica incredibile: sembra letteralmente una pista di Mario Kart presa benissimo.",
+      "note": "Fanno un jazz-fusion giapponese assurdo, hanno una vibe e un'energia incredibile, sembra di stare letteralmente in una pista di Mario Kart.",
       "alternatives": [
         {
           "artist": "CASIOPEA",
@@ -76,7 +78,8 @@ const TRACK_DATA = {
       "artist": "Pino Daniele",
       "title": "Sotto ’O Sole (Alternative Version)",
       "album": "Sotto 'o Sole",
-      "youtubeId": "88wFJb0itYQ"
+      "youtubeId": "88wFJb0itYQ",
+      "note": "Masayoshi Esposito!"
     },
     {
       "id": "top-05",
@@ -85,7 +88,8 @@ const TRACK_DATA = {
       "artist": "Mandrill",
       "title": "Peace And Love - Movement IV",
       "album": "Mandrill",
-      "youtubeId": "OONDL7c6aGU"
+      "youtubeId": "OONDL7c6aGU",
+      "note": "I Mandrill da Brooklyn nel 1971 fecero semplicemente un capolavoro funk, come tutto l'album o altri loro brani storici come <em>Fencewalk</em>, <em>Ape Is High</em> e <em>Mango Meat</em>."
     },
     {
       "id": "top-06",
@@ -95,7 +99,7 @@ const TRACK_DATA = {
       "title": "Walk of Fame",
       "album": "Something Beautiful",
       "youtubeId": "JX2GkxNT-IQ",
-      "note": "Ha una voce allucinante. Questo pezzo ha un'attitudine rock e soul del sud scurissima e sporca, chitarre sature e un testo che ti resta incollato addosso. Lontanissima dal pop di plastica.",
+      "note": "Ha una voce allucinante, lontanissima dal pop di plastica. Tutto l'album è da ascoltare perché ha una cura nei dettagli e un gusto molto chic, clamoroso.",
       "alternatives": [
         {
           "artist": "Miley Cyrus",
@@ -113,7 +117,7 @@ const TRACK_DATA = {
       "title": "Due mondi",
       "album": "Anima Latina",
       "youtubeId": "H31Zo2Clm0E",
-      "note": "<strong>Anima Latina</strong> per me è il disco più bello di Battisti in assoluto, ne sono totalmente innamorato. Questo pezzo ha un groove afro-brasiliano e percussioni pazzesche: parla di due persone diverse che si cercano e si fondono insieme.",
+      "note": "<strong>Anima Latina</strong> per me è il disco più bello di Battisti in assoluto e nella lista dei miei album preferiti, ne sono totalmente innamorato. Questo pezzo ha un groove afro-brasiliano e percussioni assurde, parla di due persone diverse che si cercano e si fondono insieme.",
       "alternatives": [
         {
           "artist": "Lucio Battisti",
@@ -138,7 +142,7 @@ const TRACK_DATA = {
           "title": "I sacchi della posta",
           "album": "La sposa occidentale",
           "youtubeId": "0VeW4BNL16g",
-          "note": "Uno dei vertici degli 'album bianchi' scritti con Pasquale Panella: dischi rivoluzionari e futuristici, avanti di decenni e all'epoca incompresi. Purtroppo per questioni di diritti non si trovano su Spotify, ed è un peccato enorme perché questo suono elettronico e destrutturato è puro genio."
+          "note": "Peak degli 'album bianchi' scritti con Pasquale Panella, dischi rivoluzionari e futuristici, avanti di decenni e all'epoca incompresi. Purtroppo per questioni di diritti non si trovano facilmente, ed è un peccato enorme."
         }
       ]
     },
@@ -149,42 +153,31 @@ const TRACK_DATA = {
       "artist": "Lucio Dalla",
       "title": "Stella di mare",
       "album": "Lucio Dalla",
-      "youtubeId": "Jq2tcDNeSC8"
+      "youtubeId": "Jq2tcDNeSC8",
+      "note": "Dio mio quanto è figa questa canzone."
     },
     {
       "id": "top-09",
       "num": "09",
       "arc": "plum",
-      "artist": "Daniela Pes",
-      "title": "Illa Sera",
-      "album": "SPIRA",
-      "youtubeId": "FCHPla9hceI",
-      "note": "Daniela Pes è un'artista sarda che canta letteralmente in una lingua creata da lei, mescolando fonemi e suoni galluresi con l'elettronica scura di <a href='https://it.wikipedia.org/wiki/Iosonouncane' target='_blank' rel='noopener'>Iosonouncane</a>. L'album <em>SPIRA</em> è un viaggio ancestrale assurdo.",
+      "artist": "RAYE, The Heritage Orchestra",
+      "title": "Oscar Winning Tears. (Live at The Royal Albert Hall)",
+      "album": "My 21st Century Symphony.",
+      "youtubeId": "BtdBQ1-fzXM",
+      "note": "Una prova vocale e orchestrale monumentale al Royal Albert Hall con The Heritage Orchestra, una fusione travolgente di soul viscerale, jazz orchestrale e pathos cinematografico. Un'artista pura che dal vivo lascia senza fiato. Gli inglesi ci sanno fare!",
       "alternatives": [
         {
-          "artist": "Daniela Pes",
-          "title": "Ca milla dia dè",
-          "album": "Musicultura 2018",
-          "youtubeId": "WVTOhljfHt4",
-          "youtubeVariants": [
-            {
-              "youtubeId": "WVTOhljfHt4",
-              "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/WVTOhljfHt4?si=gU5Vk-ccjWtJ_apr\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>",
-              "label": "Versione brano"
-            },
-            {
-              "youtubeId": "-9jFPY-sif4",
-              "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/-9jFPY-sif4?si=-vj-2nHum3e0fp1j\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>",
-              "label": "Live Musicultura"
-            }
-          ],
-          "note": "Il brano con cui Daniela Pes ha conquistato Musicultura nel 2018: fonetica arcaica in gallurese antico ispirata alle poesie di Don Gavino Pes, fusa con un'elettronica sciamanica ipnotica."
+          "artist": "RAYE, The Heritage Orchestra",
+          "title": "The Thrill Is Gone. / Requiem (Live at The Royal Albert Hall)",
+          "album": "My 21st Century Symphony.",
+          "youtubeId": "ob6rhoog11c"
         },
         {
-          "artist": "Daniela Pes",
-          "title": "Carme",
-          "album": "SPIRA",
-          "youtubeId": "67-IgXBCoRM"
+          "artist": "RAYE, London Symphony Orchestra",
+          "title": "I Will Overcome (Live at Abbey Road Studios)",
+          "album": "Abbey Road Sessions",
+          "youtubeId": "Iy2FoVeIUXs",
+          "note": "Registrata con la leggendaria London Symphony Orchestra agli Abbey Road Studios, un inno intimo e trionfale di resilienza e speranza."
         }
       ]
     },
@@ -196,7 +189,7 @@ const TRACK_DATA = {
       "title": "E Ti Vengo A Cercare",
       "album": "Linea Gotica",
       "youtubeId": "yjT7C1hBFaI",
-      "note": "<strong>Linea Gotica</strong> è un capolavoro della musica italiana. Questa rilettura di Battiato ha un'intensità e una delicatezza disarmante: la sento come una dedica pura.",
+      "note": "<strong>Linea Gotica</strong> è un capolavoro della musica italiana. Questa rilettura di Battiato ha un'intensità e una delicatezza disarmante.",
       "alternatives": [
         {
           "artist": "C.S.I.",
@@ -220,6 +213,7 @@ const TRACK_DATA = {
       "title": "You and Whose Army?",
       "album": "Amnesiac",
       "youtubeId": "QQnc-hM80UQ",
+      "note": "Registrato con Thom Yorke che canta letteralmente appiccicato al microfono su un pianoforte intimo e cupo. Spero che prima o poi possano piacerti i Radiohead.",
       "alternatives": [
         {
           "artist": "Radiohead",
@@ -243,7 +237,7 @@ const TRACK_DATA = {
       "title": "YOU CAN NEVER COME TO THIS PLACE",
       "album": "The Rainbow Goblins",
       "youtubeId": "i7QC2XAe4hA",
-      "note": "<strong>The Rainbow Goblins</strong> è un concept album pazzesco ispirato alla fiaba di Ul de Rico sui goblin che rubano i colori dell'arcobaleno. Questo pezzo è il finale: la chitarra racconta tutta la storia senza bisogno di parole. Takanaka è il mio chitarrista preferito in assoluto.",
+      "note": "<strong>The Rainbow Goblins</strong> è un concept album pazzesco ispirato alla fiaba di Ul de Rico sui goblin che rubano i colori dell'arcobaleno. Questo pezzo è il finale, la chitarra racconta tutta la storia senza bisogno di parole. Takanaka è uno dei miei chitarristi preferiti in assoluto.",
       "alternatives": [
         {
           "artist": "Masayoshi Takanaka",
@@ -261,7 +255,7 @@ const TRACK_DATA = {
       "title": "The Gunner’s Dream",
       "album": "The Final Cut",
       "youtubeId": "lIJN6WWf3Rg",
-      "note": "Da <strong>The Final Cut</strong>. Il momento in cui la voce straziata di Waters sfuma ed entra il sax ti giuro mi spezza ogni volta in due: sembra una lama. È un pezzo cupo, profondissimo, fa venire i brividi.",
+      "note": "Da <strong>The Final Cut</strong>. Il momento in cui la voce straziata di Waters sfuma ed entra il sax ti giuro mi fa commuovere, sembra una lama.",
       "alternatives": [
         {
           "artist": "Pink Floyd",
@@ -301,7 +295,17 @@ const TRACK_DATA = {
       "artist": "Emerson, Lake & Palmer",
       "title": "From the Beginning",
       "album": "Trilogy",
-      "youtubeId": "0Yryg8sc6pE"
+      "youtubeId": "0Yryg8sc6pE",
+      "note": "<p>In studio Greg Lake incise due tracce sovrapposte di chitarra per dare quel suono pieno e avvolgente, mentre dal vivo non potendosi sdoppiare suonava la sua leggendaria <strong>Ovation Pacemaker 12-String (Model 1615)</strong>.</p><p>Tra l'altro Greg Lake era anche la voce e il basso dei primissimi King Crimson, nei capolavori <em>In the Court of the Crimson King</em> e <em>In the Wake of Poseidon</em>.</p><p>Un'altra perla totale degli ELP è l'album <strong>Brain Salad Surgery</strong> (1973), un disco incredibile con brani assurdi come <em>Benny the Bouncer</em> o la suite <em>Karn Evil 9</em>. La copertina storica fu dipinta dal maestro svizzero <strong>H.R. Giger</strong> ed è il manifesto assoluto dell'estetica <strong>Biomeccanica</strong>, una fusione tra anatomia organica, ossa, cavi e ingranaggi alieni.</p><p>È esattamente lo stesso artista geniale che pochi anni dopo creò il design iconico e lo Xenomorfo di <strong>Alien</strong> (1979) di Ridley Scott vincendo l'Oscar, un immaginario che ha segnato la storia del cinema e ha ispirato decenni dopo anche videogiochi come <strong>Scorn</strong>. Da citare assolutamente anche <em>Tarkus</em> con la sua celebre creatura corazzata a metà tra istrice e carro armato!</p><div class=\"popover-gallery-section\"><div class=\"popover-gallery-header\"><span class=\"gallery-header-title\">Galleria visiva</span></div><div class=\"popover-gallery-grid\"><div class=\"popover-gallery-item\" data-zoom-src=\"ovation-pacemaker-12-string.png\" data-zoom-caption=\"Ovation Pacemaker 12-String (Model 1615) di Greg Lake\"><div class=\"popover-img-wrap\"><img src=\"ovation-pacemaker-12-string.png\" alt=\"Ovation Pacemaker 12-String (Model 1615)\" class=\"popover-gear-img popover-gear-png\"><button class=\"btn-image-expand\" type=\"button\" aria-label=\"Ingrandisci Ovation 12-String\" title=\"Ingrandisci immagine\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></button></div><span class=\"popover-gear-caption\">Ovation 12-String di Greg Lake</span></div><div class=\"popover-gallery-item\" data-zoom-src=\"elp-brain-salad-surgery.jpg\" data-zoom-caption=\"Brain Salad Surgery (1973), copertina dipinta da H.R. Giger\"><div class=\"popover-img-wrap\"><img src=\"elp-brain-salad-surgery.jpg\" alt=\"Cover Brain Salad Surgery di H.R. Giger\" class=\"popover-gear-img\"><button class=\"btn-image-expand\" type=\"button\" aria-label=\"Ingrandisci cover Brain Salad Surgery\" title=\"Ingrandisci immagine\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></button></div><span class=\"popover-gear-caption\">Brain Salad Surgery (Cover H.R. Giger)</span></div><div class=\"popover-gallery-item\" data-zoom-src=\"hr-giger-alien-art.webp\" data-zoom-caption=\"H.R. Giger con le sculture biomeccaniche di Alien (1979)\"><div class=\"popover-img-wrap\"><img src=\"hr-giger-alien-art.webp\" alt=\"H.R. Giger e l'estetica di Alien\" class=\"popover-gear-img\"><button class=\"btn-image-expand\" type=\"button\" aria-label=\"Ingrandisci H.R. Giger e Alien\" title=\"Ingrandisci immagine\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></button></div><span class=\"popover-gear-caption\">H.R. Giger e l'estetica di Alien</span></div></div></div><div class=\"popover-scorn-feature\"><div class=\"scorn-feature-head\"><span class=\"scorn-feature-tag\">Videogioco ispirato all'arte di H.R. Giger</span><strong class=\"scorn-feature-title\">Scorn — Trailer Ufficiale</strong></div><div class=\"scorn-video-player-wrap\"><iframe src=\"https://www.youtube.com/embed/muXiufO9dXg\" title=\"Scorn Trailer Ufficiale\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen loading=\"lazy\"></iframe></div><span class=\"scorn-feature-caption\">Un videogioco interamente costruito attorno all'immaginario biomeccanico e organico di Giger.</span></div>",
+      "alternatives": [
+        {
+          "artist": "Emerson, Lake & Palmer",
+          "title": "Benny the Bouncer",
+          "album": "Brain Salad Surgery",
+          "youtubeId": "3NxcyYM7vFU",
+          "note": "Un pezzo folle e divertentissimo da Brain Salad Surgery in stile saloon scanzonato e rissa da pub con testo delirante, in pieno contrasto con le suite cosmiche dell'album."
+        }
+      ]
     },
     {
       "id": "prog-03",
@@ -311,7 +315,7 @@ const TRACK_DATA = {
       "title": "Impressioni di Settembre",
       "album": "Storia di un minuto",
       "youtubeId": "DS76YKxiOKU",
-      "note": "<p>Il sintetizzatore <strong>Moog</strong> in Italia fu introdotto proprio con questa canzone: per incidere quel leggendario riff si fecero prestare il primissimo prototipo <em>Minimoog</em> arrivato nel nostro Paese.</p><p>Fu un suono assurdo, mai sentito prima in Italia, che rivoluzionò completamente il modo di fare musica e fece esplodere l'intera stagione del progressive rock nostrano.</p><p class='note-anecdote'><em>(E pensa che mio nonno, ispirato proprio da loro, si fece portare un synth dall'America per suonarlo in Sicilia quando non sapeva manco cosa fosse nessuno: è stato il mio primissimo aggancio con il prog!).</em></p>",
+      "note": "<p>Il sintetizzatore <strong>Moog</strong> in Italia fu introdotto proprio con questa canzone, per incidere quel leggendario riff si fecero prestare il primissimo prototipo <em>Minimoog</em> arrivato nel nostro Paese.</p><p>Fu un suono assurdo, mai sentito prima in Italia, che rivoluzionò completamente il modo di fare musica e fece esplodere l'intera stagione del progressive rock nostrano.</p><p class='note-anecdote'><em>(E pensa che mio nonno, ispirato proprio da loro, portò un synth dall'America per suonarlo in Sicilia quando nessuno sapeva manco cosa fosse).</em></p>",
       "youtubeVariants": [
         {
           "youtubeId": "DS76YKxiOKU",
@@ -342,7 +346,7 @@ const TRACK_DATA = {
       "title": "Lady Fantasy (Medley)",
       "album": "Mirage",
       "youtubeId": "UgL-Pvuklcc",
-      "note": "Un capolavoro assoluto del prog rock in forma di suite/medley diviso in tre movimenti (Encounter / Smiles for You / Lady Fantasy): chitarre celestiali di Latimer, tastiere avvolgenti e continui cambi di atmosfera.",
+      "note": "Un capolavoro assoluto del prog rock in forma di suite/medley diviso in tre movimenti (Encounter / Smiles for You / Lady Fantasy), chitarre celestiali di Latimer, tastiere avvolgenti e continui cambi di atmosfera.",
       "alternatives": [
         {
           "artist": "Agitation Free",
@@ -357,11 +361,37 @@ const TRACK_DATA = {
       "num": "06",
       "arc": "prog",
       "artist": "King Crimson",
-      "title": "Fallen Angel (Elemental Mix)",
-      "album": "Red",
-      "youtubeId": "StJ35MJxDaI",
-      "note": "Da <strong>Red</strong>, uno dei loro dischi più monumentali: adoro il contrasto tra la parte melodica e le chitarre abrasive. Nelle alternative trovi anche <strong>Peoria</strong>, una chicca registrata live su cassetta per <em>Earthbound</em>: il suono è sporco e grezzo proprio per quello, ma ha un tiro viscerale incredibile.",
+      "title": "Ladies of the Road",
+      "album": "Islands",
+      "youtubeId": "sckkHW487y0",
+      "note": "Da <em>Islands</em> (1971), con cori e armonie vocali che ricordano tantissimo i Beatles e un sax sporco blues pazzesco, a lei piacciono i Beatles quindi questa è perfetta. Nelle alternative trovi anche la poesia di <strong>Matte Kudasai</strong>, <strong>Fallen Angel</strong> da <em>Red</em>, e <strong>Peoria</strong> registrata grezza dal vivo.",
       "alternatives": [
+        {
+          "artist": "King Crimson",
+          "title": "Matte Kudasai",
+          "album": "Discipline",
+          "youtubeId": "eoAupjcnm1c",
+          "note": "Uno dei brani più dolci e poetici dei King Crimson, cantato da Adrian Belew con chitarre d'atmosfera sognanti di Robert Fripp e un testo intimo («Matte Kudasai» in giapponese significa «ti prego, aspettami»).",
+          "youtubeVariants": [
+            {
+              "youtubeId": "eoAupjcnm1c",
+              "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/eoAupjcnm1c?si=udC76a-9MG8gcQAV\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>",
+              "label": "Originale"
+            },
+            {
+              "youtubeId": "EAWpBRPG-hg",
+              "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/EAWpBRPG-hg?si=RU0bYShgvJYbzeCA\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>",
+              "label": "Live"
+            }
+          ]
+        },
+        {
+          "artist": "King Crimson",
+          "title": "Fallen Angel (Elemental Mix)",
+          "album": "Red",
+          "youtubeId": "StJ35MJxDaI",
+          "note": "Da <strong>Red</strong>, uno dei loro dischi più monumentali, adoro il contrasto tra la parte melodica e le chitarre abrasive."
+        },
         {
           "artist": "King Crimson",
           "title": "Indiscipline",
@@ -437,7 +467,7 @@ const TRACK_DATA = {
       "title": "Have A Cigar",
       "album": "Wish You Were Here",
       "youtubeId": "Eq8ZiZ9xiLw",
-      "note": "Un funk-prog caustico e tagliente che prende in giro le case discografiche (<em>«Which one's Pink?»</em>). Nelle alternative c'è la suite monumentale di <strong>Atom Heart Mother</strong>: 23 minuti orchestrali da ascoltare con calma in cuffia, un viaggio unico.",
+      "note": "Questa forse la conosci già, è un funk-prog caustico e tagliente che prende in giro le case discografiche («Which one's Pink?»). Nelle alternative c'è la suite monumentale di <strong>Atom Heart Mother</strong>, 23 minuti orchestrali da ascoltare con calma in cuffia, un viaggio unico.",
       "alternatives": [
         {
           "artist": "Pink Floyd",
@@ -455,21 +485,21 @@ const TRACK_DATA = {
       "title": "Pneuma",
       "album": "Fear Inoculum",
       "youtubeId": "5ClCaPmAA7s",
-      "note": "I TOOL sono una band fuori scala. In <strong>Lateralus</strong> (il disco del 2001) hanno composto strofe e sillabe seguendo la <strong>sequenza di Fibonacci</strong> (1, 1, 2, 3, 5, 8...). <em>Pneuma</em> è il loro capolavoro recente: 12 minuti di pura trance poliritmica guidati dalla batteria pazzesca di <a href='https://it.wikipedia.org/wiki/Danny_Carey' target='_blank' rel='noopener'>Danny Carey</a>.",
+      "note": "I TOOL sono una band fuori scala. In <strong>Lateralus</strong> (il disco del 2001) hanno composto strofe e sillabe seguendo la sequenza di Fibonacci. <em>Pneuma</em> è il loro capolavoro recente, 12 minuti di pura trance poliritmica guidati dalla batteria pazzesca di Danny Carey.",
       "alternatives": [
         {
           "artist": "TOOL",
           "title": "Schism",
           "album": "Lateralus",
           "youtubeId": "MM62wjLrgmA",
-          "note": "Il brano più iconico e premiato dei TOOL (Grammy Award 2002): celebre linea di basso in tempi dispari con alternanza continua tra 5/8 e 7/8, unita al testo sulla frattura e riconnessione umana. Capolavoro assoluto del prog-metal."
+          "note": "Il brano più iconico e premiato dei TOOL, celebre linea di basso in tempi dispari con alternanza continua tra 5/8 e 7/8, unita al testo sulla frattura e riconnessione umana. Capolavoro assoluto del prog-metal."
         },
         {
           "artist": "TOOL",
           "title": "The Pot",
           "album": "10,000 Days",
           "youtubeId": "civuoU_NE38",
-          "note": "Uno dei brani più potenti e celebri della band: Maynard James Keenan che canta in un falsetto ipnotico su una linea di basso funky-heavy mastodontica di Justin Chancellor e i poliritmi tellurici di Danny Carey."
+          "note": "Uno dei brani più potenti e celebri della band, Maynard James Keenan che canta in un falsetto ipnotico su una linea di basso funky-heavy mastodontica di Justin Chancellor e i poliritmi di Danny Carey."
         }
       ]
     },
@@ -480,7 +510,8 @@ const TRACK_DATA = {
       "artist": "Frank Zappa",
       "title": "Watermelon In Easter Hay",
       "album": "Joe’s Garage",
-      "youtubeId": "Fn9ZuGquwpQ"
+      "youtubeId": "Fn9ZuGquwpQ",
+      "note": "Frank Zappa considerava questo il miglior assolo di chitarra di tutta la sua vita, ed è un pezzo così intimo e sacro che dopo la sua scomparsa la famiglia ha chiesto che nessuno lo suonasse mai più dal vivo."
     },
     {
       "id": "prog-11",
@@ -490,7 +521,17 @@ const TRACK_DATA = {
       "title": "The End",
       "album": "The Doors",
       "youtubeId": "VScSEXRwUqQ",
-      "note": "Il finale definitivo, psichedelico e teatrale. Quello reso immortale da Coppola all'inizio di <a href='https://it.wikipedia.org/wiki/Apocalypse_Now' target='_blank' rel='noopener'>Apocalypse Now</a>. Va ascoltato rigorosamente al buio e a volume alto."
+      "note": "Il finale definitivo, psichedelico e teatrale. Quello reso immortale da Coppola all'inizio di Apocalypse Now, va ascoltato rigorosamente al buio e a volume alto."
+    },
+    {
+      "id": "prog-12",
+      "num": "12",
+      "arc": "prog",
+      "artist": "Black Sabbath",
+      "title": "Planet Caravan",
+      "album": "Paranoid",
+      "youtubeId": "W6sVXK9o0Ys",
+      "note": "La gemma psichedelica e sognante dei Black Sabbath, congas ipnotiche, pianoforte jazzato, chitarra pulitissima e la voce di Ozzy Osbourne filtrata. Un proto-prog notturno favoloso."
     }
   ],
   "honorable": [
@@ -498,35 +539,47 @@ const TRACK_DATA = {
       "id": "hon-01",
       "num": "01",
       "arc": "honorable",
-      "artist": "Alabama Shakes",
-      "title": "Gimme All Your Love",
-      "album": "Sound & Color",
-      "youtubeId": "_sNNTpORtDQ"
+      "artist": "Daniela Pes",
+      "title": "Illa Sera",
+      "album": "SPIRA",
+      "youtubeId": "FCHPla9hceI",
+      "note": "Daniela Pes è un'artista sarda che canta letteralmente in una lingua creata da lei, mescolando fonemi e suoni galluresi con l'elettronica scura di Iosonouncane. L'album <em>SPIRA</em> è un viaggio ancestrale assurdo.",
+      "alternatives": [
+        {
+          "artist": "Daniela Pes",
+          "title": "Ca milla dia dè",
+          "album": "Musicultura 2018",
+          "youtubeId": "WVTOhljfHt4",
+          "youtubeVariants": [
+            {
+              "youtubeId": "WVTOhljfHt4",
+              "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/WVTOhljfHt4?si=gU5Vk-ccjWtJ_apr\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>",
+              "label": "Studio"
+            },
+            {
+              "youtubeId": "-9jFPY-sif4",
+              "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/-9jFPY-sif4?si=-vj-2nHum3e0fp1j\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>",
+              "label": "Live"
+            }
+          ],
+          "note": "Il brano con cui Daniela Pes ha conquistato Musicultura nel 2018, fonetica arcaica in gallurese antico ispirata alle poesie di Don Gavino Pes, fusa con un'elettronica sciamanica ipnotica."
+        },
+        {
+          "artist": "Daniela Pes",
+          "title": "Carme",
+          "album": "SPIRA",
+          "youtubeId": "67-IgXBCoRM"
+        }
+      ]
     },
     {
       "id": "hon-02",
       "num": "02",
       "arc": "honorable",
-      "genre": "rap",
-      "artist": "Travis Scott",
-      "title": "HYAENA",
-      "album": "UTOPIA",
-      "youtubeId": "N20q-391r48",
-      "note": "Apre <em>UTOPIA</em> con un campionamento dei mostri sacri del prog rock <strong>Gentle Giant</strong> e una batteria acustica sporchissima. Pura atmosfera notturna e tensione.",
-      "alternatives": [
-        {
-          "artist": "Travis Scott",
-          "title": "SIRENS",
-          "album": "UTOPIA",
-          "youtubeId": "6gUiQ8CqLcY"
-        },
-        {
-          "artist": "Travis Scott",
-          "title": "MY EYES",
-          "album": "UTOPIA",
-          "youtubeId": "pildU9lK6vM"
-        }
-      ]
+      "artist": "Alabama Shakes",
+      "title": "Gimme All Your Love",
+      "album": "Sound & Color",
+      "youtubeId": "_sNNTpORtDQ"
     },
     {
       "id": "hon-03",
@@ -563,7 +616,7 @@ const TRACK_DATA = {
       "title": "Like Him",
       "album": "CHROMAKOPIA",
       "youtubeId": "Z0CQf3JDKAY",
-      "note": "Da <em>CHROMAKOPIA</em>: una ballata intima al piano con Lola Young. Tyler che affronta a cuore aperto il rapporto con suo padre: per me è il suo pezzo più toccante e maturo in assoluto.",
+      "note": "Da <em>CHROMAKOPIA</em>, una ballata intima al piano con Lola Young. Tyler che affronta a cuore aperto il rapporto con suo padre, per me è uno dei suoi pezzi più toccanti e maturi in assoluto. Ma tutto l'album va ascoltato.",
       "alternatives": [
         {
           "artist": "Tyler, The Creator",
@@ -582,7 +635,7 @@ const TRACK_DATA = {
       "title": "Perlificat",
       "album": "Orbit Orbit",
       "youtubeId": "Kga8ZLXxXTE",
-      "note": "Da <em>Orbit Orbit</em>: beat denso e un testo geniale sul creare arte per salvarsi e non per le classifiche (<em>«Fallo per te, non per la classifica...»</em>). Nelle alternative c'è <strong>Cosmonaufrago</strong>, un altro viaggio incredibile.",
+      "note": "Da <em>Orbit Orbit</em>, beat denso e un testo geniale sul creare arte per salvarsi, come fa l'ostrica che prende la tossicità e il brutto e lo perlifica.",
       "alternatives": [
         {
           "artist": "Caparezza",
@@ -615,7 +668,7 @@ const TRACK_DATA = {
           "title": "Luci",
           "album": "Magica Musica",
           "youtubeId": "C3FxEgbFD1w",
-          "note": "La traccia che chiude Magica Musica: la voce eterea e il soul cosmico di Venerus avvolti dalle trame elettroniche e dai synth sognanti cesellati da Mace."
+          "note": "La traccia che chiude <em>Magica Musica</em>."
         }
       ]
     },
@@ -659,8 +712,7 @@ const TRACK_DATA = {
           "artist": "Tame Impala",
           "title": "Apocalypse Dreams",
           "album": "Lonerism",
-          "youtubeId": "DmmvZrBnQ4M",
-          "note": "Il momento più grandioso di Lonerism: batteria tellurica, pianoforte psichedelico e un crescendo finale straripante scritto da Kevin Parker insieme a Jay Watson."
+          "youtubeId": "DmmvZrBnQ4M"
         }
       ]
     },
@@ -678,20 +730,11 @@ const TRACK_DATA = {
       "num": "13",
       "arc": "honorable",
       "genre": "rap",
-      "artist": "Kanye West",
-      "title": "Waves",
-      "album": "The Life of Pablo",
-      "youtubeId": "Sh855LWd774",
-      "note": "Apertura melodica soul-gospel ariosa e luminosa, con il ritornello trascinante di Chris Brown e la produzione stellare di Charlie Heat e Metro Boomin.",
-      "alternatives": [
-        {
-          "artist": "Kanye West, Rick Ross",
-          "title": "Devil in a New Dress",
-          "album": "My Beautiful Dark Twisted Fantasy",
-          "youtubeId": "sk3rpYkiHe8",
-          "note": "Un gioiello senza tempo: il sample soul di Smokey Robinson, il maestoso assolo di chitarra di Mike Dean e una delle strofe più iconiche mai scritte da Rick Ross."
-        }
-      ]
+      "artist": "Kanye West, Rick Ross",
+      "title": "Devil in a New Dress",
+      "album": "My Beautiful Dark Twisted Fantasy",
+      "youtubeId": "2joLWbdEf6Y",
+      "note": "Un capolavoro assoluto con il sample soul di Smokey Robinson, la chitarra leggendaria di Mike Dean e una delle strofe più iconiche della storia dell'hip-hop firmata Rick Ross."
     },
     {
       "id": "hon-14",
@@ -702,7 +745,7 @@ const TRACK_DATA = {
       "title": "SHED TEARS",
       "album": "MICHAEL",
       "youtubeId": "1WEXSVk9qDQ",
-      "note": "Una figata incredibile dall'album MICHAEL (vincitore di 3 Grammy nel 2024): rap viscerale, spiritualità soul e un ritornello gospel celestiale cantato da Lena Byrd Miles che fa venire i brividi."
+      "note": "Una figata incredibile dall'album MICHAEL (vincitore di 3 Grammy nel 2024)."
     },
     {
       "id": "hon-15",
@@ -722,17 +765,7 @@ const TRACK_DATA = {
       "title": "Nah It Ain't The Same",
       "album": "MAN MADE",
       "youtubeId": "5CzNP_sKWK4",
-      "note": "Greentea Peng ha una vibe tutta sua, troppo figa: un incrocio magnetico tra neo-soul psichedelico, basse frequenze dub e un mood rilassato ma ipnotico che per me è superlativo."
-    },
-    {
-      "id": "hon-17",
-      "num": "17",
-      "arc": "honorable",
-      "artist": "Black Sabbath",
-      "title": "Planet Caravan",
-      "album": "Paranoid",
-      "youtubeId": "W6sVXK9o0Ys",
-      "note": "La mia canzone preferita dei Black Sabbath in assoluto: psichedelica, notturna, intima, con le percussioni jazz e la voce di Ozzy filtrata da un Leslie cabinet. Un viaggio onirico nello spazio profondo."
+      "note": "Greentea Peng ha una vibe tutta sua, troppo figa, un incrocio magnetico tra neo-soul psichedelico, basse frequenze e un mood rilassato ma ipnotico che per me è superlativo."
     }
   ]
 };
