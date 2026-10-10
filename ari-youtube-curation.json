@@ -1,0 +1,652 @@
+{
+  "format": "ari-youtube-curation-v1",
+  "tracks": [
+    {
+      "key": "lista/top-01",
+      "collection": "La Lista",
+      "trackId": "top-01",
+      "title": "Cold Little Heart",
+      "artist": "Michael Kiwanuka",
+      "album": "Love & Hate",
+      "youtubeId": "FGG5K1XLgkA",
+      "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/FGG5K1XLgkA?si=6u1Sj-TNxlEKCUUF\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe> <iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/FngDSOuCNAA?si=GsTOlJKDgZp951ld\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+    },
+    {
+      "key": "lista/top-02",
+      "collection": "La Lista",
+      "trackId": "top-02",
+      "title": "drive ME crazy!",
+      "artist": "Lil Yachty, Diana Gordon",
+      "album": "Let’s Start Here.",
+      "youtubeId": "dGgBzSfgVsA",
+      "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/dGgBzSfgVsA\" title=\"YouTube video player\" frameborder=\"0\" allowfullscreen></iframe>"
+    },
+    {
+      "key": "lista/top-02/alt-1",
+      "collection": "La Lista",
+      "trackId": "top-02",
+      "alternativeIndex": 1,
+      "title": "the BLACK seminole.",
+      "artist": "Lil Yachty",
+      "album": "Let’s Start Here.",
+      "youtubeId": "J8l2kS4U8EE",
+      "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/J8l2kS4U8EE?si=ZTGN77LTS14Wy0Iw\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+    },
+    {
+      "key": "lista/top-02/alt-2",
+      "collection": "La Lista",
+      "trackId": "top-02",
+      "alternativeIndex": 2,
+      "title": "IVE OFFICIALLY LOST ViSiON!!!!",
+      "artist": "Lil Yachty",
+      "album": "Let’s Start Here.",
+      "youtubeId": "IwyjxAWsUtM",
+      "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/IwyjxAWsUtM?si=CswCV7SpVJikN6s_\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+    },
+    {
+      "key": "lista/top-03",
+      "collection": "La Lista",
+      "trackId": "top-03",
+      "title": "ミッドナイト・ランデブー (Midnight Rendezvous)",
+      "artist": "CASIOPEA",
+      "album": "CASIOPEA",
+      "youtubeId": "4Hvvltt7d-U",
+      "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/4Hvvltt7d-U?si=vkqv23PFGEH90qYi\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+    },
+    {
+      "key": "lista/top-03/alt-1",
+      "collection": "La Lista",
+      "trackId": "top-03",
+      "alternativeIndex": 1,
+      "title": "スワロー (Swallow)",
+      "artist": "CASIOPEA",
+      "album": "Super Flight",
+      "youtubeId": "Qe5BmH_-TFA",
+      "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/Qe5BmH_-TFA?si=AYKmjILZ59hDLbzK\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+    },
+    {
+      "key": "lista/top-03/alt-2",
+      "collection": "La Lista",
+      "trackId": "top-03",
+      "alternativeIndex": 2,
+      "title": "ダズリング (Dazzling)",
+      "artist": "CASIOPEA",
+      "album": "Photographs",
+      "youtubeId": "Ufvbtb5PzjU",
+      "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/Ufvbtb5PzjU?si=ByVSV6Z1ysYlqU4Z\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+    },
+    {
+      "key": "lista/top-04",
+      "collection": "La Lista",
+      "trackId": "top-04",
+      "title": "Sotto ’O Sole",
+      "artist": "Pino Daniele",
+      "album": "Sotto 'o Sole",
+      "youtubeId": "88wFJb0itYQ",
+      "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/88wFJb0itYQ?si=lH1JOrz4klhlUxn0\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe> questa è la versione alternativa infatti devi correggere le sotto solo versione alternativa alternative version scrivilo come vuoi alt version scrivi come preferisci"
+    },
+    {
+      "key": "lista/top-05",
+      "collection": "La Lista",
+      "trackId": "top-05",
+      "title": "Peace And Love - Movement IV",
+      "artist": "Mandrill",
+      "album": "Mandrill",
+      "youtubeId": "OONDL7c6aGU",
+      "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/OONDL7c6aGU?si=ZmcENa8xKQfmOCaN\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+    },
+    {
+      "key": "lista/top-06",
+      "collection": "La Lista",
+      "trackId": "top-06",
+      "title": "Walk of Fame",
+      "artist": "Miley Cyrus, Brittany Howard",
+      "album": "Something Beautiful",
+      "youtubeId": "JX2GkxNT-IQ",
+      "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/JX2GkxNT-IQ?si=0peMElfkw_NvEY3G\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+    },
+    {
+      "key": "lista/top-06/alt-1",
+      "collection": "La Lista",
+      "trackId": "top-06",
+      "alternativeIndex": 1,
+      "title": "Something Beautiful",
+      "artist": "Miley Cyrus",
+      "album": "Something Beautiful",
+      "youtubeId": "y2nu8zpVBmY",
+      "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/y2nu8zpVBmY?si=O2mtLKfrR14BgH5k\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+    },
+    {
+      "key": "lista/top-07",
+      "collection": "La Lista",
+      "trackId": "top-07",
+      "title": "Due mondi",
+      "artist": "Lucio Battisti",
+      "album": "Anima Latina",
+      "youtubeId": "H31Zo2Clm0E",
+      "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/H31Zo2Clm0E?si=mT_cF23e6vcfZK4r\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+    },
+    {
+      "key": "lista/top-07/alt-1",
+      "collection": "La Lista",
+      "trackId": "top-07",
+      "alternativeIndex": 1,
+      "title": "Abbracciala abbracciali",
+      "artist": "Lucio Battisti",
+      "album": "Anima Latina",
+      "youtubeId": "9RBF19FzUrA",
+      "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/9RBF19FzUrA?si=8EKWq5wAGZTYL21P\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+    },
+    {
+      "key": "lista/top-07/alt-2",
+      "collection": "La Lista",
+      "trackId": "top-07",
+      "alternativeIndex": 2,
+      "title": "Anima latina",
+      "artist": "Lucio Battisti",
+      "album": "Anima Latina",
+      "youtubeId": "BQZysfcTyRQ",
+      "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/BQZysfcTyRQ?si=SA85Hqg46uZe4A_1\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+    },
+    {
+      "key": "lista/top-07/alt-3",
+      "collection": "La Lista",
+      "trackId": "top-07",
+      "alternativeIndex": 3,
+      "title": "Questo inferno rosa",
+      "artist": "Lucio Battisti",
+      "album": "Il nostro caro angelo",
+      "youtubeId": "_tx-tdCqP7k",
+      "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/_tx-tdCqP7k?si=rPiLupgtO_Tc0Aaf\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+    },
+    {
+      "key": "lista/top-08",
+      "collection": "La Lista",
+      "trackId": "top-08",
+      "title": "Stella di mare",
+      "artist": "Lucio Dalla",
+      "album": "Lucio Dalla",
+      "youtubeId": "Jq2tcDNeSC8",
+      "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/Jq2tcDNeSC8?si=VaivCpCRXeCIfC-B\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+    },
+    {
+      "key": "lista/top-09",
+      "collection": "La Lista",
+      "trackId": "top-09",
+      "title": "Illa Sera",
+      "artist": "Daniela Pes",
+      "album": "SPIRA",
+      "youtubeId": "FCHPla9hceI",
+      "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/FCHPla9hceI?si=cAWdLmGHI9GTGgvs\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+    },
+    {
+      "key": "lista/top-09/alt-1",
+      "collection": "La Lista",
+      "trackId": "top-09",
+      "alternativeIndex": 1,
+      "title": "Carme",
+      "artist": "Daniela Pes",
+      "album": "SPIRA",
+      "youtubeId": "67-IgXBCoRM",
+      "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/67-IgXBCoRM?si=w34Uha5459tn74aZ\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+    },
+    {
+      "key": "lista/top-10",
+      "collection": "La Lista",
+      "trackId": "top-10",
+      "title": "E Ti Vengo A Cercare",
+      "artist": "C.S.I.",
+      "album": "Linea Gotica",
+      "youtubeId": "yjT7C1hBFaI",
+      "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/yjT7C1hBFaI?si=PUcI4Q-bvftp5XP7\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+    },
+    {
+      "key": "lista/top-10/alt-1",
+      "collection": "La Lista",
+      "trackId": "top-10",
+      "alternativeIndex": 1,
+      "title": "Cupe Vampe",
+      "artist": "C.S.I.",
+      "album": "Linea Gotica",
+      "youtubeId": "yoL5keSkTAU",
+      "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/yoL5keSkTAU?si=gvjea4SH5XLI0GgQ\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+    },
+    {
+      "key": "lista/top-10/alt-2",
+      "collection": "La Lista",
+      "trackId": "top-10",
+      "alternativeIndex": 2,
+      "title": "Depressione Caspica",
+      "artist": "C.S.I.",
+      "album": "Linea Gotica",
+      "youtubeId": "WI5E4Nv0YZg",
+      "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/WI5E4Nv0YZg?si=YRB85RE5i45qjQPu\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+    },
+    {
+      "key": "lista/top-11",
+      "collection": "La Lista",
+      "trackId": "top-11",
+      "title": "HYAENA",
+      "artist": "Travis Scott",
+      "album": "UTOPIA",
+      "youtubeId": "N20q-391r48",
+      "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/N20q-391r48?si=1Qvlp4zkArh1Fu4g\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+    },
+    {
+      "key": "lista/top-11/alt-1",
+      "collection": "La Lista",
+      "trackId": "top-11",
+      "alternativeIndex": 1,
+      "title": "SIRENS",
+      "artist": "Travis Scott",
+      "album": "UTOPIA",
+      "youtubeId": "6gUiQ8CqLcY",
+      "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/6gUiQ8CqLcY?si=5_DqnRX2vllsv2lD\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+    },
+    {
+      "key": "lista/top-11/alt-2",
+      "collection": "La Lista",
+      "trackId": "top-11",
+      "alternativeIndex": 2,
+      "title": "MY EYES",
+      "artist": "Travis Scott",
+      "album": "UTOPIA",
+      "youtubeId": "pildU9lK6vM",
+      "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/pildU9lK6vM?si=5X8bbvNq2xX1o-AC\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+    },
+    {
+      "key": "lista/top-12",
+      "collection": "La Lista",
+      "trackId": "top-12",
+      "title": "You and Whose Army?",
+      "artist": "Radiohead",
+      "album": "Amnesiac",
+      "youtubeId": "QQnc-hM80UQ",
+      "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/QQnc-hM80UQ?si=dxEg55RgbUHb4wSF\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+    },
+    {
+      "key": "lista/top-12/alt-1",
+      "collection": "La Lista",
+      "trackId": "top-12",
+      "alternativeIndex": 1,
+      "title": "Everything in Its Right Place",
+      "artist": "Radiohead",
+      "album": "Kid A",
+      "youtubeId": "NUnXxh5U25Y",
+      "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/NUnXxh5U25Y?si=_S5TUEdvwrL2uCjK\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+    },
+    {
+      "key": "lista/top-12/alt-2",
+      "collection": "La Lista",
+      "trackId": "top-12",
+      "alternativeIndex": 2,
+      "title": "Nude",
+      "artist": "Radiohead",
+      "album": "In Rainbows",
+      "youtubeId": "BbWBRnDK_AE",
+      "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/BbWBRnDK_AE?si=C94ZuG_gfiWL38dU\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+    },
+    {
+      "key": "lista/top-13",
+      "collection": "La Lista",
+      "trackId": "top-13",
+      "title": "YOU CAN NEVER COME TO THIS PLACE",
+      "artist": "Masayoshi Takanaka",
+      "album": "The Rainbow Goblins",
+      "youtubeId": "i7QC2XAe4hA",
+      "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/i7QC2XAe4hA?si=I00RTiUprwAdeR5Q\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+    },
+    {
+      "key": "lista/top-13/alt-1",
+      "collection": "La Lista",
+      "trackId": "top-13",
+      "alternativeIndex": 1,
+      "title": "SEVEN GOBLINS",
+      "artist": "Masayoshi Takanaka",
+      "album": "The Rainbow Goblins",
+      "youtubeId": "dr2CMlflcEs",
+      "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/dr2CMlflcEs?si=O29NA-_y_k1oFIKr\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+    },
+    {
+      "key": "lista/top-14",
+      "collection": "La Lista",
+      "trackId": "top-14",
+      "title": "The Gunner’s Dream",
+      "artist": "Pink Floyd",
+      "album": "The Final Cut",
+      "youtubeId": "lIJN6WWf3Rg",
+      "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/lIJN6WWf3Rg?si=YFzNPIJwqlBBClk3\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+    },
+    {
+      "key": "lista/top-14/alt-1",
+      "collection": "La Lista",
+      "trackId": "top-14",
+      "alternativeIndex": 1,
+      "title": "High Hopes",
+      "artist": "Pink Floyd",
+      "album": "The Division Bell",
+      "youtubeId": "pDKPz6KD8fs",
+      "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/pDKPz6KD8fs?si=tp95tb3L3mu4JrQS\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+    },
+    {
+      "key": "lista/top-14/alt-2",
+      "collection": "La Lista",
+      "trackId": "top-14",
+      "alternativeIndex": 2,
+      "title": "In The Flesh?",
+      "artist": "Pink Floyd",
+      "album": "The Wall",
+      "youtubeId": "6Z6Je2QM6lE",
+      "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/6Z6Je2QM6lE?si=B6Ly3jOUOhXJAeql\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+    },
+    {
+      "key": "lista/top-14/alt-3",
+      "collection": "La Lista",
+      "trackId": "top-14",
+      "alternativeIndex": 3,
+      "title": "Don’t Leave Me Now",
+      "artist": "Pink Floyd",
+      "album": "The Wall",
+      "youtubeId": "zppuIqcUsig",
+      "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/zppuIqcUsig?si=nwVwN4VLK6t1OrWI\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+    },
+    {
+      "key": "prog/prog-01",
+      "collection": "Prog",
+      "trackId": "prog-01",
+      "title": "The Logical Song",
+      "artist": "Supertramp",
+      "album": "Breakfast in America",
+      "youtubeId": "kln_bIndDJg",
+      "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/kln_bIndDJg?si=EhsImaanZbeYBSVE\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+    },
+    {
+      "key": "prog/prog-02",
+      "collection": "Prog",
+      "trackId": "prog-02",
+      "title": "From the Beginning",
+      "artist": "Emerson, Lake & Palmer",
+      "album": "Trilogy",
+      "youtubeId": "0Yryg8sc6pE",
+      "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/0Yryg8sc6pE?si=zfVpPLn0N9_nBKZC\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+    },
+    {
+      "key": "prog/prog-03",
+      "collection": "Prog",
+      "trackId": "prog-03",
+      "title": "Impressioni di Settembre",
+      "artist": "Premiata Forneria Marconi",
+      "album": "Storia di un minuto",
+      "youtubeId": "DS76YKxiOKU",
+      "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/DS76YKxiOKU?si=UoZPa5FLNbBZOaAX\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe><iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/hzy6sGiLGqM?si=971N2I66AFHQ2Hfr\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>Ho messo la prima parte, il primo pezzo, il primo reframe che è la versione live, fighissima e il secondo invece che è la versione classica, brano audio originale poi vediamo, cioè lo metti un tastino che la gente, cioè puoi switchare, in alto a destra lo metti, magari che puoi switchare tra versione live e versione normale"
+    },
+    {
+      "key": "prog/prog-04",
+      "collection": "Prog",
+      "trackId": "prog-04",
+      "title": "Firth of Fifth",
+      "artist": "Genesis",
+      "album": "Selling England By the Pound",
+      "youtubeId": "Rz-tHZEr37I",
+      "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/Rz-tHZEr37I?si=cNpuaWk80KMO01ob\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+    },
+    {
+      "key": "prog/prog-05",
+      "collection": "Prog",
+      "trackId": "prog-05",
+      "title": "Lady Fantasy",
+      "artist": "Camel",
+      "album": "Mirage",
+      "youtubeId": "UgL-Pvuklcc",
+      "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/UgL-Pvuklcc?si=kMuv49FUUUuhf0oI\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+    },
+    {
+      "key": "prog/prog-05/alt-1",
+      "collection": "Prog",
+      "trackId": "prog-05",
+      "alternativeIndex": 1,
+      "title": "Laila, Pt. 1",
+      "artist": "Agitation Free",
+      "album": "Malesch",
+      "youtubeId": "DMVguH34LMM",
+      "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/DMVguH34LMM?si=XjMl7Hc9TwbM8ROe\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+    },
+    {
+      "key": "prog/prog-06",
+      "collection": "Prog",
+      "trackId": "prog-06",
+      "title": "Fallen Angel",
+      "artist": "King Crimson",
+      "album": "Red",
+      "youtubeId": "StJ35MJxDaI",
+      "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/StJ35MJxDaI?si=aDhk2ch4ogK--yko\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>Va segnato Fallen Angel Elemental Mix perché è questo quello che voglio io"
+    },
+    {
+      "key": "prog/prog-06/alt-1",
+      "collection": "Prog",
+      "trackId": "prog-06",
+      "alternativeIndex": 1,
+      "title": "Indiscipline",
+      "artist": "King Crimson",
+      "album": "Discipline",
+      "youtubeId": "JIBsSZvmSN0",
+      "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/JIBsSZvmSN0?si=8vQup4PEqcOu3Knk\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe><iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/tH3phKBbVLs?si=DtGWRmNfpddYTgmp\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe><iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/ES_JxIBwQ6w?si=2xAtlwGQjaPqNdd0\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>Ti ho incollato, oppure, perché praticamente sarebbe, il primo è il live di Indiscipline, il secondo è l'audio normale classico e poi gli ho guardato un terzo frame che è una canzone che devi aggiungere che si chiama Peoria ed è un live rebound che è stato perso, non esiste la versione originale perché è stata suonata una sola volta e poi non so, fai delle ricerche casomai e dillo che è una chicca, che è perso, l'audio è quello che è perché non c'è una versione Ai quali del pezzo, anzi io ho il vinile che ha questa roba qui ma si trova solo nel vinile, nessuna volta che non si trova"
+    },
+    {
+      "key": "prog/prog-07",
+      "collection": "Prog",
+      "trackId": "prog-07",
+      "title": "My God",
+      "artist": "Jethro Tull",
+      "album": "Aqualung",
+      "youtubeId": "5WSulenOUb0",
+      "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/5WSulenOUb0?si=5INvg1PaYoi50H-t\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe><iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/U4P5dsPvRIA?si=kzRHFFIsUzFvh1Lz\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>Sempre il primo pezzo è un live, c'è scritto la data, caso me lo segni, e poi il secondo in realtà è il pezzo originale"
+    },
+    {
+      "key": "prog/prog-07/alt-1",
+      "collection": "Prog",
+      "trackId": "prog-07",
+      "alternativeIndex": 1,
+      "title": "Aqualung",
+      "artist": "Jethro Tull",
+      "album": "Aqualung",
+      "youtubeId": "lO8a369YOQk",
+      "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/lO8a369YOQk?si=ksgbXi954K_6URc-\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe><iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/N4zPu3ISCGs?si=0JiuG05Db6ujJx8s\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+    },
+    {
+      "key": "prog/prog-08",
+      "collection": "Prog",
+      "trackId": "prog-08",
+      "title": "Have A Cigar",
+      "artist": "Pink Floyd",
+      "album": "Wish You Were Here",
+      "youtubeId": "Eq8ZiZ9xiLw",
+      "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/Eq8ZiZ9xiLw?si=5gnVphMUjUhuPmrv\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+    },
+    {
+      "key": "prog/prog-08/alt-1",
+      "collection": "Prog",
+      "trackId": "prog-08",
+      "alternativeIndex": 1,
+      "title": "Atom Heart Mother",
+      "artist": "Pink Floyd",
+      "album": "Atom Heart Mother",
+      "youtubeId": "gLhYOdTSQHA",
+      "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/gLhYOdTSQHA?si=23Zba8ywzv_0YgKa\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>Si lo metti, questo è un brano da ascoltare una volta all'anno, o una volta nella vita, dato alla lunghezza però è un viaggio, cioè ti siedi lì nella poltrona, lo metti nel vinile, wow, e viaggi"
+    },
+    {
+      "key": "prog/prog-09",
+      "collection": "Prog",
+      "trackId": "prog-09",
+      "title": "Pneuma",
+      "artist": "TOOL",
+      "album": "Fear Inoculum",
+      "youtubeId": "5ClCaPmAA7s",
+      "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/5ClCaPmAA7s?si=n0cEvDgD-r687BYC\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>Ma, come tutti i tool, i tool sono da approfondire, cioè, sono un mondo dietro, sono super precisi, super chirurgici, fanno roba assurde con i multitempi, cioè, ci sono brani assurdi che utilizzano le sequenze di fibonacci, sono super intrippati, cioè, i tool sono da studiare, sono davvero figli, cioè, sono roba di cui io ne parlarei in un video, i tool sono cazzo troppo cool, cioè, sono assurdi per me i tool"
+    },
+    {
+      "key": "prog/prog-10",
+      "collection": "Prog",
+      "trackId": "prog-10",
+      "title": "Watermelon In Easter Hay",
+      "artist": "Frank Zappa",
+      "album": "Joe’s Garage",
+      "youtubeId": "Fn9ZuGquwpQ",
+      "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/Fn9ZuGquwpQ?si=h7Zi2GxzQdGrQbmd\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>Frank Zappa pure assurdo, Frank Zappa, la chitarra di Frank Zappa, quello che scrive a sé Frank Zappa assurdo, vale una di scrittura di tabloidi, di note, è folle, assurdo"
+    },
+    {
+      "key": "prog/prog-11",
+      "collection": "Prog",
+      "trackId": "prog-11",
+      "title": "The End",
+      "artist": "The Doors",
+      "album": "The Doors",
+      "youtubeId": "VScSEXRwUqQ",
+      "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/VScSEXRwUqQ?si=SIGcWkQGAZse0cNT\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>Questa canzone della Madonna, infatti nonché è l'intro di Apocalypse Now, uno dei film più fichi di sempre, non poteva esserci questa canzone"
+    },
+    {
+      "key": "menzioni/hon-01",
+      "collection": "Menzioni d'onore",
+      "trackId": "hon-01",
+      "title": "War",
+      "artist": "IDLES",
+      "album": "Ultra Mono",
+      "youtubeId": "BLcM3fq6Quk",
+      "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/BLcM3fq6Quk?si=h0JaVkUWQ4-ph6Zu\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+    },
+    {
+      "key": "menzioni/hon-01/alt-1",
+      "collection": "Menzioni d'onore",
+      "trackId": "hon-01",
+      "alternativeIndex": 1,
+      "title": "Grounds",
+      "artist": "IDLES",
+      "album": "Ultra Mono",
+      "youtubeId": "mRkUt9VnaR0",
+      "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/mRkUt9VnaR0?si=098LMx9O9UOBuGy7\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+    },
+    {
+      "key": "menzioni/hon-02",
+      "collection": "Menzioni d'onore",
+      "trackId": "hon-02",
+      "title": "I Know It’s Over",
+      "artist": "The Smiths",
+      "album": "The Queen Is Dead",
+      "youtubeId": "M6o1SEj02t0",
+      "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/M6o1SEj02t0?si=yWPpKkkDZa3EhJvy\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+    },
+    {
+      "key": "menzioni/hon-03",
+      "collection": "Menzioni d'onore",
+      "trackId": "hon-03",
+      "title": "Like Him",
+      "artist": "Tyler, The Creator",
+      "album": "CHROMAKOPIA",
+      "youtubeId": "Z0CQf3JDKAY",
+      "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/Z0CQf3JDKAY?si=-aDM83RNEBvrgvds\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>Eh ma tutto quest'album è spaziale, quest'album è spaziale, anche gli altri album di The Creator, ma questo è spaziale, bellissimo questo album, cromocopia da ascoltare"
+    },
+    {
+      "key": "menzioni/hon-03/alt-1",
+      "collection": "Menzioni d'onore",
+      "trackId": "hon-03",
+      "alternativeIndex": 1,
+      "title": "Darling, I",
+      "artist": "Tyler, The Creator",
+      "album": "CALL ME IF YOU GET LOST",
+      "youtubeId": "kZfz5UlsHlQ",
+      "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/kZfz5UlsHlQ?si=z_2eOpb_1qsL1XVS\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+    },
+    {
+      "key": "menzioni/hon-04",
+      "collection": "Menzioni d'onore",
+      "trackId": "hon-04",
+      "title": "Perlificat",
+      "artist": "Caparezza",
+      "album": "Orbit Orbit",
+      "youtubeId": "Kga8ZLXxXTE",
+      "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/Kga8ZLXxXTE?si=hdTjKXDJgsswxMGF\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+    },
+    {
+      "key": "menzioni/hon-04/alt-1",
+      "collection": "Menzioni d'onore",
+      "trackId": "hon-04",
+      "alternativeIndex": 1,
+      "title": "Cosmonaufrago",
+      "artist": "Caparezza",
+      "album": "Orbit Orbit",
+      "youtubeId": "7AjMvdNrDqs",
+      "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/7AjMvdNrDqs?si=2kE7Wwl8TphSyj-f\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+    },
+    {
+      "key": "menzioni/hon-05",
+      "collection": "Menzioni d'onore",
+      "trackId": "hon-05",
+      "title": "Painkiller",
+      "artist": "Depeche Mode",
+      "album": "Ultra",
+      "youtubeId": "kMH__kOxvbY",
+      "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/kMH__kOxvbY?si=A9bJHWfgSeaXgcHc\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+    },
+    {
+      "key": "menzioni/hon-06",
+      "collection": "Menzioni d'onore",
+      "trackId": "hon-06",
+      "title": "SOLO UN UOMO",
+      "artist": "MACE, Altea",
+      "album": "MĀYĀ",
+      "youtubeId": "_iwFej_m_qQ",
+      "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/_iwFej_m_qQ?si=ph2YK7ZEB2j2NH4L\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+    },
+    {
+      "key": "menzioni/hon-07",
+      "collection": "Menzioni d'onore",
+      "trackId": "hon-07",
+      "title": "So Real",
+      "artist": "Jeff Buckley",
+      "album": "Grace",
+      "youtubeId": "EcaxrqhUJ4c",
+      "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/EcaxrqhUJ4c?si=fkcyigBAHlcdkrwj\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+    },
+    {
+      "key": "menzioni/hon-08",
+      "collection": "Menzioni d'onore",
+      "trackId": "hon-08",
+      "title": "i",
+      "artist": "Kendrick Lamar",
+      "album": "To Pimp a Butterfly",
+      "youtubeId": "8aShfolR6w8",
+      "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/8aShfolR6w8?si=1yQN2waIDiayYN7j\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+    },
+    {
+      "key": "menzioni/hon-08/alt-1",
+      "collection": "Menzioni d'onore",
+      "trackId": "hon-08",
+      "alternativeIndex": 1,
+      "title": "The Blacker The Berry",
+      "artist": "Kendrick Lamar",
+      "album": "To Pimp a Butterfly",
+      "youtubeId": "VdPtVZDspIY",
+      "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/VdPtVZDspIY?si=PXE99XMjexb6-DZE\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+    },
+    {
+      "key": "menzioni/hon-09",
+      "collection": "Menzioni d'onore",
+      "trackId": "hon-09",
+      "title": "No Choice",
+      "artist": "Tame Impala",
+      "album": "No Choice - Single",
+      "youtubeId": "gM7qKOKotyI",
+      "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/gM7qKOKotyI?si=3n9r4FpR2Ba5zFDo\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+    },
+    {
+      "key": "menzioni/hon-10",
+      "collection": "Menzioni d'onore",
+      "trackId": "hon-10",
+      "title": "Sponda sud",
+      "artist": "Eugenio Bennato",
+      "album": "Sponda sud",
+      "youtubeId": "kT_UFug82g4",
+      "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/kT_UFug82g4?si=rW2NsyTQCD9NrYEV\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+    }
+  ]
+}

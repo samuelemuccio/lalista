@@ -1,0 +1,910 @@
+{
+  "lista": [
+    {
+      "id": "lst-1",
+      "num": "01",
+      "artist": "Lil Yachty, Diana Gordon",
+      "title": "drive ME crazy!",
+      "album": "Let’s Start Here.",
+      "source": "Lato A",
+      "dotClass": "side-a",
+      "youtubeId": "dGgBzSfgVsA",
+      "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/41/99/5f/41995fea-361a-f337-2407-1fccaab4e32e/mzaf_4542021973554561510.plus.aac.p.m4a",
+      "alternatives": [
+        {
+          "artist": "Lil Yachty",
+          "title": "IVE OFFICIALLY LOST ViSiON!!!!",
+          "album": "Let’s Start Here.",
+          "youtubeId": "Wl20s_BvX2s",
+          "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/4c/12/57/4c12578d-959a-a231-d46b-a8a2fd6f9c6d/mzaf_14260991342063268143.plus.aac.p.m4a",
+          "note": "Scarti #12"
+        }
+      ]
+    },
+    {
+      "id": "lst-2",
+      "num": "02",
+      "artist": "Miley Cyrus, Brittany Howard",
+      "title": "Walk of Fame",
+      "album": "Something Beautiful",
+      "source": "Lato A",
+      "dotClass": "side-a",
+      "youtubeId": "JX2GkxNT-IQ",
+      "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/c1/bd/6d/c1bd6d7e-a518-344a-257c-3160da69f048/mzaf_4553368778020030357.plus.aac.p.m4a",
+      "alternatives": [
+        {
+          "artist": "Miley Cyrus",
+          "title": "Something Beautiful",
+          "album": "Something Beautiful",
+          "youtubeId": "3bWz6U8qX7s",
+          "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/cc/19/88/cc198850-fa56-0345-a115-fdb9345d81fe/mzaf_10347101652109153961.plus.aac.p.m4a",
+          "note": "Scarti #6"
+        }
+      ]
+    },
+    {
+      "id": "lst-3",
+      "num": "03",
+      "artist": "CASIOPEA",
+      "title": "ミッドナイト・ランデブー (Midnight Rendezvous)",
+      "album": "CASIOPEA",
+      "source": "Lato A",
+      "dotClass": "side-a",
+      "youtubeId": "HiFtgt4vV5c",
+      "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/bd/0e/28/bd0e28bf-36c1-d5a8-3180-b3a33ac6bd01/mzaf_7017324575477029350.plus.aac.p.m4a",
+      "alternatives": [
+        {
+          "artist": "CASIOPEA",
+          "title": "スワロー (Swallow)",
+          "album": "Super Flight",
+          "youtubeId": "GhvXcOInICQ",
+          "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/ab/d0/ff/abd0ff08-e485-6532-e894-0c9022aa53eb/mzaf_15088470871978216872.plus.aac.p.m4a",
+          "note": "Scarti #1"
+        },
+        {
+          "artist": "CASIOPEA",
+          "title": "ダズリング (Dazzling)",
+          "album": "Photographs",
+          "youtubeId": "",
+          "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/15/e9/d7/15e9d754-a931-a12f-58c5-f0bb348ba203/mzaf_13155254417184447900.plus.aac.p.m4a",
+          "note": "Scarti #2"
+        }
+      ]
+    },
+    {
+      "id": "lst-4",
+      "num": "04",
+      "artist": "McKinley Dixon",
+      "title": "Magic, Alive!",
+      "album": "City of Gold / Human",
+      "source": "Lato A",
+      "dotClass": "side-a",
+      "youtubeId": "kYJc-H2QzY0",
+      "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/db/74/3b/db743b18-6e31-e893-2f90-23835e20f7ac/mzaf_17757235395137982269.plus.aac.p.m4a",
+      "alternatives": []
+    },
+    {
+      "id": "lst-5",
+      "num": "05",
+      "artist": "Premiata Forneria Marconi",
+      "title": "Impressioni di Settembre",
+      "album": "Storia di un minuto",
+      "source": "Prog",
+      "dotClass": "prog",
+      "youtubeId": "P5WwrgC1qZk",
+      "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/c7/b5/cb/c7b5cb64-784f-0198-555e-4edd672b6ab9/mzaf_2200537047027690905.plus.aac.p.m4a",
+      "alternatives": []
+    },
+    {
+      "id": "lst-6",
+      "num": "06",
+      "artist": "Masayoshi Takanaka",
+      "title": "YOU CAN NEVER COME TO THIS PLACE",
+      "album": "The Rainbow Goblins",
+      "source": "Lato A",
+      "dotClass": "side-a",
+      "youtubeId": "5c5eXSArn28",
+      "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview128/v4/a8/43/25/a8432561-b351-77cf-eea5-1d10af03af9f/mzaf_1315291689461201948.plus.aac.p.m4a",
+      "alternatives": [
+        {
+          "artist": "Masayoshi Takanaka",
+          "title": "SEVEN GOBLINS",
+          "album": "The Rainbow Goblins",
+          "youtubeId": "kYJbC9qW9aI",
+          "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview128/v4/37/a7/2b/37a72b60-07a7-02be-e8cf-f0776230113a/mzaf_1646310089032148943.plus.aac.p.m4a",
+          "note": "Scarti #3"
+        }
+      ]
+    },
+    {
+      "id": "lst-7",
+      "num": "07",
+      "artist": "Genesis",
+      "title": "Firth of Fifth",
+      "album": "Selling England By the Pound",
+      "source": "Prog",
+      "dotClass": "prog",
+      "youtubeId": "Rz-tHZEr37I",
+      "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/1e/43/25/1e4325a1-6c4d-4560-2f65-e64dd1dba079/mzaf_2213887118548680272.plus.aac.p.m4a",
+      "alternatives": []
+    },
+    {
+      "id": "lst-8",
+      "num": "08",
+      "artist": "Tyler, The Creator",
+      "title": "Noid",
+      "album": "CHROMAKOPIA",
+      "source": "Lato B",
+      "dotClass": "side-b",
+      "youtubeId": "Qer3lwd5hyA",
+      "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/17/45/aa/1745aa84-7704-fbd0-367f-7d8e43962af0/mzaf_11834146206841647973.plus.aac.p.m4a",
+      "alternatives": []
+    },
+    {
+      "id": "lst-9",
+      "num": "09",
+      "artist": "Lil Yachty, Diana Gordon",
+      "title": "the BLACK seminole.",
+      "album": "Let’s Start Here.",
+      "source": "Lato B",
+      "dotClass": "side-b",
+      "youtubeId": "J8l2kS4U8EE",
+      "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/49/5b/b5/495bb57a-a21d-119e-f717-ab1e4dfd5024/mzaf_9381522881357106628.plus.aac.p.m4a",
+      "alternatives": [
+        {
+          "artist": "Lil Yachty",
+          "title": "IVE OFFICIALLY LOST ViSiON!!!!",
+          "album": "Let’s Start Here.",
+          "youtubeId": "Wl20s_BvX2s",
+          "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/4c/12/57/4c12578d-959a-a231-d46b-a8a2fd6f9c6d/mzaf_14260991342063268143.plus.aac.p.m4a",
+          "note": "Scarti #12"
+        }
+      ]
+    },
+    {
+      "id": "lst-10",
+      "num": "10",
+      "artist": "TOOL",
+      "title": "Pneuma",
+      "album": "Fear Inoculum",
+      "source": "Prog",
+      "dotClass": "prog",
+      "youtubeId": "5ClCaPmAA7s",
+      "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/62/fe/6a/62fe6acb-2abc-b480-692f-6612fdbffacd/mzaf_1793646962415303070.plus.aac.p.m4a",
+      "alternatives": []
+    },
+    {
+      "id": "lst-11",
+      "num": "11",
+      "artist": "Daniela Pes",
+      "title": "Carme",
+      "album": "SPIRA",
+      "source": "Lato B",
+      "dotClass": "side-b",
+      "youtubeId": "mS-fU-f_H3s",
+      "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/c1/d4/cc/c1d4ccf1-5805-bf7a-cdcd-d4819bfac729/mzaf_2540447420904700352.plus.aac.p.m4a",
+      "alternatives": [
+        {
+          "artist": "Daniela Pes",
+          "title": "Illa Sera",
+          "album": "SPIRA",
+          "youtubeId": "nC8cW7-V6n4",
+          "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/80/5f/57/805f57c1-39eb-0561-635e-21db80176627/mzaf_13753362714222577821.plus.aac.p.m4a",
+          "note": "Scarti #14"
+        }
+      ]
+    },
+    {
+      "id": "lst-12",
+      "num": "12",
+      "artist": "C.S.I.",
+      "title": "Cupe Vampe",
+      "album": "Linea gotica",
+      "source": "Lato B",
+      "dotClass": "side-b",
+      "youtubeId": "49N6vt2Yk3U",
+      "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/15/a3/fb/15a3fb16-76fc-520c-7c10-2bd94a04b80a/mzaf_9457939436332585130.plus.aac.p.m4a",
+      "alternatives": [
+        {
+          "artist": "C.S.I.",
+          "title": "E Ti Vengo A Cercare",
+          "album": "Linea gotica",
+          "youtubeId": "0hYJ6FwS7wI",
+          "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/1f/11/52/1f115243-a919-f2dc-1a32-afe06c93ce1b/mzaf_15584834865662439454.plus.aac.p.m4a",
+          "note": "Scarti #15"
+        }
+      ]
+    },
+    {
+      "id": "lst-13",
+      "num": "13",
+      "artist": "Michael Kiwanuka",
+      "title": "Cold Little Heart",
+      "album": "Love & Hate",
+      "source": "Lato B",
+      "dotClass": "side-b",
+      "youtubeId": "nOubjLM9Cbc",
+      "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/2e/3a/48/2e3a4814-1fd2-c92e-cf05-d55717c7e339/mzaf_10627100711625513087.plus.aac.p.m4a",
+      "alternatives": []
+    },
+    {
+      "id": "lst-14",
+      "num": "14",
+      "artist": "Frank Zappa",
+      "title": "Watermelon In Easter Hay",
+      "album": "Joe’s Garage",
+      "source": "Prog",
+      "dotClass": "prog",
+      "youtubeId": "Fn9ZuGquwpQ",
+      "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/bc/57/98/bc579862-b701-df0e-a1cc-2b06a01fdc42/mzaf_11318764465740112117.plus.aac.p.m4a",
+      "alternatives": []
+    },
+    {
+      "id": "lst-15",
+      "num": "15",
+      "artist": "Pink Floyd",
+      "title": "High Hopes",
+      "album": "The Division Bell",
+      "source": "Lato B",
+      "dotClass": "side-b",
+      "youtubeId": "7jMlFXouPk8",
+      "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/13/7e/9a/137e9a0b-3143-127b-206f-9b785a4f70f1/mzaf_10401000737640341623.plus.aac.p.m4a",
+      "alternatives": [
+        {
+          "artist": "Pink Floyd",
+          "title": "In The Flesh?",
+          "album": "The Wall",
+          "youtubeId": "5j1Xn9A8e9g",
+          "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/b0/59/cb/b059cb57-4f68-69c5-c8e8-17ed7d011cc3/mzaf_11185182136828393949.plus.aac.p.m4a",
+          "note": "Scarti #16"
+        },
+        {
+          "artist": "Pink Floyd",
+          "title": "Don’t Leave Me Now",
+          "album": "The Wall",
+          "youtubeId": "Q5u2K6_8G2Y",
+          "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/27/eb/ac/27ebac5a-bd07-b50c-25d5-a5fd8aa16ef0/mzaf_7223833338892656397.plus.aac.p.m4a",
+          "note": "Scarti #17"
+        },
+        {
+          "artist": "Pink Floyd",
+          "title": "The Gunner’s Dream",
+          "album": "The Final Cut",
+          "youtubeId": "HjZq1w1z3hA",
+          "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/a7/93/f2/a793f2da-3764-cda4-7cfb-e53f97d59354/mzaf_15517150928452832090.plus.aac.p.m4a",
+          "note": "Scarti #18"
+        },
+        {
+          "artist": "Pink Floyd",
+          "title": "Atom Heart Mother",
+          "album": "Atom Heart Mother",
+          "youtubeId": "7K_d9PqNl5o",
+          "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/d1/78/ce/d178ceb5-a9b3-f236-7356-d41a380ec506/mzaf_7079651836969887744.plus.aac.p.m4a",
+          "note": "Scarti #19"
+        }
+      ]
+    }
+  ],
+  "sideA": [
+    {
+      "id": "sa-1",
+      "num": "A1",
+      "artist": "Lil Yachty, Diana Gordon",
+      "title": "drive ME crazy!",
+      "album": "Let’s Start Here.",
+      "inLista": true,
+      "youtubeId": "dGgBzSfgVsA",
+      "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/41/99/5f/41995fea-361a-f337-2407-1fccaab4e32e/mzaf_4542021973554561510.plus.aac.p.m4a",
+      "alternatives": [
+        {
+          "artist": "Lil Yachty",
+          "title": "IVE OFFICIALLY LOST ViSiON!!!!",
+          "album": "Let’s Start Here.",
+          "youtubeId": "Wl20s_BvX2s",
+          "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/4c/12/57/4c12578d-959a-a231-d46b-a8a2fd6f9c6d/mzaf_14260991342063268143.plus.aac.p.m4a",
+          "note": "Scarti #12"
+        }
+      ]
+    },
+    {
+      "id": "sa-2",
+      "num": "A2",
+      "artist": "Miley Cyrus, Brittany Howard",
+      "title": "Walk of Fame",
+      "album": "Something Beautiful",
+      "inLista": true,
+      "youtubeId": "JX2GkxNT-IQ",
+      "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/c1/bd/6d/c1bd6d7e-a518-344a-257c-3160da69f048/mzaf_4553368778020030357.plus.aac.p.m4a",
+      "alternatives": [
+        {
+          "artist": "Miley Cyrus",
+          "title": "Something Beautiful",
+          "album": "Something Beautiful",
+          "youtubeId": "3bWz6U8qX7s",
+          "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/cc/19/88/cc198850-fa56-0345-a115-fdb9345d81fe/mzaf_10347101652109153961.plus.aac.p.m4a",
+          "note": "Scarti #6"
+        }
+      ]
+    },
+    {
+      "id": "sa-3",
+      "num": "A3",
+      "artist": "CASIOPEA",
+      "title": "ミッドナイト・ランデブー",
+      "album": "CASIOPEA",
+      "inLista": true,
+      "youtubeId": "HiFtgt4vV5c",
+      "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/bd/0e/28/bd0e28bf-36c1-d5a8-3180-b3a33ac6bd01/mzaf_7017324575477029350.plus.aac.p.m4a",
+      "alternatives": [
+        {
+          "artist": "CASIOPEA",
+          "title": "スワロー (Swallow)",
+          "album": "Super Flight",
+          "youtubeId": "GhvXcOInICQ",
+          "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/ab/d0/ff/abd0ff08-e485-6532-e894-0c9022aa53eb/mzaf_15088470871978216872.plus.aac.p.m4a",
+          "note": "Scarti #1"
+        },
+        {
+          "artist": "CASIOPEA",
+          "title": "ダズリング (Dazzling)",
+          "album": "Photographs",
+          "youtubeId": "",
+          "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/15/e9/d7/15e9d754-a931-a12f-58c5-f0bb348ba203/mzaf_13155254417184447900.plus.aac.p.m4a",
+          "note": "Scarti #2"
+        }
+      ]
+    },
+    {
+      "id": "sa-4",
+      "num": "A4",
+      "artist": "Pino Daniele",
+      "title": "Sotto ’O Sole",
+      "album": "Nero a Metà (2008 Remaster)",
+      "inLista": false,
+      "youtubeId": "k-Z6k2TfD30",
+      "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/09/bf/e7/09bfe74e-2482-a7de-7873-1215f7c3d651/mzaf_6252480490976827361.plus.aac.p.m4a",
+      "alternatives": []
+    },
+    {
+      "id": "sa-5",
+      "num": "A5",
+      "artist": "Lucio Battisti",
+      "title": "Due mondi",
+      "album": "Anima latina",
+      "inLista": false,
+      "youtubeId": "ClgxXkc_NbA",
+      "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/c0/c8/05/c0c805bb-03f2-6e4a-211c-40770311d9be/mzaf_17920038255154201004.plus.aac.p.m4a",
+      "alternatives": []
+    },
+    {
+      "id": "sa-6",
+      "num": "A6",
+      "artist": "McKinley Dixon",
+      "title": "Magic, Alive!",
+      "album": "City of Gold / Human",
+      "inLista": true,
+      "youtubeId": "kYJc-H2QzY0",
+      "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/db/74/3b/db743b18-6e31-e893-2f90-23835e20f7ac/mzaf_17757235395137982269.plus.aac.p.m4a",
+      "alternatives": []
+    },
+    {
+      "id": "sa-7",
+      "num": "A7",
+      "artist": "KIDS SEE GHOSTS, Ty Dolla $ign",
+      "title": "Freeee (Ghost Town Pt. 2)",
+      "album": "KIDS SEE GHOSTS",
+      "inLista": false,
+      "youtubeId": "x-F3Pn5AzZ4",
+      "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/b1/f1/20/b1f12027-14a5-2ef6-dab1-323074507f3e/mzaf_15585309897983409618.plus.aac.p.m4a",
+      "alternatives": []
+    },
+    {
+      "id": "sa-8",
+      "num": "A8",
+      "artist": "Masayoshi Takanaka",
+      "title": "YOU CAN NEVER COME TO THIS PLACE",
+      "album": "The Rainbow Goblins",
+      "inLista": true,
+      "youtubeId": "5c5eXSArn28",
+      "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview128/v4/a8/43/25/a8432561-b351-77cf-eea5-1d10af03af9f/mzaf_1315291689461201948.plus.aac.p.m4a",
+      "alternatives": [
+        {
+          "artist": "Masayoshi Takanaka",
+          "title": "SEVEN GOBLINS",
+          "album": "The Rainbow Goblins",
+          "youtubeId": "kYJbC9qW9aI",
+          "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview128/v4/37/a7/2b/37a72b60-07a7-02be-e8cf-f0776230113a/mzaf_1646310089032148943.plus.aac.p.m4a",
+          "note": "Scarti #3"
+        }
+      ]
+    },
+    {
+      "id": "sa-9",
+      "num": "A9",
+      "artist": "Lucio Dalla",
+      "title": "Stella di mare",
+      "album": "12000 Lune",
+      "inLista": false,
+      "youtubeId": "k45aZ_5717s",
+      "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/9b/11/71/9b117159-ebd0-9c41-d280-067deaf6b88f/mzaf_10067120812048082132.plus.aac.p.m4a",
+      "alternatives": []
+    }
+  ],
+  "sideB": [
+    {
+      "id": "sb-1",
+      "num": "B1",
+      "artist": "Tyler, The Creator",
+      "title": "Noid",
+      "album": "CHROMAKOPIA",
+      "inLista": true,
+      "youtubeId": "Qer3lwd5hyA",
+      "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/17/45/aa/1745aa84-7704-fbd0-367f-7d8e43962af0/mzaf_11834146206841647973.plus.aac.p.m4a",
+      "alternatives": []
+    },
+    {
+      "id": "sb-2",
+      "num": "B2",
+      "artist": "Lil Yachty, Diana Gordon",
+      "title": "the BLACK seminole.",
+      "album": "Let’s Start Here.",
+      "inLista": true,
+      "youtubeId": "J8l2kS4U8EE",
+      "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/49/5b/b5/495bb57a-a21d-119e-f717-ab1e4dfd5024/mzaf_9381522881357106628.plus.aac.p.m4a",
+      "alternatives": [
+        {
+          "artist": "Lil Yachty",
+          "title": "IVE OFFICIALLY LOST ViSiON!!!!",
+          "album": "Let’s Start Here.",
+          "youtubeId": "Wl20s_BvX2s",
+          "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/4c/12/57/4c12578d-959a-a231-d46b-a8a2fd6f9c6d/mzaf_14260991342063268143.plus.aac.p.m4a",
+          "note": "Scarti #12"
+        }
+      ]
+    },
+    {
+      "id": "sb-3",
+      "num": "B3",
+      "artist": "Mandrill",
+      "title": "Peace And Love - Movement IV",
+      "album": "Mandrill",
+      "inLista": false,
+      "youtubeId": "aV1t-Xh6jH4",
+      "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/9e/6b/95/9e6b9512-d3a7-e5b0-e18e-cb0d17444513/mzaf_1204878092292414861.plus.aac.p.m4a",
+      "alternatives": []
+    },
+    {
+      "id": "sb-4",
+      "num": "B4",
+      "artist": "MACE, Altea",
+      "title": "SOLO UN UOMO",
+      "album": "MĀYĀ",
+      "inLista": false,
+      "youtubeId": "2M5c_XqP46U",
+      "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/a1/0d/20/a10d20a0-f6c9-5de3-4823-a220d4629393/mzaf_14148658815269061711.plus.aac.p.m4a",
+      "alternatives": []
+    },
+    {
+      "id": "sb-5",
+      "num": "B5",
+      "artist": "Daniela Pes",
+      "title": "Carme",
+      "album": "SPIRA",
+      "inLista": true,
+      "youtubeId": "mS-fU-f_H3s",
+      "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/c1/d4/cc/c1d4ccf1-5805-bf7a-cdcd-d4819bfac729/mzaf_2540447420904700352.plus.aac.p.m4a",
+      "alternatives": [
+        {
+          "artist": "Daniela Pes",
+          "title": "Illa Sera",
+          "album": "SPIRA",
+          "youtubeId": "nC8cW7-V6n4",
+          "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/80/5f/57/805f57c1-39eb-0561-635e-21db80176627/mzaf_13753362714222577821.plus.aac.p.m4a",
+          "note": "Scarti #14"
+        }
+      ]
+    },
+    {
+      "id": "sb-6",
+      "num": "B6",
+      "artist": "C.S.I.",
+      "title": "Depressione Caspica",
+      "album": "Noi non ci saremo, Vol. 1",
+      "inLista": false,
+      "youtubeId": "O9-R7M5uI9k",
+      "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/66/51/50/6651509f-3779-1876-37a9-4e42c9125911/mzaf_10742491162778597273.plus.aac.p.m4a",
+      "alternatives": [
+        {
+          "artist": "C.S.I.",
+          "title": "E Ti Vengo A Cercare",
+          "album": "Linea gotica",
+          "youtubeId": "0hYJ6FwS7wI",
+          "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/1f/11/52/1f115243-a919-f2dc-1a32-afe06c93ce1b/mzaf_15584834865662439454.plus.aac.p.m4a",
+          "note": "Scarti #15"
+        }
+      ]
+    },
+    {
+      "id": "sb-7",
+      "num": "B7",
+      "artist": "C.S.I.",
+      "title": "Cupe Vampe",
+      "album": "Linea gotica",
+      "inLista": true,
+      "youtubeId": "49N6vt2Yk3U",
+      "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/15/a3/fb/15a3fb16-76fc-520c-7c10-2bd94a04b80a/mzaf_9457939436332585130.plus.aac.p.m4a",
+      "alternatives": [
+        {
+          "artist": "C.S.I.",
+          "title": "E Ti Vengo A Cercare",
+          "album": "Linea gotica",
+          "youtubeId": "0hYJ6FwS7wI",
+          "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/1f/11/52/1f115243-a919-f2dc-1a32-afe06c93ce1b/mzaf_15584834865662439454.plus.aac.p.m4a",
+          "note": "Scarti #15"
+        }
+      ]
+    },
+    {
+      "id": "sb-8",
+      "num": "B8",
+      "artist": "Jeff Buckley",
+      "title": "So Real",
+      "album": "Grace",
+      "inLista": false,
+      "youtubeId": "EckbJ8g2W4k",
+      "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/f0/f8/3c/f0f83ce9-0785-d3b8-96fb-fe8ba53a67b3/mzaf_3904594632816436469.plus.aac.p.m4a",
+      "alternatives": []
+    },
+    {
+      "id": "sb-9",
+      "num": "B9",
+      "artist": "The Smiths",
+      "title": "I Know It’s Over",
+      "album": "The Queen Is Dead",
+      "inLista": false,
+      "youtubeId": "bAJ_7350TW8",
+      "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/19/bc/48/19bc48e0-ca37-3720-e361-1f52ab4e8056/mzaf_4827638567725072885.plus.aac.p.m4a",
+      "alternatives": []
+    },
+    {
+      "id": "sb-10",
+      "num": "B10",
+      "artist": "Michael Kiwanuka",
+      "title": "Cold Little Heart",
+      "album": "Love & Hate",
+      "inLista": true,
+      "youtubeId": "nOubjLM9Cbc",
+      "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/2e/3a/48/2e3a4814-1fd2-c92e-cf05-d55717c7e339/mzaf_10627100711625513087.plus.aac.p.m4a",
+      "alternatives": []
+    },
+    {
+      "id": "sb-11",
+      "num": "B11",
+      "artist": "Pink Floyd",
+      "title": "High Hopes",
+      "album": "The Division Bell",
+      "inLista": true,
+      "youtubeId": "7jMlFXouPk8",
+      "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/13/7e/9a/137e9a0b-3143-127b-206f-9b785a4f70f1/mzaf_10401000737640341623.plus.aac.p.m4a",
+      "alternatives": [
+        {
+          "artist": "Pink Floyd",
+          "title": "In The Flesh?",
+          "album": "The Wall",
+          "youtubeId": "5j1Xn9A8e9g",
+          "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/b0/59/cb/b059cb57-4f68-69c5-c8e8-17ed7d011cc3/mzaf_11185182136828393949.plus.aac.p.m4a",
+          "note": "Scarti #16"
+        },
+        {
+          "artist": "Pink Floyd",
+          "title": "Don’t Leave Me Now",
+          "album": "The Wall",
+          "youtubeId": "Q5u2K6_8G2Y",
+          "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/27/eb/ac/27ebac5a-bd07-b50c-25d5-a5fd8aa16ef0/mzaf_7223833338892656397.plus.aac.p.m4a",
+          "note": "Scarti #17"
+        },
+        {
+          "artist": "Pink Floyd",
+          "title": "The Gunner’s Dream",
+          "album": "The Final Cut",
+          "youtubeId": "HjZq1w1z3hA",
+          "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/a7/93/f2/a793f2da-3764-cda4-7cfb-e53f97d59354/mzaf_15517150928452832090.plus.aac.p.m4a",
+          "note": "Scarti #18"
+        },
+        {
+          "artist": "Pink Floyd",
+          "title": "Atom Heart Mother",
+          "album": "Atom Heart Mother",
+          "youtubeId": "7K_d9PqNl5o",
+          "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/d1/78/ce/d178ceb5-a9b3-f236-7356-d41a380ec506/mzaf_7079651836969887744.plus.aac.p.m4a",
+          "note": "Scarti #19"
+        }
+      ]
+    }
+  ],
+  "prog": [
+    {
+      "id": "p-1",
+      "num": "P1",
+      "artist": "Supertramp",
+      "title": "The Logical Song",
+      "album": "Breakfast in America (Deluxe Edition) [2010 Remaster]",
+      "inLista": false,
+      "youtubeId": "OQfjR3z3T50",
+      "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/ec/5a/ae/ec5aaedf-7493-6df9-f18f-8c0388ad67d3/mzaf_7892337859087768596.plus.aac.p.m4a"
+    },
+    {
+      "id": "p-2",
+      "num": "P2",
+      "artist": "Emerson, Lake & Palmer",
+      "title": "From the Beginning",
+      "album": "Trilogy",
+      "inLista": false,
+      "youtubeId": "c2Mmnn_Xk7U",
+      "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/35/20/6f/35206f0f-f328-fa25-00fe-3bedbc00b836/mzaf_14234046391914184001.plus.aac.p.m4a"
+    },
+    {
+      "id": "p-3",
+      "num": "P3",
+      "artist": "Premiata Forneria Marconi",
+      "title": "Impressioni di Settembre",
+      "album": "Storia di un minuto",
+      "inLista": true,
+      "youtubeId": "P5WwrgC1qZk",
+      "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/c7/b5/cb/c7b5cb64-784f-0198-555e-4edd672b6ab9/mzaf_2200537047027690905.plus.aac.p.m4a"
+    },
+    {
+      "id": "p-4",
+      "num": "P4",
+      "artist": "Pink Floyd",
+      "title": "Have A Cigar",
+      "album": "Wish You Were Here",
+      "inLista": false,
+      "youtubeId": "4sVShT6nVTA",
+      "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/1d/83/78/1d837818-ce05-2fc9-76be-3b9050e61d5d/mzaf_10807137204805942680.plus.aac.p.m4a"
+    },
+    {
+      "id": "p-5",
+      "num": "P5",
+      "artist": "King Crimson",
+      "title": "Fallen Angel",
+      "album": "Red (Expanded Edition)",
+      "inLista": false,
+      "youtubeId": "L8S4n5B4N38",
+      "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/93/d4/e9/93d4e9ff-6051-daff-8582-2925b9396ef0/mzaf_14391962516504460798.plus.aac.p.m4a"
+    },
+    {
+      "id": "p-6",
+      "num": "P6",
+      "artist": "Jethro Tull",
+      "title": "My God",
+      "album": "Aqualung (1996 Bonus Tracks Edition)",
+      "inLista": false,
+      "youtubeId": "JcO1f9hU6uM",
+      "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/ad/97/f7/ad97f747-cf06-73aa-5b6c-0909bd974cd4/mzaf_12678323233050535786.plus.aac.p.m4a"
+    },
+    {
+      "id": "p-7",
+      "num": "P7",
+      "artist": "Genesis",
+      "title": "Firth of Fifth",
+      "album": "Selling England By the Pound",
+      "inLista": true,
+      "youtubeId": "Rz-tHZEr37I",
+      "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/1e/43/25/1e4325a1-6c4d-4560-2f65-e64dd1dba079/mzaf_2213887118548680272.plus.aac.p.m4a"
+    },
+    {
+      "id": "p-8",
+      "num": "P8",
+      "artist": "Camel",
+      "title": "Lady Fantasy",
+      "album": "Mirage (2023 Remastered & Expanded Edition)",
+      "inLista": false,
+      "youtubeId": "Zh2UqH2qY4Y",
+      "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/e5/fb/e0/e5fbe0ab-6465-da76-5832-4391efa2260b/mzaf_15193893979235573020.plus.aac.p.m4a"
+    },
+    {
+      "id": "p-9",
+      "num": "P9",
+      "artist": "TOOL",
+      "title": "Pneuma",
+      "album": "Fear Inoculum",
+      "inLista": true,
+      "youtubeId": "5ClCaPmAA7s",
+      "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/62/fe/6a/62fe6acb-2abc-b480-692f-6612fdbffacd/mzaf_1793646962415303070.plus.aac.p.m4a"
+    },
+    {
+      "id": "p-10",
+      "num": "P10",
+      "artist": "Frank Zappa",
+      "title": "Watermelon In Easter Hay",
+      "album": "Joe’s Garage",
+      "inLista": true,
+      "youtubeId": "Fn9ZuGquwpQ",
+      "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/bc/57/98/bc579862-b701-df0e-a1cc-2b06a01fdc42/mzaf_11318764465740112117.plus.aac.p.m4a"
+    },
+    {
+      "id": "p-11",
+      "num": "P11",
+      "artist": "The Doors",
+      "title": "The End",
+      "album": "The Doors (50th Anniversary Deluxe Edition)",
+      "inLista": false,
+      "youtubeId": "BXqPNlng6uI",
+      "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/e3/0a/0f/e30a0fcd-a7e2-e71b-6f95-521a61df2fc6/mzaf_9050273682135964434.plus.aac.p.m4a"
+    }
+  ],
+  "scarti": [
+    {
+      "id": "s-1",
+      "num": "S01",
+      "artist": "CASIOPEA",
+      "title": "スワロー (Swallow)",
+      "album": "CASIOPEA",
+      "youtubeId": "GhvXcOInICQ",
+      "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/ab/d0/ff/abd0ff08-e485-6532-e894-0c9022aa53eb/mzaf_15088470871978216872.plus.aac.p.m4a"
+    },
+    {
+      "id": "s-2",
+      "num": "S02",
+      "artist": "CASIOPEA",
+      "title": "ダズリング (Dazzling)",
+      "album": "PHOTOGRAPHS",
+      "youtubeId": "",
+      "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/15/e9/d7/15e9d754-a931-a12f-58c5-f0bb348ba203/mzaf_13155254417184447900.plus.aac.p.m4a"
+    },
+    {
+      "id": "s-3",
+      "num": "S03",
+      "artist": "Masayoshi Takanaka",
+      "title": "SEVEN GOBLINS",
+      "album": "Seychelles",
+      "youtubeId": "kYJbC9qW9aI",
+      "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview128/v4/37/a7/2b/37a72b60-07a7-02be-e8cf-f0776230113a/mzaf_1646310089032148943.plus.aac.p.m4a"
+    },
+    {
+      "id": "s-4",
+      "num": "S04",
+      "artist": "Kendrick Lamar",
+      "title": "i",
+      "album": "i - Single",
+      "youtubeId": "8aShfolR6w8",
+      "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/5b/38/e8/5b38e887-430e-5e4f-5dbe-0d5b58b42c14/mzaf_13874119598667964376.plus.aac.p.m4a"
+    },
+    {
+      "id": "s-5",
+      "num": "S05",
+      "artist": "Kanye West",
+      "title": "Waves",
+      "album": "The Life of Pablo",
+      "youtubeId": "t28vyD3W3kI",
+      "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/be/d2/cc/bed2cc94-a5f1-63f1-7b3a-e513dd22e9e9/mzaf_11675430544024663738.plus.aac.p.m4a"
+    },
+    {
+      "id": "s-6",
+      "num": "S06",
+      "artist": "Miley Cyrus",
+      "title": "Something Beautiful",
+      "album": "Something Beautiful",
+      "youtubeId": "3bWz6U8qX7s",
+      "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/cc/19/88/cc198850-fa56-0345-a115-fdb9345d81fe/mzaf_10347101652109153961.plus.aac.p.m4a"
+    },
+    {
+      "id": "s-7",
+      "num": "S07",
+      "artist": "Tame Impala",
+      "title": "No Choice",
+      "album": "The Slow Rush B-Sides & Remixes",
+      "youtubeId": "J8aX51Q8KzM",
+      "audioUrl": null
+    },
+    {
+      "id": "s-8",
+      "num": "S08",
+      "artist": "Talking Heads",
+      "title": "Born Under Punches (The Heat Goes On)",
+      "album": "Remain In Light",
+      "youtubeId": "ilCd1xwf2Q4",
+      "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/3b/12/35/3b1235a3-2b53-7a6c-b542-7741d6c32dfe/mzaf_18191031209642399185.plus.aac.p.m4a"
+    },
+    {
+      "id": "s-9",
+      "num": "S09",
+      "artist": "Jethro Tull",
+      "title": "Aqualung",
+      "album": "Aqualung (1996 Bonus Tracks Edition)",
+      "youtubeId": "B0yZz_gYqA8",
+      "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/49/10/f4/4910f435-9043-36c1-d43f-fabf6bc92ff9/mzaf_2339058477304528151.plus.aac.p.m4a"
+    },
+    {
+      "id": "s-10",
+      "num": "S10",
+      "artist": "Led Zeppelin",
+      "title": "Dazed and Confused",
+      "album": "Led Zeppelin (Remastered)",
+      "youtubeId": "uO0dGz4X7Gk",
+      "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/1c/34/26/1c3426d4-d963-2953-6d52-269e36c8f9e9/mzaf_6113463901177165243.plus.aac.p.m4a"
+    },
+    {
+      "id": "s-11",
+      "num": "S11",
+      "artist": "Agitation Free",
+      "title": "Laila, Pt. 1",
+      "album": "Live '74",
+      "youtubeId": "2DqK6k_6a38",
+      "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/ad/6f/a1/ad6fa13b-d2d7-9783-8aff-5ad3b06dab82/mzaf_17004464217711624831.plus.aac.p.m4a"
+    },
+    {
+      "id": "s-12",
+      "num": "S12",
+      "artist": "Lil Yachty",
+      "title": "IVE OFFICIALLY LOST ViSiON!!!!",
+      "album": "Let’s Start Here.",
+      "youtubeId": "Wl20s_BvX2s",
+      "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/4c/12/57/4c12578d-959a-a231-d46b-a8a2fd6f9c6d/mzaf_14260991342063268143.plus.aac.p.m4a"
+    },
+    {
+      "id": "s-13",
+      "num": "S13",
+      "artist": "King Crimson",
+      "title": "Indiscipline",
+      "album": "Discipline (Expanded Edition)",
+      "youtubeId": "Yg_oB1n1h-s",
+      "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/30/8e/c0/308ec093-b152-6f3a-0686-9901d243d281/mzaf_13530699006721593104.plus.aac.p.m4a"
+    },
+    {
+      "id": "s-14",
+      "num": "S14",
+      "artist": "Daniela Pes",
+      "title": "Illa Sera",
+      "album": "SPIRA",
+      "youtubeId": "nC8cW7-V6n4",
+      "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/80/5f/57/805f57c1-39eb-0561-635e-21db80176627/mzaf_13753362714222577821.plus.aac.p.m4a"
+    },
+    {
+      "id": "s-15",
+      "num": "S15",
+      "artist": "C.S.I.",
+      "title": "E Ti Vengo A Cercare",
+      "album": "Linea gotica",
+      "youtubeId": "0hYJ6FwS7wI",
+      "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/1f/11/52/1f115243-a919-f2dc-1a32-afe06c93ce1b/mzaf_15584834865662439454.plus.aac.p.m4a"
+    },
+    {
+      "id": "s-16",
+      "num": "S16",
+      "artist": "Pink Floyd",
+      "title": "In The Flesh?",
+      "album": "The Wall",
+      "youtubeId": "5j1Xn9A8e9g",
+      "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/b0/59/cb/b059cb57-4f68-69c5-c8e8-17ed7d011cc3/mzaf_11185182136828393949.plus.aac.p.m4a"
+    },
+    {
+      "id": "s-17",
+      "num": "S17",
+      "artist": "Pink Floyd",
+      "title": "Don’t Leave Me Now",
+      "album": "The Wall",
+      "youtubeId": "Q5u2K6_8G2Y",
+      "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/27/eb/ac/27ebac5a-bd07-b50c-25d5-a5fd8aa16ef0/mzaf_7223833338892656397.plus.aac.p.m4a"
+    },
+    {
+      "id": "s-18",
+      "num": "S18",
+      "artist": "Pink Floyd",
+      "title": "The Gunner’s Dream",
+      "album": "The Final Cut",
+      "youtubeId": "HjZq1w1z3hA",
+      "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/a7/93/f2/a793f2da-3764-cda4-7cfb-e53f97d59354/mzaf_15517150928452832090.plus.aac.p.m4a"
+    },
+    {
+      "id": "s-19",
+      "num": "S19",
+      "artist": "Pink Floyd",
+      "title": "Atom Heart Mother",
+      "album": "Atom Heart Mother",
+      "youtubeId": "7K_d9PqNl5o",
+      "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/d1/78/ce/d178ceb5-a9b3-f236-7356-d41a380ec506/mzaf_7079651836969887744.plus.aac.p.m4a"
+    }
+  ]
+}
