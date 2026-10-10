@@ -25,8 +25,10 @@ const elements = {
   playerToggle: document.getElementById("playerToggle"),
   playerNext: document.getElementById("playerNext"),
   cinemaPrevBadge: document.getElementById("cinemaPrevBadge"),
+  cinemaPrevTag: document.getElementById("cinemaPrevTag"),
   cinemaPrevTitle: document.getElementById("cinemaPrevTitle"),
   cinemaNextBadge: document.getElementById("cinemaNextBadge"),
+  cinemaNextTag: document.getElementById("cinemaNextTag"),
   cinemaNextTitle: document.getElementById("cinemaNextTitle"),
   playerNextTooltip: document.getElementById("playerNextTooltip"),
   playerQueuePosition: document.getElementById("playerQueuePosition"),
@@ -36,6 +38,7 @@ const elements = {
   btnOpenLyrics: document.getElementById("btnOpenLyrics"),
   playerLyricsDrawer: document.getElementById("playerLyricsDrawer"),
   lyricsDrawerBody: document.getElementById("lyricsDrawerBody"),
+  cinemaLyricsResizer: document.getElementById("cinemaLyricsResizer"),
   mobileMiniPlayer: document.getElementById("mobileMiniPlayer"),
   miniPlayerExpand: document.getElementById("miniPlayerExpand"),
   miniPlayerPrevious: document.getElementById("miniPlayerPrevious"),
@@ -53,6 +56,7 @@ const elements = {
   toastBubble: document.getElementById("toastBubble"),
   btnCinemaMode: document.getElementById("btnCinemaMode"),
   cinemaHeaderBar: document.getElementById("cinemaHeaderBar"),
+  cinemaBadgeText: document.getElementById("cinemaBadgeText"),
   btnCinemaToggleLyrics: document.getElementById("btnCinemaToggleLyrics"),
   cinemaToggleLyricsLabel: document.getElementById("cinemaToggleLyricsLabel"),
   btnCinemaClose: document.getElementById("btnCinemaClose"),
@@ -82,7 +86,10 @@ let showLyricsTranslation = false;
 
 document.addEventListener("DOMContentLoaded", () => {
   renderAllTrackLists();
-  setPlaybackQueue(LISTA_TRACKS, "La Lista", 0);
+  const restored = restorePlaybackSession();
+  if (!restored) {
+    setPlaybackQueue(LISTA_TRACKS, "La Lista", 0);
+  }
   setupCollectionNavigation();
   setupExportTools();
   setupMobileMiniPlayer();
@@ -95,6 +102,9 @@ document.addEventListener("DOMContentLoaded", () => {
   setupImageLightbox();
   setupHonorableElasticAccordion();
   setupKeyboardShortcuts();
+
+  window.addEventListener("beforeunload", () => savePlaybackSession());
+  window.addEventListener("pagehide", () => savePlaybackSession());
 });
 
 function renderNoteButton(title, note) {
@@ -289,10 +299,11 @@ function setupImageLightbox() {
 
 function setLyricsContent(container, lyricsText) {
   if (!container) return;
-  if (lyricsText.includes("<div") || lyricsText.includes("<span")) {
-    container.innerHTML = lyricsText;
+  const bottomSpacerHtml = '<div class="lyrics-bottom-spacer" style="height: 90px; min-height: 90px; width: 100%; pointer-events: none;" aria-hidden="true"></div>';
+  if (lyricsText.includes("<div") || lyricsText.includes("<span") || lyricsText.includes("<p")) {
+    container.innerHTML = lyricsText + bottomSpacerHtml;
   } else {
-    container.textContent = lyricsText;
+    container.innerHTML = `<div class="lyrics-text-flow">${escapeHtml(lyricsText)}</div>` + bottomSpacerHtml;
   }
 }
 
@@ -345,7 +356,7 @@ function setupLyricsDrawer() {
           }
           document.body.classList.remove("mobile-lyrics-open");
           updateCaptionMarquee();
-        }, 220);
+        }, 160);
         return;
       }
       elements.playerLyricsDrawer.hidden = true;
@@ -518,8 +529,185 @@ function setupCinemaMode() {
     }
   });
 
+  setupCinemaResizer();
+
   window.enterCinemaMode = enterCinemaMode;
   window.exitCinemaMode = exitCinemaMode;
+}
+
+function setupCinemaResizer() {
+  const resizer = elements.cinemaLyricsResizer;
+  const playerPaper = document.querySelector(".player-paper");
+  if (!resizer || !playerPaper) return;
+
+  const savedWidth = localStorage.getItem("ari_cinema_lyrics_width");
+  if (savedWidth) {
+    playerPaper.style.setProperty("--cinema-lyrics-width", `${savedWidth}px`);
+  }
+
+  let startX = 0;
+  let startWidth = 0;
+  let isDragging = false;
+
+  const onPointerDown = (e) => {
+    if (!playerPaper.classList.contains("cinema-mode-active")) return;
+    if (e.button !== 0 && e.pointerType === "mouse") return;
+    isDragging = true;
+    startX = e.clientX;
+    const lyricsDrawer = elements.playerLyricsDrawer;
+    startWidth = lyricsDrawer ? lyricsDrawer.getBoundingClientRect().width : 420;
+    document.body.classList.add("is-resizing-cinema");
+    try {
+      resizer.setPointerCapture(e.pointerId);
+    } catch (_) {}
+    window.addEventListener("pointermove", onPointerMove);
+    window.addEventListener("pointerup", onPointerUp);
+    window.addEventListener("pointercancel", onPointerUp);
+    e.preventDefault();
+  };
+
+  const onPointerMove = (e) => {
+    if (!isDragging) return;
+    const deltaX = startX - e.clientX;
+    const minW = 320;
+    const maxW = Math.min(680, Math.floor(window.innerWidth * 0.52));
+    const newWidth = Math.max(minW, Math.min(maxW, Math.round(startWidth + deltaX)));
+    playerPaper.style.setProperty("--cinema-lyrics-width", `${newWidth}px`);
+  };
+
+  const onPointerUp = (e) => {
+    if (!isDragging) return;
+    isDragging = false;
+    document.body.classList.remove("is-resizing-cinema");
+    try {
+      if (e?.pointerId && resizer.hasPointerCapture?.(e.pointerId)) {
+        resizer.releasePointerCapture(e.pointerId);
+      }
+    } catch (_) {}
+    window.removeEventListener("pointermove", onPointerMove);
+    window.removeEventListener("pointerup", onPointerUp);
+    window.removeEventListener("pointercancel", onPointerUp);
+    const lyricsDrawer = elements.playerLyricsDrawer;
+    if (lyricsDrawer) {
+      const finalWidth = Math.round(lyricsDrawer.getBoundingClientRect().width);
+      localStorage.setItem("ari_cinema_lyrics_width", String(finalWidth));
+    }
+  };
+
+  resizer.addEventListener("pointerdown", onPointerDown);
+
+  resizer.addEventListener("dblclick", () => {
+    playerPaper.style.removeProperty("--cinema-lyrics-width");
+    localStorage.removeItem("ari_cinema_lyrics_width");
+  });
+
+  resizer.addEventListener("keydown", (e) => {
+    if (e.key === "ArrowLeft" || e.key === "ArrowRight") {
+      const lyricsDrawer = elements.playerLyricsDrawer;
+      const currentWidth = lyricsDrawer ? lyricsDrawer.getBoundingClientRect().width : 420;
+      const step = e.shiftKey ? 40 : 16;
+      const delta = e.key === "ArrowLeft" ? step : -step;
+      const minW = 320;
+      const maxW = Math.min(680, Math.floor(window.innerWidth * 0.52));
+      const newWidth = Math.max(minW, Math.min(maxW, Math.round(currentWidth + delta)));
+      playerPaper.style.setProperty("--cinema-lyrics-width", `${newWidth}px`);
+      localStorage.setItem("ari_cinema_lyrics_width", String(newWidth));
+      e.preventDefault();
+    }
+  });
+}
+
+// =============================================================================
+// SESSION PERSISTENCE & CACHING (LOCALSTORAGE)
+// =============================================================================
+
+let savedResumeSeconds = 0;
+
+function findTrackInCollections(trackId) {
+  if (!trackId) return null;
+  const collections = [
+    { tracks: LISTA_TRACKS, label: "La Lista" },
+    { tracks: PROG_TRACKS, label: "Prog" },
+    { tracks: HONORABLE_MENTIONS, label: "Menzioni d'onore" }
+  ];
+  for (const col of collections) {
+    if (!Array.isArray(col.tracks)) continue;
+    for (let i = 0; i < col.tracks.length; i++) {
+      const t = col.tracks[i];
+      if (t.id === trackId) {
+        return { track: t, queue: col.tracks, label: col.label, index: i };
+      }
+      if (t.alternatives) {
+        for (let j = 0; j < t.alternatives.length; j++) {
+          const alt = t.alternatives[j];
+          const altId = alt.id || `${t.id}-alt-${alt.youtubeId || j}`;
+          if (altId === trackId || alt.youtubeId === trackId) {
+            return { track: alt, queue: col.tracks, label: col.label, index: i };
+          }
+        }
+      }
+    }
+  }
+  return null;
+}
+
+function savePlaybackSession(currentTime) {
+  if (!activeVideoTrack) return;
+  try {
+    const time = typeof currentTime === "number" ? currentTime : (youtubePlayer?.getCurrentTime?.() || 0);
+    const session = {
+      trackId: activeVideoTrack.id,
+      variantIndex: activeVideoTrack.selectedYoutubeVariant || 0,
+      queueLabel: playbackQueueLabel || "La Lista",
+      queueIndex: playbackQueueIndex || 0,
+      currentTime: Math.floor(time),
+      timestamp: Date.now()
+    };
+    localStorage.setItem("ari_playback_session", JSON.stringify(session));
+  } catch (_) {}
+}
+
+function restorePlaybackSession() {
+  try {
+    const raw = localStorage.getItem("ari_playback_session");
+    if (!raw) return false;
+    const session = JSON.parse(raw);
+    if (!session || !session.trackId) return false;
+
+    const match = findTrackInCollections(session.trackId);
+    if (!match) return false;
+
+    let queue = match.queue;
+    let label = match.label;
+    let idx = match.index;
+    if (session.queueLabel && session.queueLabel !== label) {
+      if (session.queueLabel === "Prog") { queue = PROG_TRACKS; label = "Prog"; }
+      else if (session.queueLabel === "Menzioni d'onore") { queue = HONORABLE_MENTIONS; label = "Menzioni d'onore"; }
+      else { queue = LISTA_TRACKS; label = "La Lista"; }
+      if (typeof session.queueIndex === "number" && session.queueIndex >= 0 && session.queueIndex < queue.length) {
+        idx = session.queueIndex;
+      }
+    }
+    setPlaybackQueue(queue, label, idx);
+
+    const trackToLoad = {
+      ...match.track,
+      selectedYoutubeVariant: session.variantIndex || 0
+    };
+
+    if (session.currentTime && session.currentTime > 2) {
+      savedResumeSeconds = session.currentTime;
+    }
+
+    loadTrack(trackToLoad, false);
+    if (savedResumeSeconds > 0) {
+      elements.miniPlayerCurrentTime.textContent = formatPlaybackTime(savedResumeSeconds);
+    }
+    return true;
+  } catch (e) {
+    console.warn("Restore session error", e);
+    return false;
+  }
 }
 
 // =============================================================================
@@ -545,9 +733,47 @@ function setupBackgroundMediaSession() {
         if (youtubePlayer?.pauseVideo) youtubePlayer.pauseVideo();
         setMiniPlayerPlaying(false);
       });
+      // Scrubbing del minutaggio da blocco schermo e tendina notifiche
+      navigator.mediaSession.setActionHandler("seekto", (details) => {
+        if (details.seekTime !== undefined && youtubePlayer?.seekTo) {
+          youtubePlayer.seekTo(details.seekTime, true);
+          updateMediaSessionPosition(details.seekTime, youtubePlayer.getDuration?.() || 0);
+          savePlaybackSession(details.seekTime);
+        }
+      });
+      navigator.mediaSession.setActionHandler("seekbackward", (details) => {
+        const skip = details.seekOffset || 10;
+        const current = youtubePlayer?.getCurrentTime?.() || 0;
+        const target = Math.max(0, current - skip);
+        youtubePlayer?.seekTo?.(target, true);
+        updateMediaSessionPosition(target, youtubePlayer?.getDuration?.() || 0);
+      });
+      navigator.mediaSession.setActionHandler("seekforward", (details) => {
+        const skip = details.seekOffset || 10;
+        const current = youtubePlayer?.getCurrentTime?.() || 0;
+        const dur = youtubePlayer?.getDuration?.() || current + 10;
+        const target = Math.min(dur, current + skip);
+        youtubePlayer?.seekTo?.(target, true);
+        updateMediaSessionPosition(target, dur);
+      });
     } catch (e) {
       console.warn("MediaSession action handler error", e);
     }
+  }
+}
+
+function updateMediaSessionPosition(current, duration) {
+  if (!("mediaSession" in navigator) || !("setPositionState" in navigator.mediaSession)) return;
+  const safeDur = Math.max(0, Number(duration) || 0);
+  const safePos = Math.max(0, Math.min(Number(current) || 0, safeDur));
+  if (safeDur > 0 && safePos <= safeDur) {
+    try {
+      navigator.mediaSession.setPositionState({
+        duration: safeDur,
+        playbackRate: 1.0,
+        position: safePos
+      });
+    } catch (_) {}
   }
 }
 
@@ -569,6 +795,11 @@ function updateMediaSession(track, isPlaying = true) {
       artwork
     });
     navigator.mediaSession.playbackState = isPlaying ? "playing" : "paused";
+    if (youtubePlayer?.getDuration) {
+      const cur = youtubePlayer.getCurrentTime?.() || 0;
+      const dur = youtubePlayer.getDuration?.() || 0;
+      updateMediaSessionPosition(cur, dur);
+    }
   } catch (e) {
     console.warn("MediaSession metadata update error", e);
   }
@@ -723,13 +954,22 @@ function positionVariantSliderThumb(animate = true) {
 }
 
 function setupVideoVariants() {
-  elements.playerVariantButton?.addEventListener("click", () => {
+  elements.playerVariantButton?.addEventListener("click", (e) => {
     const track = activeVideoTrack;
     const variants = track?.youtubeVariants || [];
     if (variants.length < 2) return;
 
+    const targetTab = e.target?.closest?.(".variant-tab");
     const currentIndex = track.selectedYoutubeVariant || 0;
-    const nextIndex = (currentIndex + 1) % variants.length;
+    let nextIndex;
+    if (targetTab && targetTab.dataset.index !== undefined) {
+      const clickedIndex = parseInt(targetTab.dataset.index, 10);
+      if (clickedIndex === currentIndex) return;
+      nextIndex = clickedIndex;
+    } else {
+      nextIndex = (currentIndex + 1) % variants.length;
+    }
+
     const playing = youtubePlayer?.getPlayerState?.() === window.YT?.PlayerState?.PLAYING;
     loadTrack({ ...track, youtubeId: variants[nextIndex].youtubeId, selectedYoutubeVariant: nextIndex }, playing);
   });
@@ -778,6 +1018,10 @@ function updatePlaybackQueueUi() {
     if (labelEl) labelEl.textContent = ` · ${shortQueueLabel}`;
   }
 
+  if (elements.cinemaBadgeText) {
+    elements.cinemaBadgeText.textContent = `${num} / ${total} · ${shortQueueLabel}`;
+  }
+
   setMiniPlayerTitle(activeVideoTrack?.title || playbackQueueLabel);
   updateCaptionMarquee();
   [elements.playerPrevious, elements.miniPlayerPrevious].forEach(button => { if (button) button.disabled = playbackQueueIndex === 0; });
@@ -789,11 +1033,16 @@ function updatePlaybackQueueUi() {
   if (elements.cinemaPrevBadge && elements.cinemaPrevTitle) {
     elements.cinemaPrevBadge.hidden = false;
     if (prevTrack) {
+      const prevNum = String(playbackQueueIndex).padStart(2, "0");
+      if (elements.cinemaPrevTag) {
+        elements.cinemaPrevTag.textContent = `${prevNum} / ${total}`;
+      }
       elements.cinemaPrevTitle.textContent = `${prevTrack.title} — ${prevTrack.artist}`;
       elements.cinemaPrevBadge.style.visibility = "visible";
       elements.cinemaPrevBadge.setAttribute("aria-hidden", "false");
       elements.cinemaPrevBadge.classList.remove("is-disabled");
-      elements.cinemaPrevBadge.title = `Torna al brano precedente, ${prevTrack.title} (${prevTrack.artist})`;
+      elements.cinemaPrevBadge.title = `Passa al brano ${prevNum}, ${prevTrack.title} (${prevTrack.artist})`;
+      elements.cinemaPrevBadge.setAttribute("aria-label", `Brano ${prevNum} di ${total}, ${prevTrack.title}`);
       const wrap = elements.cinemaPrevBadge.querySelector(".cinema-pill-marquee-wrap");
       const content = elements.cinemaPrevBadge.querySelector(".cinema-pill-marquee-content");
       if (wrap && content) {
@@ -812,11 +1061,16 @@ function updatePlaybackQueueUi() {
   if (elements.cinemaNextBadge && elements.cinemaNextTitle) {
     elements.cinemaNextBadge.hidden = false;
     if (nextTrack) {
+      const nextNum = String(playbackQueueIndex + 2).padStart(2, "0");
+      if (elements.cinemaNextTag) {
+        elements.cinemaNextTag.textContent = `${nextNum} / ${total}`;
+      }
       elements.cinemaNextTitle.textContent = `${nextTrack.title} — ${nextTrack.artist}`;
       elements.cinemaNextBadge.style.visibility = "visible";
       elements.cinemaNextBadge.setAttribute("aria-hidden", "false");
       elements.cinemaNextBadge.classList.remove("is-disabled");
-      elements.cinemaNextBadge.title = `Passa al brano successivo, ${nextTrack.title} (${nextTrack.artist})`;
+      elements.cinemaNextBadge.title = `Passa al brano ${nextNum}, ${nextTrack.title} (${nextTrack.artist})`;
+      elements.cinemaNextBadge.setAttribute("aria-label", `Brano ${nextNum} di ${total}, ${nextTrack.title}`);
       const wrap = elements.cinemaNextBadge.querySelector(".cinema-pill-marquee-wrap");
       const content = elements.cinemaNextBadge.querySelector(".cinema-pill-marquee-content");
       if (wrap && content) {
@@ -881,11 +1135,10 @@ function loadTrack(track, autoplay) {
     elements.playerVariantButton.hidden = !nextVariant;
     if (nextVariant) {
       const getShortLabel = (label = "") => {
-        if (/album/i.test(label)) return "Album";
-        if (/live/i.test(label)) return "Live";
-        if (/session/i.test(label)) return "Session";
-        if (/brano|studio/i.test(label)) return "Studio";
-        return label.length > 7 ? label.slice(0, 6) + "…" : label;
+        if (/live|session/i.test(label)) return "Live";
+        if (/album|studio|orig|audio/i.test(label)) return "Album";
+        if (/video/i.test(label)) return "Video";
+        return label.length > 6 ? label.slice(0, 5) + "…" : label;
       };
 
       const isTwoVariants = variants.length === 2;
@@ -1026,24 +1279,27 @@ function loadTrack(track, autoplay) {
     return;
   }
 
+  if (autoplay) savedResumeSeconds = 0;
   elements.playerSearchLink.hidden = true;
   elements.playerEmptyState.hidden = true;
   elements.ytVideoPlayerIframe.hidden = false;
   elements.btnDirectYt.href = `https://www.youtube.com/watch?v=${encodeURIComponent(track.youtubeId)}`;
   elements.btnDirectYt.hidden = false;
   updateMediaSession(track, Boolean(autoplay));
-  pendingYoutubeTrack = { track, autoplay };
+  pendingYoutubeTrack = { track, autoplay, startSeconds: savedResumeSeconds };
   if (youtubePlayerReady) {
     loadPendingYoutubeTrack();
   } else {
     const embedUrl = new URL(`https://www.youtube.com/embed/${encodeURIComponent(track.youtubeId)}`);
     const embedParams = new URLSearchParams({ autoplay: autoplay ? "1" : "0", playsinline: "1", rel: "0", enablejsapi: "1", modestbranding: "1", iv_load_policy: "3" });
+    if (savedResumeSeconds > 0) embedParams.set("start", String(savedResumeSeconds));
     if (window.location.origin !== "null") embedParams.set("origin", window.location.origin);
     embedUrl.search = embedParams.toString();
     elements.ytVideoPlayerIframe.src = embedUrl.toString();
     if (autoplay) setMiniPlayerPlaying(true);
     ensureYouTubeApi();
   }
+  savePlaybackSession();
 }
 
 function ensureYouTubeApi() {
@@ -1075,15 +1331,32 @@ function initializeYouTubePlayer() {
         if (queued) {
           const currentUrl = event.target.getVideoUrl?.() || "";
           const currentId = new URL(currentUrl, window.location.origin).searchParams.get("v");
-          if (currentId !== queued.track.youtubeId) event.target.loadVideoById(queued.track.youtubeId);
-          if (!queued.autoplay) event.target.pauseVideo();
+          const startSeconds = queued.startSeconds || savedResumeSeconds || 0;
+          if (queued.autoplay) {
+            if (startSeconds > 0) {
+              event.target.loadVideoById({ videoId: queued.track.youtubeId, startSeconds });
+            } else {
+              event.target.loadVideoById(queued.track.youtubeId);
+            }
+          } else {
+            if (startSeconds > 0) {
+              event.target.cueVideoById({ videoId: queued.track.youtubeId, startSeconds });
+            } else {
+              if (currentId !== queued.track.youtubeId) event.target.cueVideoById(queued.track.youtubeId);
+            }
+          }
         }
       },
       onStateChange: event => {
         const isPlaying = event.data === window.YT.PlayerState.PLAYING;
         setMiniPlayerPlaying(isPlaying);
-        if (isPlaying) startPlaybackClock();
-        else stopPlaybackClock();
+        if (isPlaying) {
+          savedResumeSeconds = 0;
+          startPlaybackClock();
+        } else {
+          stopPlaybackClock();
+          savePlaybackSession();
+        }
         if (event.data === window.YT.PlayerState.ENDED) {
           skipQueueTrack(1);
         }
@@ -1108,9 +1381,21 @@ function initializeYouTubePlayer() {
 
 function loadPendingYoutubeTrack() {
   if (!youtubePlayerReady || !youtubePlayer || !pendingYoutubeTrack) return;
-  const { track, autoplay } = pendingYoutubeTrack;
-  youtubePlayer.loadVideoById(track.youtubeId);
-  if (!autoplay) youtubePlayer.pauseVideo();
+  const { track, autoplay, startSeconds } = pendingYoutubeTrack;
+  const start = startSeconds || savedResumeSeconds || 0;
+  if (autoplay) {
+    if (start > 0) {
+      youtubePlayer.loadVideoById({ videoId: track.youtubeId, startSeconds: start });
+    } else {
+      youtubePlayer.loadVideoById(track.youtubeId);
+    }
+  } else {
+    if (start > 0) {
+      youtubePlayer.cueVideoById({ videoId: track.youtubeId, startSeconds: start });
+    } else {
+      youtubePlayer.cueVideoById(track.youtubeId);
+    }
+  }
 }
 
 function setupMobileMiniPlayer() {
@@ -1519,6 +1804,14 @@ function startPlaybackClock() {
     elements.miniPlayerCurrentTime.textContent = formatPlaybackTime(current);
     elements.miniPlayerDuration.textContent = formatPlaybackTime(duration);
     elements.miniPlayerProgress.style.width = `${duration ? Math.min(100, current / duration * 100) : 0}%`;
+
+    // Aggiorna lo stato della posizione per la Media Session (timeline scrubbing su Android/iOS)
+    updateMediaSessionPosition(current, duration);
+
+    // Salva periodicamente nel localStorage ogni 2 secondi
+    if (Math.floor(current) % 2 === 0) {
+      savePlaybackSession(current);
+    }
   }, 500);
 }
 

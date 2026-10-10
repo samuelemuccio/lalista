@@ -36,7 +36,7 @@
       <div class="player-paper">
         <div id="cinemaHeaderBar" class="cinema-header-bar" hidden>
           <div class="cinema-header-meta">
-            <span class="cinema-mode-badge"><span class="cinema-badge-dot" aria-hidden="true"></span>Cinema &amp; Testo</span>
+            <span class="cinema-mode-badge"><span class="cinema-badge-dot" aria-hidden="true"></span><span id="cinemaBadgeText">Cinema &amp; Testo</span></span>
             <div class="cinema-track-info">
               <h2 id="cinemaTrackTitle" class="cinema-track-title">Scegli un brano</h2>
               <span class="cinema-sep" aria-hidden="true">·</span>
@@ -71,9 +71,11 @@
 
           <!-- Cinema Mode Previous Track Indicator (PC ONLY, on the LEFT) -->
           <button id="cinemaPrevBadge" class="cinema-nav-track-pill cinema-prev-pill" type="button" aria-label="Torna al brano precedente" title="Brano precedente" hidden>
-            <span class="cinema-pill-icon" aria-hidden="true">⏮</span>
+            <span class="cinema-pill-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="15" height="15"><path d="M6 6h2v12H6zm3.5 6 8.5 6V6z" fill="currentColor"/></svg>
+            </span>
             <span class="cinema-pill-meta">
-              <span class="cinema-pill-tag">Precedente</span>
+              <span id="cinemaPrevTag" class="cinema-pill-tag"></span>
               <span class="cinema-pill-marquee-wrap">
                 <span class="cinema-pill-marquee-content">
                   <span id="cinemaPrevTitle" class="cinema-pill-title"></span>
@@ -101,17 +103,22 @@
           <!-- Cinema Mode Next Track Indicator (PC ONLY, on the RIGHT) -->
           <button id="cinemaNextBadge" class="cinema-nav-track-pill cinema-next-pill" type="button" aria-label="Passa al brano successivo" title="Brano successivo" hidden>
             <span class="cinema-pill-meta">
-              <span class="cinema-pill-tag">Prossimo</span>
+              <span id="cinemaNextTag" class="cinema-pill-tag"></span>
               <span class="cinema-pill-marquee-wrap">
                 <span class="cinema-pill-marquee-content">
                   <span id="cinemaNextTitle" class="cinema-pill-title"></span>
                 </span>
               </span>
             </span>
-            <span class="cinema-pill-icon" aria-hidden="true">⏭</span>
+            <span class="cinema-pill-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="15" height="15"><path d="M6 6v12l8.5-6zm10 0h2v12h-2z" fill="currentColor"/></svg>
+            </span>
           </button>
         </div>
         <div id="playerLyricsDrawer" class="player-lyrics-drawer" hidden>
+          <div id="cinemaLyricsResizer" class="cinema-lyrics-resizer" role="separator" aria-orientation="vertical" tabindex="0" aria-label="Ridimensiona larghezza testo">
+            <span class="cinema-resizer-grip" aria-hidden="true"></span>
+          </div>
           <div id="lyricsDrawerBody" class="lyrics-drawer-body"></div>
         </div>
       </div>
@@ -120,7 +127,7 @@
     <section class="playlist-deck" aria-label="Raccolte">
       <section id="panelLista" class="deck-panel-view is-active" aria-labelledby="listaTitle">
         <div class="panel-heading"><div class="panel-title-group"><div class="panel-title-row"><div class="collection-title-with-letter"><h1 id="listaTitle">La Lista</h1><button id="reopenWelcome" class="letter-reopen" type="button" aria-label="Rileggi la lettera" title="Rileggi la lettera"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6.5A1.5 1.5 0 0 1 4.5 5h15A1.5 1.5 0 0 1 21 6.5v11a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 17.5v-11z" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m3.5 7 8.5 6 8.5-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div><div class="export-links-box" aria-label="Esporta la scaletta"><button id="btnCopyText" class="text-action" type="button" aria-label="Copia la scaletta" title="Copia la scaletta"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="1" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M16 8V4H4v12h4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg><span>Copia</span></button><button id="btnDownloadText" class="text-action" type="button" aria-label="Scarica la scaletta in testo" title="Scarica la scaletta in testo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0 4-4m-4 4-4-4M5 17v3h14v-3" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg><span>.txt</span></button></div></div><div class="list-count-legend"><p>13 brani</p></div></div></div>
-        <article class="intro-letter" id="introLetterLista"><button class="btn-letter-dismiss" type="button" aria-label="Nascondi la lettera" title="Nascondi la lettera"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button><p class="letter-opening">Ciao Ari,</p><p><strong>Ho provato a tenerla corta, davvero.</strong></p><p>Questi sono brani che mi fanno impazzire e spero che ti piaceranno tanto quanto a me. Spero tanto possa trovare qualche artista nuovo o brano nuovo che ti possa piacere, oppure un album che ti incuriosisce abbastanza da volerlo aggiungere alla tua collezione di vinili o da raccontare in un video.</p><p>Volevo farcene entrare dieci, ma è stato impossibile, ne ho lasciate <strong>tredici</strong> e qualche alternativa se ti dovesse intrigare l'artista, e in fondo, le <strong>menzioni d’onore</strong>. Se hai voglia o tempo, meritano tutte.</p></article>
+        <article class="intro-letter" id="introLetterLista"><button class="btn-letter-dismiss" type="button" aria-label="Nascondi la lettera" title="Nascondi la lettera"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button><p class="letter-opening">Ciao Ari,</p><p><strong>Ho provato a tenerla corta, davvero.</strong></p><p>Questi sono brani che mi fanno impazzire e spero che ti piaceranno tanto quanto a me. Spero tanto tu possa trovare qualche artista nuovo o brano nuovo che ti possa piacere, oppure un album che ti incuriosisce abbastanza da volerlo aggiungere alla tua collezione di vinili o da raccontare in un video.</p><p>Volevo farcene entrare dieci, ma è stato impossibile, ne ho lasciate <strong>tredici</strong> e qualche alternativa se ti dovesse intrigare l'artista, e in fondo, le <strong>menzioni d’onore</strong>. Se hai voglia o tempo, meritano tutte.</p></article>
         <div id="listaUniformList" class="tracklist-card-stack"></div>
         <div class="tracklist-end-divider" aria-hidden="true">
           <div class="end-divider-line-wrap">

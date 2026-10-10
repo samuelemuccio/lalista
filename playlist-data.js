@@ -8,17 +8,17 @@ const TRACK_DATA = {
       "artist": "Michael Kiwanuka",
       "title": "Cold Little Heart",
       "album": "Love & Hate",
-      "youtubeId": "FGG5K1XLgkA",
+      "youtubeId": "FngDSOuCNAA",
       "youtubeVariants": [
+        {
+          "youtubeId": "FngDSOuCNAA",
+          "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/FngDSOuCNAA?si=GsTOlJKDgZp951ld\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>",
+          "label": "Live"
+        },
         {
           "youtubeId": "FGG5K1XLgkA",
           "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/FGG5K1XLgkA?si=6u1Sj-TNxlEKCUUF\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>",
           "label": "Album"
-        },
-        {
-          "youtubeId": "FngDSOuCNAA",
-          "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/FngDSOuCNAA?si=GsTOlJKDgZp951ld\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>",
-          "label": "Session"
         }
       ],
       "note": "È semplicemente stupenda, non so quante volte io l'abbia ascoltata, mi ricorda molto i Pink Floyd ma con una veste black."
@@ -325,7 +325,7 @@ const TRACK_DATA = {
         {
           "youtubeId": "hzy6sGiLGqM",
           "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/hzy6sGiLGqM?si=971N2I66AFHQ2Hfr\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>",
-          "label": "Originale"
+          "label": "Album"
         }
       ]
     },
@@ -370,18 +370,18 @@ const TRACK_DATA = {
           "artist": "King Crimson",
           "title": "Matte Kudasai",
           "album": "Discipline",
-          "youtubeId": "eoAupjcnm1c",
+          "youtubeId": "EAWpBRPG-hg",
           "note": "Uno dei brani più dolci e poetici dei King Crimson, cantato da Adrian Belew con chitarre d'atmosfera sognanti di Robert Fripp e un testo intimo («Matte Kudasai» in giapponese significa «ti prego, aspettami»).",
           "youtubeVariants": [
-            {
-              "youtubeId": "eoAupjcnm1c",
-              "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/eoAupjcnm1c?si=udC76a-9MG8gcQAV\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>",
-              "label": "Originale"
-            },
             {
               "youtubeId": "EAWpBRPG-hg",
               "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/EAWpBRPG-hg?si=RU0bYShgvJYbzeCA\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>",
               "label": "Live"
+            },
+            {
+              "youtubeId": "eoAupjcnm1c",
+              "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/eoAupjcnm1c?si=udC76a-9MG8gcQAV\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>",
+              "label": "Album"
             }
           ]
         },
@@ -406,7 +406,7 @@ const TRACK_DATA = {
             {
               "youtubeId": "tH3phKBbVLs",
               "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/tH3phKBbVLs?si=DtGWRmNfpddYTgmp\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>",
-              "label": "Originale"
+              "label": "Album"
             }
           ]
         },
@@ -436,12 +436,12 @@ const TRACK_DATA = {
             {
               "youtubeId": "lO8a369YOQk",
               "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/lO8a369YOQk?si=ksgbXi954K_6URc-\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>",
-              "label": "Audio album"
+              "label": "Album"
             },
             {
               "youtubeId": "N4zPu3ISCGs",
               "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/N4zPu3ISCGs?si=0JiuG05Db6ujJx8s\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>",
-              "label": "Video ufficiale"
+              "label": "Video"
             }
           ]
         }
@@ -450,12 +450,12 @@ const TRACK_DATA = {
         {
           "youtubeId": "5WSulenOUb0",
           "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/5WSulenOUb0?si=5INvg1PaYoi50H-t\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>",
-          "label": "Live · Isle of Wight 1970"
+          "label": "Live"
         },
         {
           "youtubeId": "U4P5dsPvRIA",
           "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/U4P5dsPvRIA?si=kzRHFFIsUzFvh1Lz\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>",
-          "label": "Originale"
+          "label": "Album"
         }
       ]
     },
@@ -549,17 +549,17 @@ const TRACK_DATA = {
           "artist": "Daniela Pes",
           "title": "Ca milla dia dè",
           "album": "Musicultura 2018",
-          "youtubeId": "WVTOhljfHt4",
+          "youtubeId": "-9jFPY-sif4",
           "youtubeVariants": [
-            {
-              "youtubeId": "WVTOhljfHt4",
-              "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/WVTOhljfHt4?si=gU5Vk-ccjWtJ_apr\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>",
-              "label": "Studio"
-            },
             {
               "youtubeId": "-9jFPY-sif4",
               "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/-9jFPY-sif4?si=-vj-2nHum3e0fp1j\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>",
               "label": "Live"
+            },
+            {
+              "youtubeId": "WVTOhljfHt4",
+              "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/WVTOhljfHt4?si=gU5Vk-ccjWtJ_apr\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>",
+              "label": "Album"
             }
           ],
           "note": "Il brano con cui Daniela Pes ha conquistato Musicultura nel 2018, fonetica arcaica in gallurese antico ispirata alle poesie di Don Gavino Pes, fusa con un'elettronica sciamanica ipnotica."
