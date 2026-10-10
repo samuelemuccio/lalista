@@ -163,9 +163,21 @@ const TRACK_DATA = {
       "alternatives": [
         {
           "artist": "Daniela Pes",
-          "title": "Ca milla dia dì",
+          "title": "Ca milla dia dè",
           "album": "Musicultura 2018",
-          "youtubeId": "YbkzCg-Zdiw",
+          "youtubeId": "WVTOhljfHt4",
+          "youtubeVariants": [
+            {
+              "youtubeId": "WVTOhljfHt4",
+              "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/WVTOhljfHt4?si=gU5Vk-ccjWtJ_apr\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>",
+              "label": "Versione brano"
+            },
+            {
+              "youtubeId": "-9jFPY-sif4",
+              "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/-9jFPY-sif4?si=-vj-2nHum3e0fp1j\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>",
+              "label": "Live Musicultura"
+            }
+          ],
           "note": "Il brano con cui Daniela Pes ha conquistato Musicultura nel 2018: fonetica arcaica in gallurese antico ispirata alle poesie di Don Gavino Pes, fusa con un'elettronica sciamanica ipnotica."
         },
         {

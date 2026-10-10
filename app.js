@@ -206,6 +206,7 @@ function setupLyricsDrawer() {
         document.body.classList.add("lyrics-drawer-open");
         playerPaper?.classList.add("lyrics-drawer-open");
       }
+      updateCaptionMarquee();
     } else {
       elements.playerLyricsDrawer.hidden = true;
       elements.btnOpenLyrics.classList.remove("is-active");
@@ -213,10 +214,13 @@ function setupLyricsDrawer() {
       playerPaper?.classList.remove("has-lyrics-open");
       document.body.classList.remove("lyrics-drawer-open");
       playerPaper?.classList.remove("lyrics-drawer-open");
+      updateCaptionMarquee();
     }
   };
 
   elements.btnOpenLyrics.addEventListener("click", () => toggleLyrics());
+
+  window.addEventListener("resize", updateCaptionMarquee, { passive: true });
 
   document.addEventListener("keydown", event => {
     if (event.key === "Escape" && !elements.playerLyricsDrawer.hidden) {
@@ -377,20 +381,42 @@ function setPlaybackQueue(tracks, label, index = 0) {
   updatePlaybackQueueUi();
 }
 
+function updateCaptionMarquee() {
+  const wrap = document.querySelector(".caption-marquee-wrap");
+  const content = document.querySelector(".caption-marquee-content");
+  if (!wrap || !content) return;
+  requestAnimationFrame(() => {
+    wrap.classList.toggle("is-marquee", content.scrollWidth > wrap.clientWidth + 4);
+  });
+}
+
 function updatePlaybackQueueUi() {
   if (!playbackQueue.length) return;
-  const position = `${String(playbackQueueIndex + 1).padStart(2, "0")} / ${String(playbackQueue.length).padStart(2, "0")}`;
-  elements.playerQueuePosition.querySelector(".queue-position-count").textContent = position;
-  elements.playerQueuePosition.querySelector(".queue-position-label").textContent = ` · ${playbackQueueLabel}`;
-
-  const shortNum = String(playbackQueueIndex + 1).padStart(2, "0");
+  const num = String(playbackQueueIndex + 1).padStart(2, "0");
+  const total = String(playbackQueue.length).padStart(2, "0");
   const shortQueueLabel = playbackQueueLabel.replace(/^La\s+/i, "");
-  elements.playerQueuePositionMobile.querySelector(".queue-position-count").textContent = shortNum;
-  elements.playerQueuePositionMobile.querySelector(".queue-position-label").textContent = ` · ${shortQueueLabel}`;
+
+  if (elements.playerQueuePosition) {
+    elements.playerQueuePosition.innerHTML = `
+      <span class="queue-position-count">
+        <span class="queue-num">${num}</span><span class="queue-total"> / ${total}</span>
+      </span>
+      <span class="queue-position-label">
+        · <span class="queue-label-full">${escapeHtml(playbackQueueLabel)}</span><span class="queue-label-short">${escapeHtml(shortQueueLabel)}</span>
+      </span>`;
+  }
+
+  if (elements.playerQueuePositionMobile) {
+    const countEl = elements.playerQueuePositionMobile.querySelector(".queue-position-count");
+    if (countEl) countEl.textContent = num;
+    const labelEl = elements.playerQueuePositionMobile.querySelector(".queue-position-label");
+    if (labelEl) labelEl.textContent = ` · ${shortQueueLabel}`;
+  }
 
   setMiniPlayerTitle(activeVideoTrack?.title || playbackQueueLabel);
-  [elements.playerPrevious, elements.miniPlayerPrevious].forEach(button => { button.disabled = playbackQueueIndex === 0; });
-  [elements.playerNext, elements.miniPlayerNext].forEach(button => { button.disabled = playbackQueueIndex >= playbackQueue.length - 1; });
+  updateCaptionMarquee();
+  [elements.playerPrevious, elements.miniPlayerPrevious].forEach(button => { if (button) button.disabled = playbackQueueIndex === 0; });
+  [elements.playerNext, elements.miniPlayerNext].forEach(button => { if (button) button.disabled = playbackQueueIndex >= playbackQueue.length - 1; });
 }
 
 function playQueueTrack(index, autoplay = true) {
@@ -436,6 +462,7 @@ function loadTrack(track, autoplay) {
         if (/album/i.test(label)) return "Album";
         if (/live/i.test(label)) return "Live";
         if (/session/i.test(label)) return "Session";
+        if (/brano|studio/i.test(label)) return "Studio";
         return label.length > 7 ? label.slice(0, 6) + "…" : label;
       };
 
@@ -480,7 +507,7 @@ function loadTrack(track, autoplay) {
       elements.btnOpenLyrics.classList.remove("is-active");
       elements.btnOpenLyrics.setAttribute("aria-expanded", "false");
       document.body.classList.remove("lyrics-drawer-open");
-      document.querySelector(".player-paper")?.classList.remove("lyrics-drawer-open");
+      document.querySelector(".player-paper")?.classList.remove("lyrics-drawer-open", "has-lyrics-open");
     } else if (hasLyrics && !elements.playerLyricsDrawer.hidden) {
       renderActiveLyrics();
     }
@@ -547,7 +574,7 @@ function loadTrack(track, autoplay) {
     loadPendingYoutubeTrack();
   } else {
     const embedUrl = new URL(`https://www.youtube.com/embed/${encodeURIComponent(track.youtubeId)}`);
-    const embedParams = new URLSearchParams({ autoplay: autoplay ? "1" : "0", playsinline: "1", rel: "0", enablejsapi: "1" });
+    const embedParams = new URLSearchParams({ autoplay: autoplay ? "1" : "0", playsinline: "1", rel: "0", enablejsapi: "1", modestbranding: "1", iv_load_policy: "3" });
     if (window.location.origin !== "null") embedParams.set("origin", window.location.origin);
     embedUrl.search = embedParams.toString();
     elements.ytVideoPlayerIframe.src = embedUrl.toString();
@@ -574,7 +601,7 @@ function ensureYouTubeApi() {
 function initializeYouTubePlayer() {
   if (!pendingYoutubeTrack || !window.YT?.Player) return;
   const { autoplay } = pendingYoutubeTrack;
-  const playerVars = { playsinline: 1, rel: 0, enablejsapi: 1 };
+  const playerVars = { playsinline: 1, rel: 0, enablejsapi: 1, modestbranding: 1, iv_load_policy: 3 };
   if (window.location.origin !== "null") playerVars.origin = window.location.origin;
   youtubePlayer = new window.YT.Player(elements.ytVideoPlayerIframe, {
     playerVars,
@@ -690,6 +717,31 @@ function setupMobileWelcome() {
   showMobileLetter = openLetter;
   canShowProgLetter = () => isMobile() && !progLetterSeen;
 
+  const handleDismissDesktopLetter = (letterCard, reopenBtn) => {
+    const dismissBtn = letterCard.querySelector(".btn-letter-dismiss");
+    dismissBtn?.classList.add("is-animating");
+    letterCard.classList.add("is-folding");
+
+    setTimeout(() => {
+      letterCard.classList.add("is-collapsed");
+      letterCard.classList.remove("is-folding");
+      dismissBtn?.classList.remove("is-animating");
+      reopenBtn.classList.add("is-visible-desktop");
+      reopenBtn.classList.remove("letter-reopen-pop");
+      void reopenBtn.offsetWidth;
+      reopenBtn.classList.add("letter-reopen-pop");
+    }, 320);
+  };
+
+  const handleReopenDesktopLetter = (targetCard, reopenBtn) => {
+    reopenBtn.classList.remove("is-visible-desktop");
+    targetCard.classList.remove("is-collapsed");
+    targetCard.classList.add("is-folding");
+    void targetCard.offsetWidth;
+    targetCard.classList.remove("is-folding");
+    targetCard.scrollIntoView({ behavior: "smooth", block: "nearest" });
+  };
+
   const handleReopenClick = kind => {
     if (isMobile()) {
       openLetter(kind);
@@ -699,9 +751,7 @@ function setupMobileWelcome() {
         : document.getElementById("introLetterLista");
       const reopenBtn = kind === "prog" ? reopenProg : reopenList;
       if (targetCard) {
-        targetCard.classList.remove("is-collapsed");
-        reopenBtn.classList.remove("is-visible-desktop");
-        targetCard.scrollIntoView({ behavior: "smooth", block: "nearest" });
+        handleReopenDesktopLetter(targetCard, reopenBtn);
       }
     }
   };
@@ -710,10 +760,9 @@ function setupMobileWelcome() {
     btn.addEventListener("click", event => {
       const letterCard = event.currentTarget.closest(".intro-letter");
       if (!letterCard) return;
-      letterCard.classList.add("is-collapsed");
       const isProg = letterCard.id === "introLetterProg";
       const reopenBtn = isProg ? reopenProg : reopenList;
-      reopenBtn.classList.add("is-visible-desktop");
+      handleDismissDesktopLetter(letterCard, reopenBtn);
     });
   });
 
@@ -794,6 +843,154 @@ function updateMiniPlayerVisibility() {
   if (!wasActive && shouldShow) updateMiniPlayerTitleMarquee();
 }
 
+let activeWaveCard = null;
+let activeWaveCanvas = null;
+let activeWaveCtx = null;
+let waveAnimFrameId = null;
+let waveStartTimestamp = 0;
+let waveStartPulse = 0;
+
+function startCardWaveVisualizer(cardElement) {
+  if (!cardElement) return;
+  if (activeWaveCard === cardElement && waveAnimFrameId) return;
+  stopCardWaveVisualizer();
+
+  activeWaveCard = cardElement;
+  let canvas = cardElement.querySelector(".track-card-wave-canvas");
+  if (!canvas) {
+    canvas = document.createElement("canvas");
+    canvas.className = "track-card-wave-canvas";
+    cardElement.prepend(canvas);
+  }
+  activeWaveCanvas = canvas;
+  activeWaveCtx = canvas.getContext("2d");
+  waveStartTimestamp = performance.now();
+  waveStartPulse = 1.0;
+
+  function resize() {
+    if (!activeWaveCanvas || !activeWaveCard) return;
+    const rect = activeWaveCard.getBoundingClientRect();
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    const w = Math.round(rect.width * dpr);
+    const h = Math.round(rect.height * dpr);
+    if (activeWaveCanvas.width !== w || activeWaveCanvas.height !== h) {
+      activeWaveCanvas.width = w;
+      activeWaveCanvas.height = h;
+    }
+  }
+  resize();
+
+  const bpm = 112;
+  const beatSec = 60 / bpm;
+
+  function render(now) {
+    if (!activeWaveCanvas || !activeWaveCtx || !activeWaveCard) return;
+    resize();
+    const ctx = activeWaveCtx;
+    const width = activeWaveCanvas.width;
+    const height = activeWaveCanvas.height;
+
+    if (width === 0 || height === 0) {
+      waveAnimFrameId = requestAnimationFrame(render);
+      return;
+    }
+
+    const t = (now - waveStartTimestamp) / 1000;
+
+    ctx.clearRect(0, 0, width, height);
+
+    // Soft radiant background glow
+    const baseGrad = ctx.createLinearGradient(0, 0, width, 0);
+    baseGrad.addColorStop(0, "rgba(255, 255, 255, 0.16)");
+    baseGrad.addColorStop(0.5, "rgba(255, 252, 245, 0.26)");
+    baseGrad.addColorStop(1, "rgba(255, 255, 255, 0.12)");
+    ctx.fillStyle = baseGrad;
+    ctx.fillRect(0, 0, width, height);
+
+    // Layer 1: Silky Fluid Body (Gentle undulating liquid fill)
+    ctx.save();
+    ctx.beginPath();
+    const midY1 = height * 0.52;
+    const amp1 = height * 0.22;
+
+    ctx.moveTo(0, height);
+    for (let x = 0; x <= width; x += 4) {
+      const normX = x / width;
+      const y = midY1 +
+        Math.sin(normX * Math.PI * 2.2 - t * 1.3) * amp1 +
+        Math.sin(normX * Math.PI * 3.8 + t * 0.8) * (amp1 * 0.28);
+      ctx.lineTo(x, y);
+    }
+    ctx.lineTo(width, height);
+    ctx.closePath();
+
+    const fillGrad1 = ctx.createLinearGradient(0, 0, 0, height);
+    fillGrad1.addColorStop(0, "rgba(255, 255, 255, 0.42)");
+    fillGrad1.addColorStop(0.5, "rgba(255, 252, 242, 0.22)");
+    fillGrad1.addColorStop(1, "rgba(255, 255, 255, 0.04)");
+    ctx.fillStyle = fillGrad1;
+    ctx.fill();
+    ctx.restore();
+
+    // Layer 2: Delicate Glowing Sine Crest (Clean luminous line)
+    ctx.save();
+    ctx.beginPath();
+    const midY2 = height * 0.48;
+    const amp2 = height * 0.18;
+
+    for (let x = 0; x <= width; x += 3) {
+      const normX = x / width;
+      const y = midY2 +
+        Math.sin(normX * Math.PI * 2.8 - t * 1.5) * amp2 +
+        Math.cos(normX * Math.PI * 1.6 + t * 0.9) * (amp2 * 0.25);
+      if (x === 0) ctx.moveTo(x, y);
+      else ctx.lineTo(x, y);
+    }
+    ctx.strokeStyle = "rgba(255, 255, 255, 0.78)";
+    ctx.lineWidth = 1.6 * Math.min(window.devicePixelRatio || 1, 2);
+    ctx.shadowColor = "rgba(255, 255, 255, 0.8)";
+    ctx.shadowBlur = 6;
+    ctx.stroke();
+    ctx.restore();
+
+    // Layer 3: Secondary Subtle Counter Ripple
+    ctx.save();
+    ctx.beginPath();
+    const midY3 = height * 0.56;
+    const amp3 = height * 0.14;
+
+    for (let x = 0; x <= width; x += 4) {
+      const normX = x / width;
+      const y = midY3 +
+        Math.sin(normX * Math.PI * 2.4 + t * 1.1) * amp3 +
+        Math.sin(normX * Math.PI * 4.6 - t * 1.6) * (amp3 * 0.2);
+      if (x === 0) ctx.moveTo(x, y);
+      else ctx.lineTo(x, y);
+    }
+    ctx.strokeStyle = "rgba(255, 248, 230, 0.45)";
+    ctx.lineWidth = 1.0 * Math.min(window.devicePixelRatio || 1, 2);
+    ctx.stroke();
+    ctx.restore();
+
+    waveAnimFrameId = requestAnimationFrame(render);
+  }
+
+  waveAnimFrameId = requestAnimationFrame(render);
+}
+
+function stopCardWaveVisualizer() {
+  if (waveAnimFrameId) {
+    cancelAnimationFrame(waveAnimFrameId);
+    waveAnimFrameId = null;
+  }
+  if (activeWaveCanvas) {
+    activeWaveCanvas.remove();
+    activeWaveCanvas = null;
+    activeWaveCtx = null;
+  }
+  activeWaveCard = null;
+}
+
 function setMiniPlayerPlaying(playing) {
   [elements.miniPlayerToggle, elements.playerToggle].forEach(button => {
     button?.classList.toggle("is-playing", playing);
@@ -806,10 +1003,18 @@ function setMiniPlayerPlaying(playing) {
     button.classList.toggle("is-playing", isPlaying);
     if (isCurrent) button.setAttribute("aria-label", `${isPlaying ? "In riproduzione" : "Riproduci"} ${activeVideoTrack.title}`);
   });
+  let playingCard = null;
   document.querySelectorAll(".track-master-card").forEach(card => {
     const isCurrent = Boolean(activeVideoTrack && (card.dataset.id === activeVideoTrack.id || activeVideoTrack.id.startsWith(`${card.dataset.id}-alt-`)));
-    card.classList.toggle("is-playing", isCurrent && playing);
+    const cardIsPlaying = Boolean(isCurrent && playing);
+    card.classList.toggle("is-playing", cardIsPlaying);
+    if (cardIsPlaying) playingCard = card;
   });
+  if (playingCard) {
+    startCardWaveVisualizer(playingCard);
+  } else {
+    stopCardWaveVisualizer();
+  }
 }
 
 function setMiniPlayerTitle(title) {
