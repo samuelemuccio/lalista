@@ -86,7 +86,12 @@ const elements = {
   mobileAltModalClose: document.getElementById("mobileAltModalClose"),
   mobileAltDragPill: document.getElementById("mobileAltDragPill"),
   mobileAltModalTitle: document.getElementById("mobileAltModalTitle"),
-  mobileAltModalList: document.getElementById("mobileAltModalList")
+  mobileAltModalList: document.getElementById("mobileAltModalList"),
+  btnAdTips: document.getElementById("btnAdTips"),
+  adTipsModal: document.getElementById("adTipsModal"),
+  adTipsBackdrop: document.getElementById("adTipsBackdrop"),
+  adTipsCloseBtn: document.getElementById("adTipsCloseBtn"),
+  adTipsConfirmBtn: document.getElementById("adTipsConfirmBtn")
 };
 
 let youtubePlayer = null;
@@ -124,6 +129,7 @@ document.addEventListener("DOMContentLoaded", () => {
   setupBackgroundMediaSession();
   setupImageLightbox();
   setupHonorableElasticAccordion();
+  setupAdTipsModal();
   setupKeyboardShortcuts();
 
   window.addEventListener("beforeunload", () => savePlaybackSession());
@@ -447,7 +453,7 @@ function setupLyricsDrawer() {
           updateCaptionMarquee();
           requestAnimationFrame(() => positionVariantSliderThumb(false));
           setTimeout(() => positionVariantSliderThumb(false), 260);
-        }, 360);
+        }, 500);
         return;
       }
       elements.playerLyricsDrawer.hidden = true;
@@ -2075,6 +2081,9 @@ function loadTrack(track, autoplay) {
   elements.playerSearchLink.hidden = true;
   elements.playerEmptyState.hidden = true;
   elements.ytVideoPlayerIframe.hidden = false;
+  elements.ytVideoPlayerIframe.removeAttribute("credentialless");
+  elements.ytVideoPlayerIframe.setAttribute("referrerpolicy", "strict-origin-when-cross-origin");
+  sanitizePlayerEnvironment();
   elements.btnDirectYt.href = `https://www.youtube.com/watch?v=${encodeURIComponent(track.youtubeId)}`;
   elements.btnDirectYt.hidden = false;
   updateMediaSession(track, Boolean(autoplay));
@@ -2083,7 +2092,17 @@ function loadTrack(track, autoplay) {
     loadPendingYoutubeTrack();
   } else {
     const embedUrl = new URL(`https://www.youtube-nocookie.com/embed/${encodeURIComponent(track.youtubeId)}`);
-    const embedParams = new URLSearchParams({ autoplay: autoplay ? "1" : "0", playsinline: "1", rel: "0", enablejsapi: "1", modestbranding: "1", iv_load_policy: "3" });
+    const embedParams = new URLSearchParams({
+      autoplay: autoplay ? "1" : "0",
+      playsinline: "1",
+      rel: "0",
+      enablejsapi: "1",
+      modestbranding: "1",
+      iv_load_policy: "3",
+      controls: "1",
+      disablekb: "0",
+      fs: "1"
+    });
     if (savedResumeSeconds > 0) embedParams.set("start", String(savedResumeSeconds));
     if (window.location.origin !== "null") embedParams.set("origin", window.location.origin);
     embedUrl.search = embedParams.toString();
@@ -2092,6 +2111,15 @@ function loadTrack(track, autoplay) {
     ensureYouTubeApi();
   }
   savePlaybackSession();
+}
+
+function sanitizePlayerEnvironment() {
+  try {
+    for (let i = sessionStorage.length - 1; i >= 0; i--) {
+      const k = sessionStorage.key(i);
+      if (k && /yt|youtube|google/i.test(k)) sessionStorage.removeItem(k);
+    }
+  } catch (e) {}
 }
 
 function ensureYouTubeApi() {
@@ -2112,7 +2140,16 @@ function ensureYouTubeApi() {
 function initializeYouTubePlayer() {
   if (!pendingYoutubeTrack || !window.YT?.Player) return;
   const { autoplay } = pendingYoutubeTrack;
-  const playerVars = { playsinline: 1, rel: 0, enablejsapi: 1, modestbranding: 1, iv_load_policy: 3 };
+  const playerVars = {
+    playsinline: 1,
+    rel: 0,
+    enablejsapi: 1,
+    modestbranding: 1,
+    iv_load_policy: 3,
+    controls: 1,
+    disablekb: 0,
+    fs: 1
+  };
   if (window.location.origin !== "null") playerVars.origin = window.location.origin;
   youtubePlayer = new window.YT.Player(elements.ytVideoPlayerIframe, {
     host: "https://www.youtube-nocookie.com",
@@ -2213,6 +2250,33 @@ function setupMobileMiniPlayer() {
   updateMiniPlayerVisibility();
 }
 
+function setupAdTipsModal() {
+  if (!elements.btnAdTips || !elements.adTipsModal) return;
+
+  function openAdTips() {
+    elements.adTipsModal.hidden = false;
+    elements.btnAdTips.setAttribute("aria-expanded", "true");
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeAdTips() {
+    elements.adTipsModal.hidden = true;
+    elements.btnAdTips.setAttribute("aria-expanded", "false");
+    document.body.style.overflow = "";
+  }
+
+  elements.btnAdTips.addEventListener("click", openAdTips);
+  elements.adTipsCloseBtn?.addEventListener("click", closeAdTips);
+  elements.adTipsConfirmBtn?.addEventListener("click", closeAdTips);
+  elements.adTipsBackdrop?.addEventListener("click", closeAdTips);
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && !elements.adTipsModal.hidden) {
+      closeAdTips();
+    }
+  });
+}
+
 function setupMobileWelcome() {
   const dialog = document.getElementById("mobileWelcomeDialog");
   const copy = document.getElementById("mobileWelcomeCopy");
@@ -2227,7 +2291,7 @@ function setupMobileWelcome() {
   let currentKind = "lista";
   const alreadySeenProgLetter = localStorage.getItem("ari_prog_letter_seen") === "true";
   let progLetterSeen = alreadySeenProgLetter;
-  const alreadySeenLetter = localStorage.getItem("ari_letter_seen") === "true" || Boolean(localStorage.getItem("ari_playback_session"));
+  const alreadySeenLetter = localStorage.getItem("ari_letter_seen") === "true";
   let listLetterSeen = alreadySeenLetter;
   if (alreadySeenLetter) {
     reopenList.hidden = false;

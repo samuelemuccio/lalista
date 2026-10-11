@@ -19,6 +19,13 @@
       <button class="collection-tab is-active" type="button" data-target="panelLista" aria-pressed="true">La Lista <span>13</span></button>
       <button class="collection-tab" type="button" data-target="panelProg" aria-pressed="false">Prog <span>12</span></button>
     </nav>
+    <button id="btnAdTips" class="header-noads-btn" type="button" aria-haspopup="dialog" aria-expanded="false" title="Consigli per bloccare le pubblicità">
+      <svg class="noads-shield-icon" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+        <path d="m9 12 2 2 4-4"/>
+      </svg>
+      <span>No ads</span>
+    </button>
     <div id="mobileMiniPlayer" class="mobile-mini-player" hidden>
       <button id="miniPlayerScrollTop" class="mini-player-action-top" type="button" aria-label="Torna in cima" title="Torna in cima"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m18 15-6-6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
       <button id="miniPlayerExpand" class="mini-player-track" type="button" aria-label="Torna al video in ascolto">
@@ -147,8 +154,11 @@
         <div class="video-window">
           <iframe id="ytVideoPlayerIframe" title="Video YouTube del brano selezionato" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen hidden></iframe>
           <a id="btnDirectYt" class="video-yt-overlay-badge" href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" aria-label="Apri il brano su YouTube" title="Apri su YouTube ↗" hidden>
-            <svg class="youtube-mark" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4l6.2 3.6-6.2 3.6Z"/></svg>
-            <svg class="external-mark" viewBox="0 0 16 16" aria-hidden="true"><path d="M5 3h8v8M13 3 6 10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <svg class="youtube-mark" viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="#FF0000" d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814z"/>
+              <polygon fill="#FFFFFF" points="9.545,15.568 15.818,12 9.545,8.432"/>
+            </svg>
+            <svg class="external-mark" viewBox="0 0 16 16" aria-hidden="true"><path d="M5 3h8v8M13 3 6 10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
           <div id="playerEmptyState" class="player-empty-state"><span class="empty-sun" aria-hidden="true">✳</span><p id="playerEmptyMessage">Scegli un brano dalla lista.</p><a id="playerSearchLink" href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" hidden>Cerca questo brano su YouTube ↗</a></div>
         </div>
@@ -344,6 +354,38 @@
         </button>
       </div>
       <div id="mobileAltModalList" class="mobile-alt-list"></div>
+    </div>
+  </div>
+
+  <!-- Modal Consiglio Ascolto Senza Pubblicità (Ari) -->
+  <div id="adTipsModal" class="ad-tips-modal" hidden role="dialog" aria-modal="true" aria-labelledby="adTipsTitle">
+    <div id="adTipsBackdrop" class="ad-tips-backdrop"></div>
+    <div class="ad-tips-card">
+      <button id="adTipsCloseBtn" class="ad-tips-close-btn" type="button" aria-label="Chiudi consiglio" title="Chiudi">
+        <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+      </button>
+      <div class="ad-tips-head">
+        <div class="ad-tips-icon-wrap" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+        </div>
+        <div>
+          <h3 id="adTipsTitle" class="ad-tips-title">Troppe pubblicità?</h3>
+          <p class="ad-tips-subtitle">Due consigli rapidi se YouTube le spara durante i brani</p>
+        </div>
+      </div>
+      <div class="ad-tips-body">
+        <div class="ad-tip-item">
+          <span class="ad-tip-badge">📱 Da Telefono</span>
+          <p>Apri questo link con l'app del browser <strong>Opera</strong> (o <strong>Brave</strong>): hanno l'<strong>AdBlock gratuito già integrato</strong> nelle impostazioni, quindi bloccano tutte le pubblicità prima che partano.</p>
+        </div>
+        <div class="ad-tip-item">
+          <span class="ad-tip-badge">💻 Da Computer</span>
+          <p>Usa una qualsiasi estensione AdBlock (come <strong>uBlock Origin</strong> o <strong>AdBlock</strong>) nel tuo browser, oppure apri la pagina in modalità <strong>Incognito</strong>.</p>
+        </div>
+      </div>
+      <div class="ad-tips-actions">
+        <button id="adTipsConfirmBtn" class="ad-tips-confirm-btn" type="button">Chiudi</button>
+      </div>
     </div>
   </div>
 
