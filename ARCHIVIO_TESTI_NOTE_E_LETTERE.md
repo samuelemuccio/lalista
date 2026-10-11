@@ -3274,101 +3274,9 @@ Just gimme all your love
 
 ---
 
-### 03. IDLES — *War*
+### 03. The Smiths — *I Know It’s Over*
 
 - **ID**: hon-03
-- **Album**: Ultra Mono
-- **YouTube ID**: BLcM3fq6Quk (https://www.youtube.com/watch?v=BLcM3fq6Quk)
-
-<details>
-<summary><strong>Testo del brano</strong> (clicca per espandere)</summary>
-
-```text
-Wa-ching
-That's the sound of the sword going in
-Clack-clack, clack-a-clang clang
-That's the sound of the gun going bang-bang
-Tukka-tuk, tuk, tuk, tuk-tukka
-That's the sound of the drone button pusher
-Shh, shh, shh
-That's the sound of the children taker
-Ah (ah)
-Ah (ah)
-Ah (ah)
-Ah (ah)
-This means war
-Anti-war
-War
-This means war
-Anti-war
-Anti-war
-Send Sally to the sandbox, baby
-Send Johnny in to open fire
-Send Sally to the sandbox, baby
-We're dying for the stone-faced lies
-Send Johnny to the sandbox, baby
-Send Sally into open fire
-Send Johnny to the sandbox, baby
-We're dying for the stone-faced lies
-We're all going straight to hell
-```
-</details>
-
-#### Brani alternativi di questa traccia:
-
-##### 1. IDLES — *Grounds*
-
-- **ID Alternativa**: hon-03-alt-0
-- **Album**: Ultra Mono
-- **YouTube ID**: mRkUt9VnaR0 (https://www.youtube.com/watch?v=mRkUt9VnaR0)
-
-<details>
-<summary><strong>Testo alternativo</strong> (clicca per espandere)</summary>
-
-```text
-You will not catch me staring at the sun
-Not sucking on a dum dum
-Not turning round to run
-No Hallelujahs and no kingdom comes
-So you will not catch me staring at the sun
-Do you hear that thunder?
-That's the sound of strength in numbers
-Fee fee fi fi fo fo fum
-I smell the blood of a million sons
-A million daughters from a hundred thousand guns
-Not taught by our teachers
-On our curriculum
-Do you hear that thunder?
-That's the sound of strength in numbers
-I am I
-Unify (hey)
-Not a single thing has ever been mended
-By you standing there and saying you're offended
-Go ahead, tell them what I've intended
-I'll say what I mean, do what I love
-And fucking send it
-Do you hear that thunder?
-That's the sound of strength in numbers
-There's nothing brave and nothing useful
-You scrawling your aggro shit on the walls of the cubicle
-Saying my race and class ain't suitable
-So I raise my pink fist and say black is beautiful
-Do you hear that thunder?
-That's the sound of strength in numbers
-I am I
-Unify
-I am I
-Unify, unify, unify
-Do you hear that thunder?
-```
-</details>
-
-
----
-
-### 04. The Smiths — *I Know It’s Over*
-
-- **ID**: hon-04
 - **Album**: The Queen Is Dead
 - **YouTube ID**: M6o1SEj02t0 (https://www.youtube.com/watch?v=M6o1SEj02t0)
 
@@ -3447,9 +3355,9 @@ Oh mother, I can feel the soil falling over my head
 
 ---
 
-### 05. Tyler, The Creator — *Like Him*
+### 04. Tyler, The Creator — *Like Him*
 
-- **ID**: hon-05
+- **ID**: hon-04
 - **Album**: CHROMAKOPIA
 - **YouTube ID**: Z0CQf3JDKAY (https://www.youtube.com/watch?v=Z0CQf3JDKAY)
 
@@ -3526,7 +3434,7 @@ Just, you know, forgive me
 
 ##### 1. Tyler, The Creator — *Darling, I*
 
-- **ID Alternativa**: hon-05-alt-0
+- **ID Alternativa**: hon-04-alt-0
 - **Album**: CALL ME IF YOU GET LOST
 - **YouTube ID**: kZfz5UlsHlQ (https://www.youtube.com/watch?v=kZfz5UlsHlQ)
 
@@ -3617,9 +3525,9 @@ Transparency is key, be honest
 
 ---
 
-### 06. Caparezza — *Perlificat*
+### 05. Caparezza — *Perlificat*
 
-- **ID**: hon-06
+- **ID**: hon-05
 - **Album**: Orbit Orbit
 - **YouTube ID**: Kga8ZLXxXTE (https://www.youtube.com/watch?v=Kga8ZLXxXTE)
 
@@ -3698,7 +3606,7 @@ Perlifica
 
 ##### 1. Caparezza — *Cosmonaufrago*
 
-- **ID Alternativa**: hon-06-alt-0
+- **ID Alternativa**: hon-05-alt-0
 - **Album**: Orbit Orbit
 - **YouTube ID**: 7AjMvdNrDqs (https://www.youtube.com/watch?v=7AjMvdNrDqs)
 
@@ -3765,9 +3673,9 @@ Come Søren Kierkegaard, sento la vertigine
 
 ---
 
-### 07. Depeche Mode — *Painkiller*
+### 06. Depeche Mode — *Painkiller*
 
-- **ID**: hon-07
+- **ID**: hon-06
 - **Album**: Ultra
 - **YouTube ID**: kMH__kOxvbY (https://www.youtube.com/watch?v=kMH__kOxvbY)
 
@@ -3785,9 +3693,9 @@ Una traccia strumentale scura, ipnotica e industriale. Caratterizzata da sequenz
 
 ---
 
-### 08. MACE, Altea — *SOLO UN UOMO*
+### 07. MACE, Altea — *SOLO UN UOMO*
 
-- **ID**: hon-08
+- **ID**: hon-07
 - **Album**: MĀYĀ
 - **YouTube ID**: _iwFej_m_qQ (https://www.youtube.com/watch?v=_iwFej_m_qQ)
 
@@ -3836,7 +3744,7 @@ Sei
 
 ##### 1. Venerus, MACE — *Luci*
 
-- **ID Alternativa**: hon-08-alt-0
+- **ID Alternativa**: hon-07-alt-0
 - **Album**: Magica Musica
 - **YouTube ID**: C3FxEgbFD1w (https://www.youtube.com/watch?v=C3FxEgbFD1w)
 **Nota alternativa**:
@@ -3882,9 +3790,9 @@ Se mi pensi forte, io ti sento da qui
 
 ---
 
-### 09. Jeff Buckley — *So Real*
+### 08. Jeff Buckley — *So Real*
 
-- **ID**: hon-09
+- **ID**: hon-08
 - **Album**: Grace
 - **YouTube ID**: EcaxrqhUJ4c (https://www.youtube.com/watch?v=EcaxrqhUJ4c)
 
@@ -3930,9 +3838,9 @@ Oh, that was so real
 
 ---
 
-### 10. Kendrick Lamar — *i*
+### 09. Kendrick Lamar — *i*
 
-- **ID**: hon-10
+- **ID**: hon-09
 - **Album**: To Pimp a Butterfly
 - **YouTube ID**: 8aShfolR6w8 (https://www.youtube.com/watch?v=8aShfolR6w8)
 
@@ -4032,7 +3940,7 @@ Give myself again 'til the well runs dry (i)
 
 ##### 1. Kendrick Lamar — *The Blacker The Berry*
 
-- **ID Alternativa**: hon-10-alt-0
+- **ID Alternativa**: hon-09-alt-0
 - **Album**: To Pimp a Butterfly
 - **YouTube ID**: VdPtVZDspIY (https://www.youtube.com/watch?v=VdPtVZDspIY)
 
@@ -4147,9 +4055,9 @@ Hypocrite!
 
 ---
 
-### 11. Tame Impala — *No Choice*
+### 10. Tame Impala — *No Choice*
 
-- **ID**: hon-11
+- **ID**: hon-10
 - **Album**: No Choice - Single
 - **YouTube ID**: gM7qKOKotyI (https://www.youtube.com/watch?v=gM7qKOKotyI)
 
@@ -4198,7 +4106,7 @@ What are we living for?
 
 ##### 1. Tame Impala — *Apocalypse Dreams*
 
-- **ID Alternativa**: hon-11-alt-0
+- **ID Alternativa**: hon-10-alt-0
 - **Album**: Lonerism
 - **YouTube ID**: DmmvZrBnQ4M (https://www.youtube.com/watch?v=DmmvZrBnQ4M)
 
@@ -4254,9 +4162,9 @@ But she'll just be excited
 
 ---
 
-### 12. Eugenio Bennato — *Sponda sud*
+### 11. Eugenio Bennato — *Sponda sud*
 
-- **ID**: hon-12
+- **ID**: hon-11
 - **Album**: Sponda sud
 - **YouTube ID**: kT_UFug82g4 (https://www.youtube.com/watch?v=kT_UFug82g4)
 
@@ -4349,9 +4257,9 @@ Per una sponda sud da scoprire ancora
 
 ---
 
-### 13. Kanye West, Rick Ross — *Devil in a New Dress*
+### 12. Kanye West, Rick Ross — *Devil in a New Dress*
 
-- **ID**: hon-13
+- **ID**: hon-12
 - **Album**: My Beautiful Dark Twisted Fantasy
 - **YouTube ID**: 2joLWbdEf6Y (https://www.youtube.com/watch?v=2joLWbdEf6Y)
 
@@ -4454,9 +4362,9 @@ Catching feelings never stumble, retracing my steps
 
 ---
 
-### 14. Killer Mike, Mozzy, Lena Byrd Miles — *SHED TEARS*
+### 13. Killer Mike, Mozzy, Lena Byrd Miles — *SHED TEARS*
 
-- **ID**: hon-14
+- **ID**: hon-13
 - **Album**: MICHAEL
 - **YouTube ID**: 1WEXSVk9qDQ (https://www.youtube.com/watch?v=1WEXSVk9qDQ)
 
@@ -4567,9 +4475,9 @@ I'll give you rest, rest for your soul
 
 ---
 
-### 15. Joy Division — *Love Will Tear Us Apart*
+### 14. Joy Division — *Love Will Tear Us Apart*
 
-- **ID**: hon-15
+- **ID**: hon-14
 - **Album**: Love Will Tear Us Apart
 - **YouTube ID**: 674KGKRQBPE (https://www.youtube.com/watch?v=674KGKRQBPE)
 
@@ -4608,9 +4516,9 @@ Love, love will tear us apart again
 
 ---
 
-### 16. Greentea Peng — *Nah It Ain't The Same*
+### 15. Greentea Peng — *Nah It Ain't The Same*
 
-- **ID**: hon-16
+- **ID**: hon-15
 - **Album**: MAN MADE
 - **YouTube ID**: 5CzNP_sKWK4 (https://www.youtube.com/watch?v=5CzNP_sKWK4)
 

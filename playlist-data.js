@@ -45,7 +45,7 @@ const TRACK_DATA = {
           "youtubeId": "IwyjxAWsUtM"
         }
       ],
-      "note": "Quest'album in generale è stato una svolta totale, nessuno si aspettava da Lil Yachty un cambio di rotta del genere, tutto suonato con strumenti veri e psichedelia pura. La voce celestiale di Diana Gordon poi è la ciliegina sulla torta."
+      "note": "Quest'album in generale è stato una svolta totale, nessuno si aspettava da Lil Yachty un cambio di rotta del genere, super psichedelico. La voce celestiale di Diana Gordon poi è la ciliegina sulla torta."
     },
     {
       "id": "top-03",
@@ -99,7 +99,7 @@ const TRACK_DATA = {
       "title": "Walk of Fame",
       "album": "Something Beautiful",
       "youtubeId": "JX2GkxNT-IQ",
-      "note": "Ha una voce allucinante, lontanissima dal pop di plastica. Tutto l'album è da ascoltare perché ha una cura nei dettagli e un gusto molto chic, clamoroso.",
+      "note": "Ha una voce allucinante, lontanissima dal pop di plastica. Tutto l'album è da ascoltare perché ha una cura nei dettagli e un gusto molto chic glam, clamoroso.",
       "alternatives": [
         {
           "artist": "Miley Cyrus",
@@ -154,7 +154,7 @@ const TRACK_DATA = {
       "title": "Stella di mare",
       "album": "Lucio Dalla",
       "youtubeId": "Jq2tcDNeSC8",
-      "note": "Dio mio quanto è figa questa canzone."
+      "note": "Dio mio quanto è bella questa canzone."
     },
     {
       "id": "top-09",
@@ -164,7 +164,7 @@ const TRACK_DATA = {
       "title": "Oscar Winning Tears. (Live at The Royal Albert Hall)",
       "album": "My 21st Century Symphony.",
       "youtubeId": "BtdBQ1-fzXM",
-      "note": "Una prova vocale e orchestrale monumentale al Royal Albert Hall con The Heritage Orchestra, una fusione travolgente di soul viscerale, jazz orchestrale e pathos cinematografico. Un'artista pura che dal vivo lascia senza fiato. Gli inglesi ci sanno fare!",
+      "note": "Una prova vocale e orchestrale monumentale alla Royal Albert Hall con The Heritage Orchestra, puro pathos cinematografico. Penso che ascoltarla dal vivo sia assurdo.",
       "alternatives": [
         {
           "artist": "RAYE, The Heritage Orchestra",
@@ -213,7 +213,7 @@ const TRACK_DATA = {
       "title": "You and Whose Army?",
       "album": "Amnesiac",
       "youtubeId": "QQnc-hM80UQ",
-      "note": "Registrato con Thom Yorke che canta letteralmente appiccicato al microfono su un pianoforte intimo e cupo. Spero che prima o poi possano piacerti i Radiohead.",
+      "note": "Registrato con Thom Yorke che canta letteralmente appiccicato al microfono su un pianoforte intimo e cupo. Spero che prima o poi possano piacerti i Radiohead. Io amo Amnesiac e Kid A, tant'è che ho il vinile con entrambi gli album insieme: non credo esista qualcosa di simile al mondo.",
       "alternatives": [
         {
           "artist": "Radiohead",
@@ -296,7 +296,7 @@ const TRACK_DATA = {
       "title": "From the Beginning",
       "album": "Trilogy",
       "youtubeId": "0Yryg8sc6pE",
-      "note": "<p>In studio Greg Lake incise due tracce sovrapposte di chitarra per dare quel suono pieno e avvolgente, mentre dal vivo non potendosi sdoppiare suonava la sua leggendaria <strong>Ovation Pacemaker 12-String (Model 1615)</strong>.</p><p>Tra l'altro Greg Lake era anche la voce e il basso dei primissimi King Crimson, nei capolavori <em>In the Court of the Crimson King</em> e <em>In the Wake of Poseidon</em>.</p><p>Un'altra perla totale degli ELP è l'album <strong>Brain Salad Surgery</strong> (1973), un disco incredibile con brani assurdi come <em>Benny the Bouncer</em> o la suite <em>Karn Evil 9</em>. La copertina storica fu dipinta dal maestro svizzero <strong>H.R. Giger</strong> ed è il manifesto assoluto dell'estetica <strong>Biomeccanica</strong>, una fusione tra anatomia organica, ossa, cavi e ingranaggi alieni.</p><p>È esattamente lo stesso artista geniale che pochi anni dopo creò il design iconico e lo Xenomorfo di <strong>Alien</strong> (1979) di Ridley Scott vincendo l'Oscar, un immaginario che ha segnato la storia del cinema e ha ispirato decenni dopo anche videogiochi come <strong>Scorn</strong>. Da citare assolutamente anche <em>Tarkus</em> con la sua celebre creatura corazzata a metà tra istrice e carro armato!</p><div class=\"popover-gallery-section\"><div class=\"popover-gallery-header\"><span class=\"gallery-header-title\">Galleria visiva</span></div><div class=\"popover-gallery-grid\"><div class=\"popover-gallery-item\" data-zoom-src=\"ovation-pacemaker-12-string.png\" data-zoom-caption=\"Ovation Pacemaker 12-String (Model 1615) di Greg Lake\"><div class=\"popover-img-wrap\"><img src=\"ovation-pacemaker-12-string.png\" alt=\"Ovation Pacemaker 12-String (Model 1615)\" class=\"popover-gear-img popover-gear-png\"><button class=\"btn-image-expand\" type=\"button\" aria-label=\"Ingrandisci Ovation 12-String\" title=\"Ingrandisci immagine\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></button></div><span class=\"popover-gear-caption\">Ovation 12-String di Greg Lake</span></div><div class=\"popover-gallery-item\" data-zoom-src=\"elp-brain-salad-surgery.jpg\" data-zoom-caption=\"Brain Salad Surgery (1973), copertina dipinta da H.R. Giger\"><div class=\"popover-img-wrap\"><img src=\"elp-brain-salad-surgery.jpg\" alt=\"Cover Brain Salad Surgery di H.R. Giger\" class=\"popover-gear-img\"><button class=\"btn-image-expand\" type=\"button\" aria-label=\"Ingrandisci cover Brain Salad Surgery\" title=\"Ingrandisci immagine\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></button></div><span class=\"popover-gear-caption\">Brain Salad Surgery (Cover H.R. Giger)</span></div><div class=\"popover-gallery-item\" data-zoom-src=\"hr-giger-alien-art.webp\" data-zoom-caption=\"H.R. Giger con le sculture biomeccaniche di Alien (1979)\"><div class=\"popover-img-wrap\"><img src=\"hr-giger-alien-art.webp\" alt=\"H.R. Giger e l'estetica di Alien\" class=\"popover-gear-img\"><button class=\"btn-image-expand\" type=\"button\" aria-label=\"Ingrandisci H.R. Giger e Alien\" title=\"Ingrandisci immagine\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></button></div><span class=\"popover-gear-caption\">H.R. Giger e l'estetica di Alien</span></div></div></div><div class=\"popover-scorn-feature\"><div class=\"scorn-feature-head\"><span class=\"scorn-feature-tag\">Videogioco ispirato all'arte di H.R. Giger</span><strong class=\"scorn-feature-title\">Scorn — Trailer Ufficiale</strong></div><div class=\"scorn-video-player-wrap\"><iframe src=\"https://www.youtube.com/embed/muXiufO9dXg\" title=\"Scorn Trailer Ufficiale\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen loading=\"lazy\"></iframe></div><span class=\"scorn-feature-caption\">Un videogioco interamente costruito attorno all'immaginario biomeccanico e organico di Giger.</span></div>",
+      "note": "<p>In studio Greg Lake incise due tracce sovrapposte di chitarra per dare quel suono pieno e avvolgente, mentre dal vivo non potendosi sdoppiare suonava la sua leggendaria <strong>Ovation Pacemaker 12-String (Model 1615)</strong>.</p><p>Tra l'altro Greg Lake era anche la voce e il basso dei primissimi King Crimson, nei capolavori <em>In the Court of the Crimson King</em> e <em>In the Wake of Poseidon</em>.</p><p>Un'altra perla totale degli ELP è l'album <strong>Brain Salad Surgery</strong> (1973), un disco incredibile con brani assurdi come <em>Benny the Bouncer</em> o la suite <em>Karn Evil 9</em>. La copertina storica fu dipinta dal maestro svizzero <strong>H.R. Giger</strong> ed è il manifesto assoluto dell'estetica <strong>Biomeccanica</strong>, una fusione tra anatomia organica, ossa, cavi e ingranaggi alieni.</p><p>È esattamente lo stesso artista geniale che pochi anni dopo creò il design iconico e lo Xenomorfo di <strong>Alien</strong> (1979) di Ridley Scott vincendo l'Oscar, un immaginario che ha segnato la storia del cinema e ha ispirato decenni dopo anche videogiochi come <strong>Scorn</strong> (gioco fighissimo). Da citare assolutamente anche <em>Tarkus</em> con la sua celebre creatura corazzata a metà tra istrice e carro armato.</p><div class=\"popover-gallery-section\"><div class=\"popover-gallery-header\"><span class=\"gallery-header-title\">Galleria visiva</span></div><div class=\"popover-gallery-grid\"><div class=\"popover-gallery-item\" data-zoom-src=\"ovation-pacemaker-12-string.png\" data-zoom-caption=\"Ovation Pacemaker 12-String (Model 1615) di Greg Lake\"><div class=\"popover-img-wrap\"><img src=\"ovation-pacemaker-12-string.png\" alt=\"Ovation Pacemaker 12-String (Model 1615)\" class=\"popover-gear-img popover-gear-png\"><button class=\"btn-image-expand\" type=\"button\" aria-label=\"Ingrandisci Ovation 12-String\" title=\"Ingrandisci immagine\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></button></div><span class=\"popover-gear-caption\">Ovation 12-String di Greg Lake</span></div><div class=\"popover-gallery-item\" data-zoom-src=\"elp-brain-salad-surgery.jpg\" data-zoom-caption=\"Brain Salad Surgery (1973), copertina dipinta da H.R. Giger\"><div class=\"popover-img-wrap\"><img src=\"elp-brain-salad-surgery.jpg\" alt=\"Cover Brain Salad Surgery di H.R. Giger\" class=\"popover-gear-img\"><button class=\"btn-image-expand\" type=\"button\" aria-label=\"Ingrandisci cover Brain Salad Surgery\" title=\"Ingrandisci immagine\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></button></div><span class=\"popover-gear-caption\">Brain Salad Surgery (Cover H.R. Giger)</span></div><div class=\"popover-gallery-item\" data-zoom-src=\"hr-giger-alien-art.webp\" data-zoom-caption=\"H.R. Giger con le sculture biomeccaniche di Alien (1979)\"><div class=\"popover-img-wrap\"><img src=\"hr-giger-alien-art.webp\" alt=\"H.R. Giger e l'estetica di Alien\" class=\"popover-gear-img\"><button class=\"btn-image-expand\" type=\"button\" aria-label=\"Ingrandisci H.R. Giger e Alien\" title=\"Ingrandisci immagine\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></button></div><span class=\"popover-gear-caption\">H.R. Giger e l'estetica di Alien</span></div></div></div><div class=\"popover-scorn-feature\"><div class=\"scorn-feature-head\"><span class=\"scorn-feature-tag\">Videogioco ispirato all'arte di H.R. Giger</span><strong class=\"scorn-feature-title\">Scorn — Trailer Ufficiale</strong></div><div class=\"scorn-video-player-wrap\"><iframe src=\"https://www.youtube.com/embed/muXiufO9dXg\" title=\"Scorn Trailer Ufficiale\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen loading=\"lazy\"></iframe></div><span class=\"scorn-feature-caption\">Un videogioco interamente costruito attorno all'immaginario biomeccanico e organico di Giger.</span></div>",
       "alternatives": [
         {
           "artist": "Emerson, Lake & Palmer",
@@ -315,7 +315,7 @@ const TRACK_DATA = {
       "title": "Impressioni di Settembre",
       "album": "Storia di un minuto",
       "youtubeId": "DS76YKxiOKU",
-      "note": "<p>Il sintetizzatore <strong>Moog</strong> in Italia fu introdotto proprio con questa canzone, per incidere quel leggendario riff si fecero prestare il primissimo prototipo <em>Minimoog</em> arrivato nel nostro Paese.</p><p>Fu un suono assurdo, mai sentito prima in Italia, che rivoluzionò completamente il modo di fare musica e fece esplodere l'intera stagione del progressive rock nostrano.</p><p class='note-anecdote'><em>(E pensa che mio nonno, ispirato proprio da loro, portò un synth dall'America per suonarlo in Sicilia quando nessuno sapeva manco cosa fosse).</em></p>",
+      "note": "<p>Il sintetizzatore <strong>Moog</strong> in Italia fu introdotto proprio con questa canzone, per incidere quel leggendario riff si fecero prestare il primissimo prototipo <em>Minimoog</em> arrivato nel nostro Paese.</p><p>Fu un suono assurdo, mai sentito prima in Italia, che rivoluzionò completamente il modo di fare musica e fece esplodere l'intera stagione del progressive rock nostrano.</p><p><p class='note-anecdote'><em>(E pensa che mio nonno, ispirato proprio da loro, portò un synth dall'America per suonarlo in Sicilia quando nessuno sapeva manco cosa fosse).</em></p></p>",
       "youtubeVariants": [
         {
           "youtubeId": "DS76YKxiOKU",
@@ -364,7 +364,7 @@ const TRACK_DATA = {
       "title": "Ladies of the Road",
       "album": "Islands",
       "youtubeId": "sckkHW487y0",
-      "note": "Da <em>Islands</em> (1971), con cori e armonie vocali che ricordano tantissimo i Beatles e un sax sporco blues pazzesco, a lei piacciono i Beatles quindi questa è perfetta. Nelle alternative trovi anche la poesia di <strong>Matte Kudasai</strong>, <strong>Fallen Angel</strong> da <em>Red</em>, e <strong>Peoria</strong> registrata grezza dal vivo.",
+      "note": "Da <em>Islands</em> (1971), con cori e armonie vocali che ricordano tantissimo i Beatles e un sax sporco blues pazzesco. Nelle alternative trovi anche la poesia di <strong>Matte Kudasai</strong>, <strong>Fallen Angel</strong> da <em>Red</em>, e <strong>Peoria</strong> registrata grezza dal vivo.",
       "alternatives": [
         {
           "artist": "King Crimson",
@@ -390,7 +390,7 @@ const TRACK_DATA = {
           "title": "Fallen Angel (Elemental Mix)",
           "album": "Red",
           "youtubeId": "StJ35MJxDaI",
-          "note": "Da <strong>Red</strong>, uno dei loro dischi più monumentali, adoro il contrasto tra la parte melodica e le chitarre abrasive."
+          "note": "Da <strong>Red</strong>, uno dei loro dischi più monumentali, adoro il contrasto tra la parte melodica e le chitarre abrasive. Ma anche perché <em>Starless</em> la conoscevi già, ti consiglio di ascoltarti le versioni live dei loro album, che secondo me sono ancora meglio delle versioni in studio, e anche l'Elemental Mix uscita di recente, che cambia di molto il mixaggio dei brani."
         },
         {
           "artist": "King Crimson",
@@ -467,7 +467,7 @@ const TRACK_DATA = {
       "title": "Have A Cigar",
       "album": "Wish You Were Here",
       "youtubeId": "Eq8ZiZ9xiLw",
-      "note": "Questa forse la conosci già, è un funk-prog caustico e tagliente che prende in giro le case discografiche («Which one's Pink?»). Nelle alternative c'è la suite monumentale di <strong>Atom Heart Mother</strong>, 23 minuti orchestrali da ascoltare con calma in cuffia, un viaggio unico.",
+      "note": "Questa forse la conosci già, è un funk-prog caustico e tagliente che prende in giro le case discografiche («Which one's Pink?»). Nelle alternative c'è la suite monumentale di <strong>Atom Heart Mother</strong>, 23 minuti orchestrali da ascoltare con calma in cuffia, un viaggio unico da ascoltare solo una volta l'anno.",
       "alternatives": [
         {
           "artist": "Pink Floyd",
@@ -531,7 +531,7 @@ const TRACK_DATA = {
       "title": "Planet Caravan",
       "album": "Paranoid",
       "youtubeId": "W6sVXK9o0Ys",
-      "note": "La gemma psichedelica e sognante dei Black Sabbath, congas ipnotiche, pianoforte jazzato, chitarra pulitissima e la voce di Ozzy Osbourne filtrata. Un proto-prog notturno favoloso."
+      "note": "La gemma psichedelica e sognante dei Black Sabbath: congas ipnotiche, pianoforte jazzato, chitarra pulitissima e la voce di Ozzy Osbourne filtrata. Un proto-prog notturno favoloso. Probabilmente la conosci già, ma ci tenevo a metterla."
     }
   ],
   "honorable": [
@@ -585,33 +585,15 @@ const TRACK_DATA = {
       "id": "hon-03",
       "num": "03",
       "arc": "honorable",
-      "artist": "IDLES",
-      "title": "War",
-      "album": "Ultra Mono",
-      "youtubeId": "BLcM3fq6Quk",
-      "alternatives": [
-        {
-          "artist": "IDLES",
-          "title": "Grounds",
-          "album": "Ultra Mono",
-          "youtubeId": "mRkUt9VnaR0"
-        }
-      ]
-    },
-    {
-      "id": "hon-04",
-      "num": "04",
-      "arc": "honorable",
       "artist": "The Smiths",
       "title": "I Know It’s Over",
       "album": "The Queen Is Dead",
       "youtubeId": "M6o1SEj02t0"
     },
     {
-      "id": "hon-05",
-      "num": "05",
+      "id": "hon-04",
+      "num": "04",
       "arc": "honorable",
-      "genre": "rap",
       "artist": "Tyler, The Creator",
       "title": "Like Him",
       "album": "CHROMAKOPIA",
@@ -627,10 +609,9 @@ const TRACK_DATA = {
       ]
     },
     {
-      "id": "hon-06",
-      "num": "06",
+      "id": "hon-05",
+      "num": "05",
       "arc": "honorable",
-      "genre": "rap",
       "artist": "Caparezza",
       "title": "Perlificat",
       "album": "Orbit Orbit",
@@ -646,8 +627,8 @@ const TRACK_DATA = {
       ]
     },
     {
-      "id": "hon-07",
-      "num": "07",
+      "id": "hon-06",
+      "num": "06",
       "arc": "honorable",
       "artist": "Depeche Mode",
       "title": "Painkiller",
@@ -655,8 +636,8 @@ const TRACK_DATA = {
       "youtubeId": "kMH__kOxvbY"
     },
     {
-      "id": "hon-08",
-      "num": "08",
+      "id": "hon-07",
+      "num": "07",
       "arc": "honorable",
       "artist": "MACE, Altea",
       "title": "SOLO UN UOMO",
@@ -673,8 +654,8 @@ const TRACK_DATA = {
       ]
     },
     {
-      "id": "hon-09",
-      "num": "09",
+      "id": "hon-08",
+      "num": "08",
       "arc": "honorable",
       "artist": "Jeff Buckley",
       "title": "So Real",
@@ -682,10 +663,9 @@ const TRACK_DATA = {
       "youtubeId": "EcaxrqhUJ4c"
     },
     {
-      "id": "hon-10",
-      "num": "10",
+      "id": "hon-09",
+      "num": "09",
       "arc": "honorable",
-      "genre": "rap",
       "artist": "Kendrick Lamar",
       "title": "i",
       "album": "To Pimp a Butterfly",
@@ -700,8 +680,8 @@ const TRACK_DATA = {
       ]
     },
     {
-      "id": "hon-11",
-      "num": "11",
+      "id": "hon-10",
+      "num": "10",
       "arc": "honorable",
       "artist": "Tame Impala",
       "title": "No Choice",
@@ -717,8 +697,8 @@ const TRACK_DATA = {
       ]
     },
     {
-      "id": "hon-12",
-      "num": "12",
+      "id": "hon-11",
+      "num": "11",
       "arc": "honorable",
       "artist": "Eugenio Bennato",
       "title": "Sponda sud",
@@ -726,10 +706,9 @@ const TRACK_DATA = {
       "youtubeId": "kT_UFug82g4"
     },
     {
-      "id": "hon-13",
-      "num": "13",
+      "id": "hon-12",
+      "num": "12",
       "arc": "honorable",
-      "genre": "rap",
       "artist": "Kanye West, Rick Ross",
       "title": "Devil in a New Dress",
       "album": "My Beautiful Dark Twisted Fantasy",
@@ -737,19 +716,18 @@ const TRACK_DATA = {
       "note": "Un capolavoro assoluto con il sample soul di Smokey Robinson, la chitarra leggendaria di Mike Dean e una delle strofe più iconiche della storia dell'hip-hop firmata Rick Ross."
     },
     {
-      "id": "hon-14",
-      "num": "14",
+      "id": "hon-13",
+      "num": "13",
       "arc": "honorable",
-      "genre": "rap",
       "artist": "Killer Mike, Mozzy, Lena Byrd Miles",
       "title": "SHED TEARS",
       "album": "MICHAEL",
       "youtubeId": "1WEXSVk9qDQ",
-      "note": "Una figata incredibile dall'album MICHAEL (vincitore di 3 Grammy nel 2024)."
+      "note": "Una figata incredibile dall'album <em>MICHAEL</em> (vincitore di 3 Grammy nel 2024)."
     },
     {
-      "id": "hon-15",
-      "num": "15",
+      "id": "hon-14",
+      "num": "14",
       "arc": "honorable",
       "artist": "Joy Division",
       "title": "Love Will Tear Us Apart",
@@ -758,8 +736,8 @@ const TRACK_DATA = {
       "note": "Uno dei miei brani preferiti in assoluto della vita. La leggendaria linea di basso melodica di Peter Hook, il riff di synth e la voce profonda e struggente di Ian Curtis. Capolavoro eterno."
     },
     {
-      "id": "hon-16",
-      "num": "16",
+      "id": "hon-15",
+      "num": "15",
       "arc": "honorable",
       "artist": "Greentea Peng",
       "title": "Nah It Ain't The Same",

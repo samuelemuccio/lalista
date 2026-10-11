@@ -59,11 +59,34 @@ const elements = {
   cinemaBadgeText: document.getElementById("cinemaBadgeText"),
   btnCinemaToggleLyrics: document.getElementById("btnCinemaToggleLyrics"),
   cinemaToggleLyricsLabel: document.getElementById("cinemaToggleLyricsLabel"),
+  cinemaVariantButton: document.getElementById("cinemaVariantButton"),
+  cinemaVariantLabel: document.getElementById("cinemaVariantLabel"),
   btnCinemaClose: document.getElementById("btnCinemaClose"),
   cinemaTrackTitle: document.getElementById("cinemaTrackTitle"),
   cinemaTrackArtist: document.getElementById("cinemaTrackArtist"),
   mobileLyricsCloseBtn: document.getElementById("mobileLyricsCloseBtn"),
-  mobileLyricsTrackTitle: document.getElementById("mobileLyricsTrackTitle")
+  mobileLyricsTrackTitle: document.getElementById("mobileLyricsTrackTitle"),
+  cinemaAltContainer: document.getElementById("cinemaAltContainer"),
+  btnCinemaAlt: document.getElementById("btnCinemaAlt"),
+  cinemaAltBadge: document.getElementById("cinemaAltBadge"),
+  cinemaAltDropdown: document.getElementById("cinemaAltDropdown"),
+  btnCinemaNote: document.getElementById("btnCinemaNote"),
+  cinemaNotePopup: document.getElementById("cinemaNotePopup"),
+  cinemaNotePopupTitle: document.getElementById("cinemaNotePopupTitle"),
+  cinemaNotePopupBody: document.getElementById("cinemaNotePopupBody"),
+  cinemaNotePopupClose: document.getElementById("cinemaNotePopupClose"),
+  cinemaNotePopupExpand: document.getElementById("cinemaNotePopupExpand"),
+  playerAltContainer: document.getElementById("playerAltContainer"),
+  playerAltDropdown: document.getElementById("playerAltDropdown"),
+  mobileAltTransportBtn: document.getElementById("mobileAltTransportBtn"),
+  mobileAltCount: document.getElementById("mobileAltCount"),
+  mobileLyricsNoteBtn: document.getElementById("mobileLyricsNoteBtn"),
+  mobileAltModal: document.getElementById("mobileAltModal"),
+  mobileAltModalBackdrop: document.getElementById("mobileAltModalBackdrop"),
+  mobileAltModalClose: document.getElementById("mobileAltModalClose"),
+  mobileAltDragPill: document.getElementById("mobileAltDragPill"),
+  mobileAltModalTitle: document.getElementById("mobileAltModalTitle"),
+  mobileAltModalList: document.getElementById("mobileAltModalList")
 };
 
 let youtubePlayer = null;
@@ -107,9 +130,26 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("pagehide", () => savePlaybackSession());
 });
 
+const NOTE_ICON_CONCENTRIC_SVG = `<svg class="note-concentric-icon" viewBox="0 0 24 24" aria-hidden="true"><circle class="note-outer-circle" cx="12" cy="12" r="11"/><circle class="note-inner-circle" cx="12" cy="12" r="8.8" fill="none" stroke-width="1.3"/><g class="note-asterisk-glyph" transform="matrix(0.0425 0 0 0.0425 5.68 2.38)" fill="currentColor"><g transform="translate(0 9)" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M166.1 69.5c.2 11.2-.4 23.5.4 36" stroke-width="19"/><path d="M123.6 91.1c12.8 4.4 28.7 10.2 42.9 14.4" stroke-width="17"/><path d="M207.6 91.5c-12.2 4.8-27.1 10.2-41.1 14" stroke-width="18.5"/><path d="M139.8 135.4c7.8-9.7 17.7-21.1 26.7-29.9" stroke-width="19.5"/><path d="M194.2 135c-8.1-9.4-18.4-20.8-27.7-29.5" stroke-width="18"/></g><path d="M103.8 209.4c16.2-8.3 38.1-17.5 54.5-19.5 9.8-1.2 16.7 2.8 19.8 10.1 2.5 5.8.4 15.1-2.1 24.3l-27 101.5c-2.7 10.4-1.6 18.4 4.5 22 7.8 4.6 19.1-.2 30-7.1l9.4-6.1c3.2-2.1 5.6-1.7 7.5 1.3 1.7 2.7 1.5 5-.8 7.1-16.6 15.1-36.4 27.2-59.3 30.5-21.1 3-36.4-5.4-37.4-23.9-.3-7.7 1-15.5 3.2-24.1l23.3-89.7c2.2-8.5 2.3-15.3-1.8-19.1-4.4-4-12.5-2.5-25.6 2.6l-5.7 2.2c-2.8 1.1-5 .3-6-2.2-1.2-2.7-.5-4.7 2.1-6.2z"/></g></svg>`;
+
+function getAltWaveBgHtml() {
+  return `
+    <div class="alt-item-waves" aria-hidden="true">
+      <svg class="alt-wave-svg wave-back" viewBox="0 0 1200 60" preserveAspectRatio="none">
+        <path d="M0,32 Q75,14 150,32 T300,32 T450,32 T600,32 T750,32 T900,32 T1050,32 T1200,32 L1200,60 L0,60 Z" />
+      </svg>
+      <svg class="alt-wave-svg wave-mid" viewBox="0 0 1200 60" preserveAspectRatio="none">
+        <path d="M0,28 Q75,44 150,28 T300,28 T450,28 T600,28 T750,28 T900,28 T1050,28 T1200,28" fill="none" />
+      </svg>
+      <svg class="alt-wave-svg wave-front" viewBox="0 0 1200 60" preserveAspectRatio="none">
+        <path d="M0,22 Q75,8 150,22 T300,22 T450,22 T600,22 T750,22 T900,22 T1050,22 T1200,22" fill="none" />
+      </svg>
+    </div>`;
+}
+
 function renderNoteButton(title, note) {
   if (!note) return "";
-  return `<button class="btn-track-note" type="button" aria-label="Informazioni su ${escapeHtml(title)}" title="Informazioni" data-title="${escapeHtml(title)}" data-note="${escapeHtml(note)}"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="7.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M10 9v5m0-8h.01" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button>`;
+  return `<button class="btn-track-note" type="button" aria-label="Note su ${escapeHtml(title)}" title="Note" data-title="${escapeHtml(title)}" data-note="${escapeHtml(note)}">${NOTE_ICON_CONCENTRIC_SVG}</button>`;
 }
 
 function showNotePopover(button, title, note) {
@@ -127,7 +167,17 @@ function showNotePopover(button, title, note) {
     popoverClosingTimer = null;
   }
 
+  if (currentNoteTrigger && currentNoteTrigger !== button) {
+    currentNoteTrigger.classList.remove("is-active", "is-note-open");
+    currentNoteTrigger.setAttribute("aria-expanded", "false");
+  }
+
   currentNoteTrigger = button;
+  if (button) {
+    button.classList.add("is-active", "is-note-open");
+    button.setAttribute("aria-expanded", "true");
+  }
+
   openPopoverScrollY = window.scrollY;
   popBody.innerHTML = note;
   popBody.scrollTop = 0;
@@ -139,9 +189,13 @@ function showNotePopover(button, title, note) {
   const isLargeNote = note.includes("popover-gallery") || note.includes("popover-scorn-feature");
   popover.classList.toggle("is-large-note", isLargeNote);
 
+  const isInsideAltModal = !!button.closest("#mobileAltModal");
+  popover.classList.toggle("is-above-alt-modal", isInsideAltModal);
+
   const backdrop = document.getElementById("noteGlobalBackdrop");
   if (backdrop) {
-    if (isLargeNote && window.innerWidth <= 640) {
+    backdrop.classList.toggle("is-above-alt-modal", isInsideAltModal);
+    if (isInsideAltModal || (isLargeNote && window.innerWidth <= 640)) {
       backdrop.hidden = false;
       requestAnimationFrame(() => backdrop.classList.add("is-visible"));
     } else {
@@ -151,9 +205,11 @@ function showNotePopover(button, title, note) {
   }
 
   const maxW = isLargeNote ? 480 : 310;
-  const popoverWidth = Math.min(maxW, window.innerWidth - 24);
-  popover.style.width = `${popoverWidth}px`;
+  const maxAllowed = Math.min(maxW, window.innerWidth - 24);
+  popover.style.width = "auto";
+  popover.style.maxWidth = `${maxAllowed}px`;
 
+  const popoverWidth = Math.max(140, Math.min(maxAllowed, popover.offsetWidth || 160));
   let left = rect.left;
   if (left + popoverWidth > window.innerWidth - 12) {
     left = window.innerWidth - popoverWidth - 12;
@@ -180,19 +236,29 @@ function showNotePopover(button, title, note) {
 function hideNotePopover() {
   const popover = document.getElementById("noteGlobalPopover");
   if (!popover || popover.hidden || popover.classList.contains("is-closing")) return;
+
+  if (currentNoteTrigger) {
+    currentNoteTrigger.classList.remove("is-active", "is-note-open");
+    currentNoteTrigger.setAttribute("aria-expanded", "false");
+  }
+
   popover.classList.remove("is-visible");
   popover.classList.add("is-closing");
 
   const backdrop = document.getElementById("noteGlobalBackdrop");
   if (backdrop && !backdrop.hidden) {
     backdrop.classList.remove("is-visible");
-    setTimeout(() => { backdrop.hidden = true; }, 160);
+    setTimeout(() => {
+      backdrop.hidden = true;
+      backdrop.classList.remove("is-above-alt-modal");
+    }, 160);
   }
 
   popoverClosingTimer = setTimeout(() => {
     popover.hidden = true;
     popover.classList.remove("is-closing");
     popover.classList.remove("is-large-note");
+    popover.classList.remove("is-above-alt-modal");
     currentNoteTrigger = null;
     popoverClosingTimer = null;
   }, 160);
@@ -228,7 +294,16 @@ function setupNotePopoverDismissal() {
   document.addEventListener("click", event => {
     const modal = document.getElementById("imageLightboxModal");
     if (modal && !modal.hidden) return;
-    if (currentNoteTrigger && !event.target.closest("#noteGlobalPopover") && !event.target.closest(".btn-track-note") && !event.target.closest(".btn-inline-popover") && !event.target.closest("#imageLightboxModal")) {
+    if (currentNoteTrigger &&
+        !event.target.closest("#noteGlobalPopover") &&
+        !event.target.closest(".btn-track-note") &&
+        !event.target.closest(".btn-inline-popover") &&
+        !event.target.closest("#imageLightboxModal") &&
+        !event.target.closest("#btnCinemaNote") &&
+        !event.target.closest("#mobileLyricsNoteBtn") &&
+        !event.target.closest(".mobile-alt-note-btn") &&
+        !event.target.closest(".player-alt-item-note-btn") &&
+        !event.target.closest(".cinema-alt-item-note-btn")) {
       hideNotePopover();
     }
   });
@@ -307,10 +382,21 @@ function setLyricsContent(container, lyricsText) {
   }
 }
 
+function getTrackLyrics(trackId) {
+  if (!trackId || typeof LYRICS_DATA === "undefined") return "";
+  let lyrics = "";
+  if (Object.prototype.hasOwnProperty.call(LYRICS_DATA, trackId)) {
+    lyrics = LYRICS_DATA[trackId];
+  } else {
+    lyrics = LYRICS_DATA[trackId.split("-alt-")[0]] || "";
+  }
+  if (!lyrics || lyrics.trim().startsWith("[Strumentale")) return "";
+  return lyrics;
+}
+
 function renderActiveLyrics() {
   if (!activeVideoTrack || !elements.lyricsDrawerBody) return;
-  const trackId = activeVideoTrack.id;
-  const lyrics = (typeof LYRICS_DATA !== "undefined" && (LYRICS_DATA[trackId] || LYRICS_DATA[trackId.split('-alt-')[0]])) || "";
+  const lyrics = getTrackLyrics(activeVideoTrack.id);
   setLyricsContent(elements.lyricsDrawerBody, lyrics);
   elements.lyricsDrawerBody.scrollTop = 0;
 }
@@ -322,8 +408,7 @@ function setupLyricsDrawer() {
 
   const toggleLyrics = (force) => {
     if (!activeVideoTrack) return;
-    const trackId = activeVideoTrack.id;
-    const lyrics = (typeof LYRICS_DATA !== "undefined" && (LYRICS_DATA[trackId] || LYRICS_DATA[trackId.split('-alt-')[0]])) || "";
+    const lyrics = getTrackLyrics(activeVideoTrack.id);
     if (!lyrics) return;
 
     const isOpen = typeof force === "boolean" ? force : elements.playerLyricsDrawer.hidden;
@@ -341,22 +426,28 @@ function setupLyricsDrawer() {
       }
       if (window.innerWidth <= 720) {
         document.body.classList.add("mobile-lyrics-open");
+        updateMobileLyricsControls(activeVideoTrack);
       }
       updateCaptionMarquee();
+      requestAnimationFrame(() => positionVariantSliderThumb(false));
+      setTimeout(() => positionVariantSliderThumb(false), 260);
     } else {
       if (playerPaper?.classList.contains("has-lyrics-open") && window.innerWidth <= 720) {
         playerPaper.classList.add("is-closing-lyrics");
+        document.body.classList.add("is-closing-mobile-lyrics");
         setTimeout(() => {
           playerPaper.classList.remove("is-closing-lyrics", "has-lyrics-open");
+          document.body.classList.remove("is-closing-mobile-lyrics", "mobile-lyrics-open");
           elements.playerLyricsDrawer.hidden = true;
           elements.btnOpenLyrics.classList.remove("is-active");
           elements.btnOpenLyrics.setAttribute("aria-expanded", "false");
           if (elements.mobileLyricsCloseBtn) {
             elements.mobileLyricsCloseBtn.hidden = true;
           }
-          document.body.classList.remove("mobile-lyrics-open");
           updateCaptionMarquee();
-        }, 160);
+          requestAnimationFrame(() => positionVariantSliderThumb(false));
+          setTimeout(() => positionVariantSliderThumb(false), 260);
+        }, 360);
         return;
       }
       elements.playerLyricsDrawer.hidden = true;
@@ -368,11 +459,50 @@ function setupLyricsDrawer() {
       }
       document.body.classList.remove("mobile-lyrics-open");
       updateCaptionMarquee();
+      requestAnimationFrame(() => positionVariantSliderThumb(false));
+      setTimeout(() => positionVariantSliderThumb(false), 260);
     }
   };
 
   elements.btnOpenLyrics.addEventListener("click", () => toggleLyrics());
   elements.mobileLyricsCloseBtn?.addEventListener("click", () => toggleLyrics(false));
+  elements.mobileAltTransportBtn?.addEventListener("click", (e) => {
+    e.stopPropagation();
+    if (window.innerWidth > 720) {
+      if (elements.playerAltDropdown) {
+        const willOpen = elements.playerAltDropdown.hidden;
+        elements.playerAltDropdown.hidden = !willOpen;
+        elements.mobileAltTransportBtn.setAttribute("aria-expanded", String(willOpen));
+        document.querySelector(".player-paper")?.classList.toggle("has-alt-open", willOpen);
+      }
+    } else {
+      if (elements.playerAltDropdown) {
+        elements.playerAltDropdown.hidden = true;
+        document.querySelector(".player-paper")?.classList.remove("has-alt-open");
+      }
+      openMobileAltModal();
+    }
+  });
+  elements.mobileLyricsNoteBtn?.addEventListener("click", (e) => {
+    e.stopPropagation();
+    const fam = getTrackFamily(activeVideoTrack);
+    if (fam?.hasNote) {
+      showNotePopover(e.currentTarget, activeVideoTrack.title, fam.currentNote);
+    }
+  });
+  elements.mobileAltModalClose?.addEventListener("click", closeMobileAltModal);
+  elements.mobileAltDragPill?.addEventListener("click", closeMobileAltModal);
+  elements.mobileAltModalBackdrop?.addEventListener("click", closeMobileAltModal);
+
+  document.addEventListener("click", (e) => {
+    if (elements.playerAltDropdown && !elements.playerAltDropdown.hidden) {
+      if (!elements.playerAltContainer?.contains(e.target)) {
+        elements.playerAltDropdown.hidden = true;
+        elements.mobileAltTransportBtn?.setAttribute("aria-expanded", "false");
+        document.querySelector(".player-paper")?.classList.remove("has-alt-open");
+      }
+    }
+  });
 
   window.addEventListener("resize", () => {
     if (window.innerWidth > 720) {
@@ -381,11 +511,18 @@ function setupLyricsDrawer() {
       document.body.classList.add("mobile-lyrics-open");
     }
     updateCaptionMarquee();
+    updateCinemaMarquee();
   }, { passive: true });
 
   document.addEventListener("keydown", event => {
-    if (event.key === "Escape" && !elements.playerLyricsDrawer.hidden && !document.body.classList.contains("cinema-mode-active")) {
-      toggleLyrics(false);
+    if (event.key === "Escape") {
+      if (elements.playerAltDropdown && !elements.playerAltDropdown.hidden) {
+        elements.playerAltDropdown.hidden = true;
+        elements.mobileAltTransportBtn?.setAttribute("aria-expanded", "false");
+      }
+      if (!elements.playerLyricsDrawer.hidden && !document.body.classList.contains("cinema-mode-active")) {
+        toggleLyrics(false);
+      }
     }
   });
 }
@@ -471,6 +608,466 @@ function setupHonorableElasticAccordion() {
   });
 }
 
+let cinemaNoteTimer = null;
+let lastAutoOpenedNoteFamilyId = null;
+
+function showCinemaNotePopup(title, note, isAutoOpen = false) {
+  if (!elements.cinemaNotePopup || !elements.cinemaNotePopupTitle || !elements.cinemaNotePopupBody) return;
+  if (!note) {
+    hideCinemaNotePopup();
+    return;
+  }
+
+  elements.cinemaNotePopupTitle.textContent = title;
+  elements.cinemaNotePopupBody.innerHTML = note;
+  elements.cinemaNotePopup.hidden = false;
+  elements.cinemaNotePopup.classList.remove("is-leaving");
+  elements.btnCinemaNote?.classList.add("is-note-open", "is-active");
+  elements.btnCinemaNote?.setAttribute("aria-expanded", "true");
+  if (isAutoOpen) {
+    elements.btnCinemaNote?.classList.add("has-unread-note");
+  }
+
+  if (cinemaNoteTimer) {
+    clearTimeout(cinemaNoteTimer);
+    cinemaNoteTimer = null;
+  }
+}
+
+function hideCinemaNotePopup() {
+  if (cinemaNoteTimer) clearTimeout(cinemaNoteTimer);
+  cinemaNoteTimer = null;
+  elements.btnCinemaNote?.classList.remove("is-note-open", "is-active", "has-unread-note");
+  elements.btnCinemaNote?.setAttribute("aria-expanded", "false");
+  if (elements.cinemaNotePopup && !elements.cinemaNotePopup.hidden) {
+    elements.cinemaNotePopup.classList.add("is-leaving");
+    setTimeout(() => {
+      elements.cinemaNotePopup.hidden = true;
+      elements.cinemaNotePopup.classList.remove("is-leaving");
+    }, 240);
+  }
+}
+
+function updateCinemaTrackControls(track) {
+  if (!track) {
+    if (elements.cinemaAltContainer) elements.cinemaAltContainer.hidden = true;
+    if (elements.cinemaVariantButton) elements.cinemaVariantButton.hidden = true;
+    if (elements.btnCinemaNote) elements.btnCinemaNote.hidden = true;
+    if (elements.cinemaNotePopup) elements.cinemaNotePopup.hidden = true;
+    return;
+  }
+
+  if (elements.cinemaTrackTitle) elements.cinemaTrackTitle.textContent = track.title;
+  if (elements.cinemaTrackArtist) elements.cinemaTrackArtist.textContent = track.artist;
+  updateCinemaMarquee();
+
+  // 1. Variant Switcher (Cinema PC)
+  if (elements.cinemaVariantButton) {
+    const variants = track.youtubeVariants || [];
+    if (variants.length > 1) {
+      elements.cinemaVariantButton.hidden = false;
+      const variantIndex = track.selectedYoutubeVariant || 0;
+      const currLabel = variants[variantIndex]?.label || "Live";
+      const nextVariant = variants[(variantIndex + 1) % variants.length];
+      const getShortLabel = (label = "") => {
+        if (/live|session/i.test(label)) return "Live";
+        if (/album|studio|orig|audio/i.test(label)) return "Album";
+        if (/video/i.test(label)) return "Video";
+        return label.length > 6 ? label.slice(0, 5) + "…" : label;
+      };
+      if (elements.cinemaVariantLabel) {
+        elements.cinemaVariantLabel.textContent = getShortLabel(currLabel);
+      }
+      const nextShort = getShortLabel(nextVariant?.label || "altra versione");
+      elements.cinemaVariantButton.title = `Passa a ${nextShort}`;
+      elements.cinemaVariantButton.setAttribute("aria-label", `Passa a ${nextShort}`);
+    } else {
+      elements.cinemaVariantButton.hidden = true;
+    }
+  }
+
+  const family = getTrackFamily(track);
+  if (!family) return;
+
+  // 2. Alternative Dropdown (Cinema PC)
+  if (elements.cinemaAltContainer && elements.cinemaAltDropdown && elements.cinemaAltBadge) {
+    if (family.hasAlternatives) {
+      elements.cinemaAltBadge.textContent = String(family.alternatives.length);
+      elements.cinemaAltContainer.hidden = false;
+
+      let html = "";
+      const isMainActive = track.id === family.primaryTrack.id;
+      const mainNoteBtn = family.primaryTrack.note ? `<button class="cinema-alt-item-note-btn" type="button" data-note-type="main" aria-label="Note su ${escapeHtml(family.primaryTrack.title)}" title="Note">${NOTE_ICON_CONCENTRIC_SVG}</button>` : '';
+      html += `
+        <div class="cinema-alt-item ${isMainActive ? 'is-current' : ''}">
+          ${isMainActive ? getAltWaveBgHtml() : ''}
+          <button class="cinema-alt-item-select" type="button" data-type="main">
+            <span class="cinema-alt-index-badge ${isMainActive ? 'is-active' : ''}">Base</span>
+            <div class="cinema-alt-item-info">
+              <strong class="cinema-alt-item-title">${escapeHtml(family.primaryTrack.title)}</strong>
+              <span class="cinema-alt-item-sub">Principale · ${escapeHtml(family.primaryTrack.album || family.primaryTrack.artist)}</span>
+            </div>
+          </button>
+          ${mainNoteBtn}
+        </div>`;
+
+      family.alternatives.forEach((alt, idx) => {
+        const altTrackId = `${family.primaryTrack.id}-alt-${idx}`;
+        const isAltActive = track.id === altTrackId || track.youtubeId === alt.youtubeId;
+        const altNum = String(idx + 1).padStart(2, "0");
+        const altNoteBtn = alt.note ? `<button class="cinema-alt-item-note-btn" type="button" data-note-type="alt" data-alt-index="${idx}" aria-label="Note su ${escapeHtml(alt.title)}" title="Note">${NOTE_ICON_CONCENTRIC_SVG}</button>` : '';
+        html += `
+          <div class="cinema-alt-item ${isAltActive ? 'is-current' : ''}">
+            ${isAltActive ? getAltWaveBgHtml() : ''}
+            <button class="cinema-alt-item-select" type="button" data-type="alt" data-alt-index="${idx}">
+              <span class="cinema-alt-index-badge ${isAltActive ? 'is-active' : ''}">${altNum}</span>
+              <div class="cinema-alt-item-info">
+                <strong class="cinema-alt-item-title">${escapeHtml(alt.title)}</strong>
+                <span class="cinema-alt-item-sub">Alt. ${idx + 1} · ${escapeHtml(alt.album || alt.subtitle || family.primaryTrack.artist)}</span>
+              </div>
+            </button>
+            ${altNoteBtn}
+          </div>`;
+      });
+
+      elements.cinemaAltDropdown.innerHTML = html;
+
+      elements.cinemaAltDropdown.querySelectorAll(".cinema-alt-item-note-btn").forEach(btn => {
+        btn.addEventListener("click", (e) => {
+          e.stopPropagation();
+          const noteTitle = btn.dataset.noteType === "main" ? family.primaryTrack.title : family.alternatives[Number(btn.dataset.altIndex)]?.title;
+          const noteBody = btn.dataset.noteType === "main" ? family.primaryTrack.note : family.alternatives[Number(btn.dataset.altIndex)]?.note;
+          if (!noteBody) return;
+
+          // Close top cinema card popup if open
+          hideCinemaNotePopup();
+
+          // Open popover directly anchored to this alternative button
+          showNotePopover(btn, noteTitle, noteBody);
+        });
+      });
+
+      elements.cinemaAltDropdown.querySelectorAll(".cinema-alt-item-select").forEach(selectBtn => {
+        selectBtn.addEventListener("click", () => {
+          elements.cinemaAltDropdown.hidden = true;
+          elements.btnCinemaAlt?.setAttribute("aria-expanded", "false");
+          if (currentNoteTrigger && currentNoteTrigger.closest("#cinemaAltDropdown")) {
+            hideNotePopover();
+          }
+          if (selectBtn.dataset.type === "main") {
+            playQueueSelection(family.primaryTrack, family.queue, family.label, family.index);
+          } else {
+            const altIndex = Number(selectBtn.dataset.altIndex);
+            const alt = family.alternatives[altIndex];
+            if (alt) {
+              playQueueSelection({ ...alt, id: `${family.primaryTrack.id}-alt-${altIndex}`, album: alt.album || "" }, family.queue, family.label, family.index);
+            }
+          }
+        });
+      });
+    } else {
+      elements.cinemaAltContainer.hidden = true;
+      if (elements.cinemaAltDropdown) elements.cinemaAltDropdown.hidden = true;
+    }
+  }
+
+  // 3. Note Button & Popup (Cinema PC)
+  if (elements.btnCinemaNote) {
+    if (family.hasNote) {
+      elements.btnCinemaNote.hidden = false;
+      elements.btnCinemaNote.setAttribute("data-note-title", track.title);
+      elements.btnCinemaNote.setAttribute("data-note-body", family.currentNote);
+
+      const familyId = family.primaryTrack.id;
+      if (document.body.classList.contains("cinema-mode-active") && elements.cinemaNotePopup) {
+        if (lastAutoOpenedNoteFamilyId !== familyId) {
+          lastAutoOpenedNoteFamilyId = familyId;
+          showCinemaNotePopup(track.title, family.currentNote, true);
+        }
+      }
+    } else {
+      elements.btnCinemaNote.hidden = true;
+      elements.btnCinemaNote.classList.remove("has-unread-note", "is-note-open");
+      hideCinemaNotePopup();
+    }
+  }
+}
+
+function updateMobileLyricsControls(track) {
+  if (!track) {
+    if (elements.mobileAltTransportBtn) elements.mobileAltTransportBtn.hidden = true;
+    if (elements.playerAltDropdown) elements.playerAltDropdown.hidden = true;
+    if (elements.mobileLyricsNoteBtn) elements.mobileLyricsNoteBtn.hidden = true;
+    return;
+  }
+
+  const family = getTrackFamily(track);
+  if (!family) return;
+
+  if (elements.mobileAltTransportBtn && elements.mobileAltCount) {
+    if (family.hasAlternatives) {
+      elements.mobileAltCount.textContent = String(family.alternatives.length);
+      elements.mobileAltTransportBtn.hidden = false;
+
+      if (elements.playerAltDropdown) {
+        let pcHtml = "";
+        const isMainActive = track.id === family.primaryTrack.id;
+        const mainNoteBtn = family.primaryTrack.note ? `<button class="player-alt-item-note-btn" type="button" data-note-type="main" aria-label="Note su ${escapeHtml(family.primaryTrack.title)}" title="Note">${NOTE_ICON_CONCENTRIC_SVG}</button>` : '';
+        pcHtml += `
+          <div class="player-alt-item ${isMainActive ? 'is-current' : ''}">
+            ${isMainActive ? getAltWaveBgHtml() : ''}
+            <button class="player-alt-item-select" type="button" data-type="main">
+              <span class="player-alt-index-badge ${isMainActive ? 'is-active' : ''}">Base</span>
+              <div class="player-alt-item-info">
+                <strong class="player-alt-item-title">${escapeHtml(family.primaryTrack.title)}</strong>
+                <span class="player-alt-item-sub">Principale · ${escapeHtml(family.primaryTrack.album || family.primaryTrack.artist)}</span>
+              </div>
+            </button>
+            ${mainNoteBtn}
+          </div>`;
+
+        family.alternatives.forEach((alt, idx) => {
+          const altTrackId = `${family.primaryTrack.id}-alt-${idx}`;
+          const isAltActive = track.id === altTrackId || track.youtubeId === alt.youtubeId;
+          const altNum = String(idx + 1).padStart(2, "0");
+          const altNoteBtn = alt.note ? `<button class="player-alt-item-note-btn" type="button" data-note-type="alt" data-alt-index="${idx}" aria-label="Note su ${escapeHtml(alt.title)}" title="Note">${NOTE_ICON_CONCENTRIC_SVG}</button>` : '';
+          pcHtml += `
+            <div class="player-alt-item ${isAltActive ? 'is-current' : ''}">
+              ${isAltActive ? getAltWaveBgHtml() : ''}
+              <button class="player-alt-item-select" type="button" data-type="alt" data-alt-index="${idx}">
+                <span class="player-alt-index-badge ${isAltActive ? 'is-active' : ''}">${altNum}</span>
+                <div class="player-alt-item-info">
+                  <strong class="player-alt-item-title">${escapeHtml(alt.title)}</strong>
+                  <span class="player-alt-item-sub">Alt. ${idx + 1} · ${escapeHtml(alt.album || alt.subtitle || family.primaryTrack.artist)}</span>
+                </div>
+              </button>
+              ${altNoteBtn}
+            </div>`;
+        });
+
+        elements.playerAltDropdown.innerHTML = pcHtml;
+
+        elements.playerAltDropdown.querySelectorAll(".player-alt-item-note-btn").forEach(btn => {
+          btn.addEventListener("click", (e) => {
+            e.stopPropagation();
+            if (btn.dataset.noteType === "main") {
+              showNotePopover(btn, family.primaryTrack.title, family.primaryTrack.note);
+            } else {
+              const altIndex = Number(btn.dataset.altIndex);
+              const alt = family.alternatives[altIndex];
+              if (alt && alt.note) {
+                showNotePopover(btn, alt.title, alt.note);
+              }
+            }
+          });
+        });
+
+        elements.playerAltDropdown.querySelectorAll(".player-alt-item-select").forEach(selectBtn => {
+          selectBtn.addEventListener("click", () => {
+            elements.playerAltDropdown.hidden = true;
+            elements.mobileAltTransportBtn?.setAttribute("aria-expanded", "false");
+            document.querySelector(".player-paper")?.classList.remove("has-alt-open");
+            if (selectBtn.dataset.type === "main") {
+              playQueueSelection(family.primaryTrack, family.queue, family.label, family.index);
+            } else {
+              const altIndex = Number(selectBtn.dataset.altIndex);
+              const alt = family.alternatives[altIndex];
+              if (alt) {
+                playQueueSelection({ ...alt, id: `${family.primaryTrack.id}-alt-${altIndex}`, album: alt.album || "" }, family.queue, family.label, family.index);
+              }
+            }
+          });
+        });
+      }
+    } else {
+      elements.mobileAltTransportBtn.hidden = true;
+      if (elements.playerAltDropdown) {
+        elements.playerAltDropdown.hidden = true;
+        elements.playerAltDropdown.innerHTML = "";
+      }
+    }
+  }
+
+  if (elements.mobileLyricsNoteBtn) {
+    if (family.hasNote) {
+      elements.mobileLyricsNoteBtn.hidden = false;
+      elements.mobileLyricsNoteBtn.setAttribute("data-note-title", track.title);
+      elements.mobileLyricsNoteBtn.setAttribute("data-note-body", family.currentNote);
+    } else {
+      elements.mobileLyricsNoteBtn.hidden = true;
+      hideNotePopover();
+    }
+  }
+}
+
+let mobileAltGesturesInitialized = false;
+function setupMobileAltGestures() {
+  if (mobileAltGesturesInitialized) return;
+  mobileAltGesturesInitialized = true;
+
+  const sheet = elements.mobileAltModal?.querySelector(".mobile-alt-sheet");
+  if (!sheet) return;
+
+  let startY = 0;
+  let currentDelta = 0;
+  let isDragging = false;
+
+  sheet.addEventListener("touchstart", (e) => {
+    if (e.touches.length !== 1) return;
+    const listEl = elements.mobileAltModalList;
+    if (listEl && listEl.scrollTop > 5 && !e.target.closest("#mobileAltDragPill")) {
+      return;
+    }
+    startY = e.touches[0].clientY;
+    currentDelta = 0;
+    isDragging = true;
+    sheet.style.animation = "none";
+    sheet.style.transition = "none";
+  }, { passive: true });
+
+  sheet.addEventListener("touchmove", (e) => {
+    if (!isDragging || e.touches.length !== 1) return;
+    const deltaY = e.touches[0].clientY - startY;
+    if (deltaY > 0) {
+      currentDelta = deltaY;
+      sheet.style.transform = `translateY(${deltaY}px)`;
+    }
+  }, { passive: true });
+
+  const endDrag = () => {
+    if (!isDragging) return;
+    isDragging = false;
+    sheet.style.transition = "transform 0.22s cubic-bezier(0.2, 0.8, 0.2, 1)";
+    if (currentDelta > 60) {
+      sheet.style.transform = "translateY(100%)";
+      setTimeout(closeMobileAltModal, 200);
+    } else {
+      sheet.style.transform = "";
+    }
+    currentDelta = 0;
+  };
+
+  sheet.addEventListener("touchend", endDrag, { passive: true });
+  sheet.addEventListener("touchcancel", endDrag, { passive: true });
+}
+
+function openMobileAltModal() {
+  if (!activeVideoTrack || !elements.mobileAltModal || !elements.mobileAltModalList) return;
+  const family = getTrackFamily(activeVideoTrack);
+  if (!family || !family.hasAlternatives) return;
+
+  if (elements.mobileAltModalTitle) {
+    elements.mobileAltModalTitle.textContent = "Versioni alternative";
+  }
+
+  let html = "";
+  const isMainActive = activeVideoTrack.id === family.primaryTrack.id;
+  const mainNoteBtn = family.primaryTrack.note ? `
+    <button class="mobile-alt-note-btn" type="button" data-note-type="main" aria-label="Note su ${escapeHtml(family.primaryTrack.title)}" title="Note">${NOTE_ICON_CONCENTRIC_SVG}</button>` : '';
+
+  html += `
+    <div class="mobile-alt-row ${isMainActive ? 'is-current' : ''}">
+      ${isMainActive ? getAltWaveBgHtml() : ''}
+      <button class="mobile-alt-row-select" type="button" data-type="main" aria-label="${escapeHtml(family.primaryTrack.title)}">
+        <span class="mobile-alt-index-badge ${isMainActive ? 'is-active' : ''}">Base</span>
+        <div class="mobile-alt-meta">
+          <strong class="mobile-alt-title">${escapeHtml(family.primaryTrack.title)}</strong>
+          <span class="mobile-alt-artist">Principale · ${escapeHtml(family.primaryTrack.album || family.primaryTrack.artist)}</span>
+        </div>
+      </button>
+      ${mainNoteBtn}
+    </div>`;
+
+  family.alternatives.forEach((alt, idx) => {
+    const altTrackId = `${family.primaryTrack.id}-alt-${idx}`;
+    const isAltActive = activeVideoTrack.id === altTrackId || activeVideoTrack.youtubeId === alt.youtubeId;
+    const altNum = String(idx + 1).padStart(2, "0");
+    const altNoteBtn = alt.note ? `
+      <button class="mobile-alt-note-btn" type="button" data-note-type="alt" data-alt-index="${idx}" aria-label="Note su ${escapeHtml(alt.title)}" title="Note">${NOTE_ICON_CONCENTRIC_SVG}</button>` : '';
+
+    html += `
+      <div class="mobile-alt-row ${isAltActive ? 'is-current' : ''}">
+        ${isAltActive ? getAltWaveBgHtml() : ''}
+        <button class="mobile-alt-row-select" type="button" data-type="alt" data-alt-index="${idx}" aria-label="${escapeHtml(alt.title)}">
+          <span class="mobile-alt-index-badge ${isAltActive ? 'is-active' : ''}">${altNum}</span>
+          <div class="mobile-alt-meta">
+            <strong class="mobile-alt-title">${escapeHtml(alt.title)}</strong>
+            <span class="mobile-alt-artist">Alt. ${idx + 1} · ${escapeHtml(alt.album || alt.subtitle || family.primaryTrack.artist)}</span>
+          </div>
+        </button>
+        ${altNoteBtn}
+      </div>`;
+  });
+
+  elements.mobileAltModalList.innerHTML = html;
+
+  elements.mobileAltModalList.querySelectorAll(".mobile-alt-note-btn").forEach(btn => {
+    btn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      if (btn.dataset.noteType === "main") {
+        showNotePopover(btn, family.primaryTrack.title, family.primaryTrack.note);
+      } else {
+        const altIndex = Number(btn.dataset.altIndex);
+        const alt = family.alternatives[altIndex];
+        if (alt && alt.note) {
+          showNotePopover(btn, alt.title, alt.note);
+        }
+      }
+    });
+  });
+
+  const onSelect = (type, altIdx) => {
+    closeMobileAltModal();
+    if (type === "main") {
+      playQueueSelection(family.primaryTrack, family.queue, family.label, family.index);
+    } else {
+      const alt = family.alternatives[altIdx];
+      if (alt) {
+        playQueueSelection({ ...alt, id: `${family.primaryTrack.id}-alt-${altIdx}`, album: alt.album || "" }, family.queue, family.label, family.index);
+      }
+    }
+  };
+
+  elements.mobileAltModalList.querySelectorAll(".mobile-alt-row-select").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const type = btn.dataset.type;
+      const altIdx = Number(btn.dataset.altIndex);
+      onSelect(type, altIdx);
+    });
+  });
+
+  elements.mobileAltModal.classList.remove("is-closing");
+  document.body.classList.add("has-alt-modal-open");
+  const sheet = elements.mobileAltModal.querySelector(".mobile-alt-sheet");
+  if (sheet) {
+    sheet.style.transform = "";
+    sheet.style.transition = "";
+    sheet.style.animation = "";
+  }
+  setupMobileAltGestures();
+  elements.mobileAltModal.hidden = false;
+}
+
+function closeMobileAltModal() {
+  if (currentNoteTrigger && currentNoteTrigger.closest("#mobileAltModal")) {
+    hideNotePopover();
+  }
+  if (elements.mobileAltModal && !elements.mobileAltModal.hidden && !elements.mobileAltModal.classList.contains("is-closing")) {
+    elements.mobileAltModal.classList.add("is-closing");
+    document.body.classList.remove("has-alt-modal-open");
+    setTimeout(() => {
+      elements.mobileAltModal.hidden = true;
+      elements.mobileAltModal.classList.remove("is-closing");
+      const sheet = elements.mobileAltModal.querySelector(".mobile-alt-sheet");
+      if (sheet) {
+        sheet.style.transform = "";
+        sheet.style.transition = "";
+        sheet.style.animation = "";
+      }
+    }, 220);
+  }
+}
+
 function setupCinemaMode() {
   if (!elements.btnCinemaMode || !elements.cinemaHeaderBar) return;
   const playerPaper = document.querySelector(".player-paper");
@@ -484,23 +1081,45 @@ function setupCinemaMode() {
 
     if (elements.cinemaTrackTitle) elements.cinemaTrackTitle.textContent = activeVideoTrack.title;
     if (elements.cinemaTrackArtist) elements.cinemaTrackArtist.textContent = activeVideoTrack.artist;
+    updateCinemaMarquee();
 
-    // Assicura che i testi siano renderizzati e visibili
-    renderActiveLyrics();
-    elements.playerLyricsDrawer.hidden = false;
-    elements.btnOpenLyrics?.classList.add("is-active");
-    elements.btnOpenLyrics?.setAttribute("aria-expanded", "true");
-    playerPaper?.classList.add("has-lyrics-open");
-
-    if (elements.cinemaToggleLyricsLabel) elements.cinemaToggleLyricsLabel.textContent = "Nascondi testo";
-    elements.btnCinemaToggleLyrics?.classList.remove("is-lyrics-off");
+    // Assicura che i testi siano renderizzati solo se la traccia ne ha
+    const trackLyrics = getTrackLyrics(activeVideoTrack.id);
+    const hasLyrics = Boolean(trackLyrics);
+    if (hasLyrics) {
+      renderActiveLyrics();
+      elements.playerLyricsDrawer.hidden = false;
+      elements.btnOpenLyrics?.classList.add("is-active");
+      elements.btnOpenLyrics?.setAttribute("aria-expanded", "true");
+      playerPaper?.classList.add("has-lyrics-open");
+      playerPaper?.classList.remove("cinema-lyrics-hidden");
+      if (elements.cinemaToggleLyricsLabel) elements.cinemaToggleLyricsLabel.textContent = "Nascondi testo";
+      elements.btnCinemaToggleLyrics?.classList.remove("is-lyrics-off");
+      if (elements.btnCinemaToggleLyrics) elements.btnCinemaToggleLyrics.hidden = false;
+    } else {
+      elements.playerLyricsDrawer.hidden = true;
+      elements.btnOpenLyrics?.classList.remove("is-active");
+      elements.btnOpenLyrics?.setAttribute("aria-expanded", "false");
+      playerPaper?.classList.remove("has-lyrics-open");
+      playerPaper?.classList.add("cinema-lyrics-hidden");
+      if (elements.btnCinemaToggleLyrics) elements.btnCinemaToggleLyrics.hidden = true;
+    }
     updatePlaybackQueueUi();
+    updateCinemaTrackControls(activeVideoTrack);
   };
 
   const exitCinemaMode = () => {
     document.body.classList.remove("cinema-mode-active");
-    playerPaper?.classList.remove("cinema-mode-active", "cinema-lyrics-hidden");
+    playerPaper?.classList.remove("cinema-mode-active", "cinema-lyrics-hidden", "has-lyrics-open");
+    if (elements.playerLyricsDrawer) elements.playerLyricsDrawer.hidden = true;
+    elements.btnOpenLyrics?.classList.remove("is-active");
+    elements.btnOpenLyrics?.setAttribute("aria-expanded", "false");
+    if (elements.mobileLyricsCloseBtn) elements.mobileLyricsCloseBtn.hidden = true;
+    document.body.classList.remove("mobile-lyrics-open");
     elements.cinemaHeaderBar.hidden = true;
+    hideCinemaNotePopup();
+    if (elements.cinemaAltDropdown) elements.cinemaAltDropdown.hidden = true;
+    elements.btnCinemaAlt?.setAttribute("aria-expanded", "false");
     updateCaptionMarquee();
     updatePlaybackQueueUi();
   };
@@ -522,10 +1141,91 @@ function setupCinemaMode() {
   elements.btnCinemaToggleLyrics?.addEventListener("click", toggleCinemaLyrics);
   elements.cinemaPrevBadge?.addEventListener("click", () => skipQueueTrack(-1));
   elements.cinemaNextBadge?.addEventListener("click", () => skipQueueTrack(1));
+  elements.cinemaVariantButton?.addEventListener("click", () => {
+    const track = activeVideoTrack;
+    const variants = track?.youtubeVariants || [];
+    if (variants.length < 2) return;
+    const currentIndex = track.selectedYoutubeVariant || 0;
+    const nextIndex = (currentIndex + 1) % variants.length;
+    const playing = youtubePlayer?.getPlayerState?.() === window.YT?.PlayerState?.PLAYING;
+
+    const icon = elements.cinemaVariantButton.querySelector(".cinema-variant-icon");
+    if (icon) {
+      icon.style.transform = nextIndex === 1 ? "rotate(180deg)" : "rotate(0deg)";
+    }
+    const label = elements.cinemaVariantLabel;
+    if (label) {
+      label.classList.add("is-swapping");
+      setTimeout(() => label.classList.remove("is-swapping"), 260);
+    }
+
+    loadTrack({ ...track, youtubeId: variants[nextIndex].youtubeId, selectedYoutubeVariant: nextIndex }, playing);
+  });
+
+  elements.btnCinemaAlt?.addEventListener("click", (e) => {
+    e.stopPropagation();
+    if (!elements.cinemaAltDropdown) return;
+    const isHidden = elements.cinemaAltDropdown.hidden;
+    elements.cinemaAltDropdown.hidden = !isHidden;
+    elements.btnCinemaAlt?.setAttribute("aria-expanded", String(isHidden));
+  });
+
+  elements.btnCinemaNote?.addEventListener("click", (e) => {
+    e.stopPropagation();
+    const fam = getTrackFamily(activeVideoTrack);
+    if (!fam?.hasNote) return;
+    elements.btnCinemaNote.classList.remove("has-unread-note");
+
+    // If an alternative note popover is open, clicking the top note button closes it
+    const popover = document.getElementById("noteGlobalPopover");
+    const isGlobalPopoverOpen = popover && !popover.hidden && !popover.classList.contains("is-closing");
+    if (isGlobalPopoverOpen) {
+      hideNotePopover();
+      return;
+    }
+
+    if (elements.cinemaNotePopup && !elements.cinemaNotePopup.hidden) {
+      hideCinemaNotePopup();
+    } else {
+      showCinemaNotePopup(activeVideoTrack.title, fam.currentNote, false);
+    }
+  });
+
+  elements.cinemaNotePopupClose?.addEventListener("click", hideCinemaNotePopup);
+
+  elements.cinemaNotePopupExpand?.addEventListener("click", () => {
+    hideCinemaNotePopup();
+    const fam = getTrackFamily(activeVideoTrack);
+    if (fam?.hasNote && elements.btnCinemaNote) {
+      showNotePopover(elements.btnCinemaNote, activeVideoTrack.title, fam.currentNote);
+    }
+  });
+
+  document.addEventListener("click", (e) => {
+    if (elements.cinemaAltDropdown && !elements.cinemaAltDropdown.hidden) {
+      if (!e.target.closest("#cinemaAltContainer") && !e.target.closest("#noteGlobalPopover")) {
+        elements.cinemaAltDropdown.hidden = true;
+        elements.btnCinemaAlt?.setAttribute("aria-expanded", "false");
+        if (currentNoteTrigger && currentNoteTrigger.closest("#cinemaAltDropdown")) {
+          hideNotePopover();
+        }
+      }
+    }
+  });
 
   document.addEventListener("keydown", event => {
-    if (event.key === "Escape" && document.body.classList.contains("cinema-mode-active")) {
-      exitCinemaMode();
+    if (event.key === "Escape") {
+      if (elements.cinemaAltDropdown && !elements.cinemaAltDropdown.hidden) {
+        elements.cinemaAltDropdown.hidden = true;
+        elements.btnCinemaAlt?.setAttribute("aria-expanded", "false");
+        if (currentNoteTrigger && currentNoteTrigger.closest("#cinemaAltDropdown")) {
+          hideNotePopover();
+        }
+        return;
+      }
+      if (document.body.classList.contains("cinema-mode-active")) {
+        exitCinemaMode();
+      }
     }
   });
 
@@ -635,20 +1335,39 @@ function findTrackInCollections(trackId) {
     for (let i = 0; i < col.tracks.length; i++) {
       const t = col.tracks[i];
       if (t.id === trackId) {
-        return { track: t, queue: col.tracks, label: col.label, index: i };
+        return { track: t, parentTrack: t, queue: col.tracks, label: col.label, index: i };
       }
       if (t.alternatives) {
         for (let j = 0; j < t.alternatives.length; j++) {
           const alt = t.alternatives[j];
           const altId = alt.id || `${t.id}-alt-${alt.youtubeId || j}`;
-          if (altId === trackId || alt.youtubeId === trackId) {
-            return { track: alt, queue: col.tracks, label: col.label, index: i };
+          if (altId === trackId || alt.youtubeId === trackId || trackId === `${t.id}-alt-${j}`) {
+            return { track: alt, parentTrack: t, altIndex: j, queue: col.tracks, label: col.label, index: i };
           }
         }
       }
     }
   }
   return null;
+}
+
+function getTrackFamily(track) {
+  if (!track) return null;
+  const match = findTrackInCollections(track.id);
+  const primaryTrack = match?.parentTrack || track;
+  const alternatives = primaryTrack.alternatives || [];
+  const currentNote = track.note || (track.id === primaryTrack.id ? (primaryTrack.note || "") : "");
+
+  return {
+    primaryTrack,
+    alternatives,
+    currentNote,
+    hasAlternatives: alternatives.length > 0,
+    hasNote: Boolean(currentNote),
+    queue: match?.queue || playbackQueue,
+    label: match?.label || playbackQueueLabel,
+    index: typeof match?.index === "number" ? match.index : playbackQueueIndex
+  };
 }
 
 function savePlaybackSession(currentTime) {
@@ -703,11 +1422,48 @@ function restorePlaybackSession() {
     if (savedResumeSeconds > 0) {
       elements.miniPlayerCurrentTime.textContent = formatPlaybackTime(savedResumeSeconds);
     }
+    setTimeout(() => {
+      showWelcomeToast(trackToLoad, label, session.currentTime);
+    }, 650);
     return true;
   } catch (e) {
     console.warn("Restore session error", e);
     return false;
   }
+}
+
+let welcomeToastTimer = null;
+function showWelcomeToast(track, queueLabel, currentTime) {
+  const toast = document.getElementById("sessionWelcomeToast");
+  const msgEl = document.getElementById("welcomeToastMessage");
+  if (!toast || !msgEl || !track) return;
+
+  let timeText = "";
+  if (currentTime && currentTime > 5) {
+    const mins = Math.floor(currentTime / 60);
+    const secs = String(Math.floor(currentTime % 60)).padStart(2, "0");
+    timeText = ` (a ${mins}m ${secs}s)`;
+  }
+  msgEl.textContent = `Hai ripreso da ${track.title} · ${queueLabel}${timeText}`;
+
+  toast.hidden = false;
+  toast.classList.remove("is-visible");
+  void toast.offsetWidth;
+  toast.classList.add("is-visible");
+
+  if (welcomeToastTimer) clearTimeout(welcomeToastTimer);
+  welcomeToastTimer = setTimeout(() => {
+    toast.classList.remove("is-visible");
+    setTimeout(() => { toast.hidden = true; }, 380);
+    welcomeToastTimer = null;
+  }, 5200);
+
+  toast.onclick = () => {
+    if (welcomeToastTimer) clearTimeout(welcomeToastTimer);
+    toast.classList.remove("is-visible");
+    setTimeout(() => { toast.hidden = true; }, 380);
+    welcomeToastTimer = null;
+  };
 }
 
 // =============================================================================
@@ -939,12 +1695,10 @@ function positionVariantSliderThumb(animate = true) {
   if (!animate) {
     thumb.style.transition = "none";
   } else {
-    thumb.style.transition = "left 360ms cubic-bezier(0.34, 1.45, 0.64, 1), width 360ms cubic-bezier(0.34, 1.45, 0.64, 1)";
+    thumb.style.transition = "left 240ms cubic-bezier(0.16, 1, 0.3, 1), width 240ms cubic-bezier(0.16, 1, 0.3, 1)";
   }
   thumb.style.left = `${activeTab.offsetLeft}px`;
   thumb.style.width = `${activeTab.offsetWidth}px`;
-  thumb.style.top = `${activeTab.offsetTop}px`;
-  thumb.style.height = `${activeTab.offsetHeight}px`;
 
   if (!animate) {
     requestAnimationFrame(() => {
@@ -959,15 +1713,24 @@ function setupVideoVariants() {
     const variants = track?.youtubeVariants || [];
     if (variants.length < 2) return;
 
-    const targetTab = e.target?.closest?.(".variant-tab");
     const currentIndex = track.selectedYoutubeVariant || 0;
+    const isCondensed = Boolean(
+      elements.playerVariantButton.closest(".has-lyrics-open") && window.innerWidth <= 720
+    );
+
     let nextIndex;
-    if (targetTab && targetTab.dataset.index !== undefined) {
-      const clickedIndex = parseInt(targetTab.dataset.index, 10);
-      if (clickedIndex === currentIndex) return;
-      nextIndex = clickedIndex;
-    } else {
+    if (isCondensed) {
+      // In condensed mobile mode, tapping ANYWHERE on the pill toggles to the other variant
       nextIndex = (currentIndex + 1) % variants.length;
+    } else {
+      const targetTab = e.target?.closest?.(".variant-tab");
+      if (targetTab && targetTab.dataset.index !== undefined) {
+        const clickedIndex = parseInt(targetTab.dataset.index, 10);
+        if (clickedIndex === currentIndex) return;
+        nextIndex = clickedIndex;
+      } else {
+        nextIndex = (currentIndex + 1) % variants.length;
+      }
     }
 
     const playing = youtubePlayer?.getPlayerState?.() === window.YT?.PlayerState?.PLAYING;
@@ -992,6 +1755,21 @@ function updateCaptionMarquee() {
   if (!wrap || !content) return;
   requestAnimationFrame(() => {
     wrap.classList.toggle("is-marquee", content.scrollWidth > wrap.clientWidth + 4);
+  });
+}
+
+function updateCinemaMarquee() {
+  const wrap = document.querySelector(".cinema-track-marquee-wrap");
+  const content = document.querySelector(".cinema-track-marquee-content");
+  if (!wrap || !content) return;
+  requestAnimationFrame(() => {
+    const isOverflowing = content.scrollWidth > wrap.clientWidth + 4;
+    wrap.classList.toggle("is-marquee", isOverflowing);
+    if (isOverflowing) {
+      wrap.style.setProperty("--cinema-marquee-width", `${wrap.clientWidth}px`);
+    } else {
+      wrap.style.removeProperty("--cinema-marquee-width");
+    }
   });
 }
 
@@ -1133,6 +1911,7 @@ function loadTrack(track, autoplay) {
   if (elements.playerVariantButton) {
     const nextVariant = variants.length > 1 ? variants[(variantIndex + 1) % variants.length] : null;
     elements.playerVariantButton.hidden = !nextVariant;
+    elements.playerVariantButton.style.display = nextVariant ? "" : "none";
     if (nextVariant) {
       const getShortLabel = (label = "") => {
         if (/live|session/i.test(label)) return "Live";
@@ -1200,10 +1979,9 @@ function loadTrack(track, autoplay) {
       }
     }
   }
+  const trackLyrics = getTrackLyrics(track.id);
+  const hasLyrics = Boolean(trackLyrics);
   if (elements.btnOpenLyrics) {
-    const trackId = track.id;
-    const lyrics = (typeof LYRICS_DATA !== "undefined" && (LYRICS_DATA[trackId] || LYRICS_DATA[trackId.split('-alt-')[0]])) || "";
-    const hasLyrics = Boolean(lyrics);
     elements.btnOpenLyrics.hidden = !hasLyrics;
     if (!hasLyrics && !elements.playerLyricsDrawer.hidden) {
       elements.playerLyricsDrawer.hidden = true;
@@ -1222,8 +2000,22 @@ function loadTrack(track, autoplay) {
   if (document.body.classList.contains("cinema-mode-active")) {
     if (elements.cinemaTrackTitle) elements.cinemaTrackTitle.textContent = track.title;
     if (elements.cinemaTrackArtist) elements.cinemaTrackArtist.textContent = track.artist;
-    renderActiveLyrics();
+    const paper = document.querySelector(".player-paper");
+    if (hasLyrics) {
+      renderActiveLyrics();
+      elements.playerLyricsDrawer.hidden = false;
+      paper?.classList.add("has-lyrics-open");
+      paper?.classList.remove("cinema-lyrics-hidden");
+      if (elements.btnCinemaToggleLyrics) elements.btnCinemaToggleLyrics.hidden = false;
+    } else {
+      elements.playerLyricsDrawer.hidden = true;
+      paper?.classList.remove("has-lyrics-open");
+      paper?.classList.add("cinema-lyrics-hidden");
+      if (elements.btnCinemaToggleLyrics) elements.btnCinemaToggleLyrics.hidden = true;
+    }
   }
+  updateCinemaTrackControls(track);
+  updateMobileLyricsControls(track);
   elements.playerTrackTitle.textContent = track.title;
   elements.playerTrackArtist.textContent = track.artist;
   if (elements.mobileLyricsTrackTitle) {
@@ -1290,7 +2082,7 @@ function loadTrack(track, autoplay) {
   if (youtubePlayerReady) {
     loadPendingYoutubeTrack();
   } else {
-    const embedUrl = new URL(`https://www.youtube.com/embed/${encodeURIComponent(track.youtubeId)}`);
+    const embedUrl = new URL(`https://www.youtube-nocookie.com/embed/${encodeURIComponent(track.youtubeId)}`);
     const embedParams = new URLSearchParams({ autoplay: autoplay ? "1" : "0", playsinline: "1", rel: "0", enablejsapi: "1", modestbranding: "1", iv_load_policy: "3" });
     if (savedResumeSeconds > 0) embedParams.set("start", String(savedResumeSeconds));
     if (window.location.origin !== "null") embedParams.set("origin", window.location.origin);
@@ -1323,6 +2115,7 @@ function initializeYouTubePlayer() {
   const playerVars = { playsinline: 1, rel: 0, enablejsapi: 1, modestbranding: 1, iv_load_policy: 3 };
   if (window.location.origin !== "null") playerVars.origin = window.location.origin;
   youtubePlayer = new window.YT.Player(elements.ytVideoPlayerIframe, {
+    host: "https://www.youtube-nocookie.com",
     playerVars,
     events: {
       onReady: event => {
@@ -1408,9 +2201,9 @@ function setupMobileMiniPlayer() {
   elements.miniPlayerExpand.addEventListener("click", () => {
     elements.listeningRoom.scrollIntoView({ behavior: "smooth", block: "start" });
   });
-  [elements.playerPrevious, elements.miniPlayerPrevious].forEach(button => button.addEventListener("click", () => skipQueueTrack(-1)));
-  [elements.playerNext, elements.miniPlayerNext].forEach(button => button.addEventListener("click", () => skipQueueTrack(1)));
-  [elements.playerToggle, elements.miniPlayerToggle].forEach(button => button.addEventListener("click", togglePlayback));
+  [elements.playerPrevious, elements.miniPlayerPrevious].filter(Boolean).forEach(button => button.addEventListener("click", () => skipQueueTrack(-1)));
+  [elements.playerNext, elements.miniPlayerNext].filter(Boolean).forEach(button => button.addEventListener("click", () => skipQueueTrack(1)));
+  [elements.playerToggle, elements.miniPlayerToggle].filter(Boolean).forEach(button => button.addEventListener("click", togglePlayback));
   window.addEventListener("scroll", updateMiniPlayerVisibility, { passive: true });
   window.addEventListener("resize", () => {
     updateMiniPlayerVisibility();
@@ -1432,21 +2225,35 @@ function setupMobileWelcome() {
   const mobileQuery = window.matchMedia("(max-width: 720px)");
   const isMobile = () => mobileQuery.matches;
   let currentKind = "lista";
-  let progLetterSeen = false;
-  let listLetterSeen = false;
+  const alreadySeenProgLetter = localStorage.getItem("ari_prog_letter_seen") === "true";
+  let progLetterSeen = alreadySeenProgLetter;
+  const alreadySeenLetter = localStorage.getItem("ari_letter_seen") === "true" || Boolean(localStorage.getItem("ari_playback_session"));
+  let listLetterSeen = alreadySeenLetter;
+  if (alreadySeenLetter) {
+    reopenList.hidden = false;
+    reopenList.classList.add("is-visible-desktop");
+    const letterCard = document.getElementById("introLetterLista");
+    letterCard?.classList.add("is-collapsed");
+  }
+  if (alreadySeenProgLetter) {
+    reopenProg.hidden = false;
+    reopenProg.classList.add("is-visible-desktop");
+    const progCard = document.getElementById("introLetterProg");
+    progCard?.classList.add("is-collapsed");
+  }
   let closingAnimation = null;
   const letters = {
     lista: {
       title: "Ciao Ari,",
-      subtitle: "ho provato a tenerla corta, davvero",
-      copy: "<p>Questi sono brani che mi fanno impazzire e spero che ti piaceranno tanto quanto a me. Magari ce n’è uno che già conosci o uno nuovo che ti resta addosso, oppure un album che ti incuriosisce abbastanza da volerlo aggiungere alla tua collezione di vinili o da raccontare in un video.</p><p>Volevo farcene entrare dieci, ma è stato impossibile, ne ho lasciate <strong>tredici</strong>, qualche alternativa e, in fondo, le <strong>menzioni d’onore</strong>. Se hai voglia, meritano tutte.</p>",
+      subtitle: "giuro che ho provato a farcene entrare 10, davvero",
+      copy: "<p>Questi sono brani che mi fanno impazzire e spero che ti piaceranno tanto quanto a me. Spero tu possa trovare pezzi che ti colpiscano e ti facciano venire voglia di ascoltare quell'artista o quell'album, o che ti facciano scoprire cose nuove; magari troverai anche qualche ispirazione da aggiungere alla tua collezione di vinili o qualche spunto per i tuoi video.</p><p>Volevo farcene entrare dieci, ma è stato impossibile, ne ho lasciate <strong>tredici</strong> + qualche alternativa se magari ti ha intrigato l'artista e, in fondo, le <strong>menzioni d’onore</strong>. Se hai voglia e tempo, meritano tutte.</p>",
       hint: true,
       reopen: reopenList
     },
     prog: {
-      title: "Un appunto sul prog",
-      subtitle: "un piccolo assaggio del genere",
-      copy: "<p>Mi avevi detto che ti incuriosiva il prog, qui trovi alcune chicche tra le più fighe per approcciare il genere. È solo un assaggio, dietro ogni brano c’è un album da esplorare e un mondo di artisti, dagli Yes ai Gentle Giant. Spero che questo viaggio ti piaccia!</p>",
+      title: "Una nota sul prog",
+      subtitle: "un piccolissimo assaggio del genere",
+      copy: "<p>Mi avevi detto che ti incuriosiva il prog, qui trovi alcune chicche tra le più fighe per approcciare il genere. È solo un assaggio, dietro ogni brano c’è un album da esplorare e un mondo di artisti, dagli Yes ai Gentle Giant. Spero che questo viaggio ti piaccia.</p>",
       hint: false,
       reopen: reopenProg
     }
@@ -1515,6 +2322,13 @@ function setupMobileWelcome() {
       if (!letterCard) return;
       const isProg = letterCard.id === "introLetterProg";
       const reopenBtn = isProg ? reopenProg : reopenList;
+      if (isProg) {
+        progLetterSeen = true;
+        try { localStorage.setItem("ari_prog_letter_seen", "true"); } catch (_) {}
+      } else {
+        listLetterSeen = true;
+        try { localStorage.setItem("ari_letter_seen", "true"); } catch (_) {}
+      }
       handleDismissDesktopLetter(letterCard, reopenBtn);
     });
   });
@@ -1526,10 +2340,22 @@ function setupMobileWelcome() {
     closingAnimation = null;
     dialog.classList.remove("is-leaving");
     letters[currentKind].reopen.hidden = false;
-    if (currentKind === "prog") progLetterSeen = true;
-    else listLetterSeen = true;
+    if (currentKind === "prog") {
+      progLetterSeen = true;
+      try { localStorage.setItem("ari_prog_letter_seen", "true"); } catch (_) {}
+    } else {
+      listLetterSeen = true;
+      try { localStorage.setItem("ari_letter_seen", "true"); } catch (_) {}
+    }
   });
   continueButton.addEventListener("click", async () => {
+    if (currentKind === "lista") {
+      listLetterSeen = true;
+      try { localStorage.setItem("ari_letter_seen", "true"); } catch (_) {}
+    } else if (currentKind === "prog") {
+      progLetterSeen = true;
+      try { localStorage.setItem("ari_prog_letter_seen", "true"); } catch (_) {}
+    }
     const trigger = letters[currentKind].reopen;
     trigger.hidden = false;
 
@@ -1578,7 +2404,7 @@ function setupMobileWelcome() {
   };
   mobileQuery.addEventListener("change", syncMobileLetter);
   window.addEventListener("resize", syncMobileLetter, { passive: true });
-  if (isMobile()) openLetter("lista");
+  if (isMobile() && !listLetterSeen) openLetter("lista");
   return { shouldShowProgLetter: () => isMobile() && !progLetterSeen };
 }
 
@@ -1745,6 +2571,7 @@ function stopCardWaveVisualizer() {
 }
 
 function setMiniPlayerPlaying(playing) {
+  document.body.classList.toggle("is-mini-player-playing", Boolean(playing));
   [elements.miniPlayerToggle, elements.playerToggle].forEach(button => {
     button?.classList.toggle("is-playing", playing);
     button?.setAttribute("aria-label", playing ? "Metti in pausa" : "Riproduci");
