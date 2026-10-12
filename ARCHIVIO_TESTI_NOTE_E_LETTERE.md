@@ -1482,6 +1482,8 @@ They hunted the great arches across the land.
 
 **Nota editoriale / di ascolto**:
 > Da **The Final Cut**. Il momento in cui la voce straziata di Waters sfuma ed entra il sax ti giuro mi fa commuovere, sembra una lama.
+>
+> *(E scusa Ari, ma non sapevo proprio come fare con i brani dei Pink Floyd... non si vede per niente che sono la mia band preferita! Anzi, ho cercato di limitarmi il più possibile per non fare un mappazzone, avrei voluto metterne altre 100. Tra l'altro stavo per metterti anche In The Flesh? e Don’t Leave Me Now da The Wall, ma quelle probabilmente le conosci già benissimo!).*
 
 <details>
 <summary><strong>Testo del brano</strong> (clicca per espandere)</summary>
@@ -1529,6 +1531,9 @@ Take heed
 - **Album**: The Division Bell
 - **YouTube ID**: pDKPz6KD8fs (https://www.youtube.com/watch?v=pDKPz6KD8fs)
 
+**Nota editoriale / di ascolto**:
+> La campana che rintocca, la slide guitar celestiale di Gilmour e la malinconia del tempo che fugge. La chiusura perfetta dell'era Floyd.
+
 <details>
 <summary><strong>Testo alternativo</strong> (clicca per espandere)</summary>
 
@@ -1575,65 +1580,282 @@ Forever and ever
 ```
 </details>
 
-##### 2. Pink Floyd — *In The Flesh?*
+##### 2. Pink Floyd — *Biding My Time*
 
 - **ID Alternativa**: top-13-alt-1
-- **Album**: The Wall
-- **YouTube ID**: 6Z6Je2QM6lE (https://www.youtube.com/watch?v=6Z6Je2QM6lE)
+- **Album**: Relics
+- **YouTube ID**: UE_kwD9CMnQ (https://www.youtube.com/watch?v=UE_kwD9CMnQ)
+- **Varianti video**:
+  - Album: UE_kwD9CMnQ (https://www.youtube.com/watch?v=UE_kwD9CMnQ)
+  - Live 1969: XcxAvIcXeL8 (https://www.youtube.com/watch?v=XcxAvIcXeL8)
+
+**Nota editoriale / di ascolto**:
+> Un blues lento e fumoso a 12 battute dell'era *Ummagumma* (parte della suite *The Man and the Journey*), con Rick Wright al trombone e un assolo blues grezzo di Gilmour. *(Nelle versioni video trovi sia la traccia in studio che il rarissimo live ad Amsterdam del 1969!)*
 
 <details>
 <summary><strong>Testo alternativo</strong> (clicca per espandere)</summary>
 
 ```text
-So ya
-Thought ya
-Might like to
-Go to the show
+Wasting my time
+Resting my mind
+And I’ll never pine
+For the sad days and the bad days
+When we was workin’ from nine to five
 
-To feel the warm thrill of confusion
-That space cadet glow
+And if you don’t mind
+I’ll spend my time
+Here by the fire side
+In the warm light of the love in her eyes
 
-Tell me, is something eluding you, sunshine?
-Is this not what you expected to see?
-If you wanna find out what's behind these cold eyes
-You'll just have to claw your way through this disguise
+And if you don’t mind
+I’ll spend my time
+Here by the fire side
+In the warm light of the love in her eyes
 
-Lights! Turn on the sound effects! Action!
-Drop it, drop it on them!
-Drop it on them!
+[Instrumental / Blues Guitar Solo]
 ```
 </details>
 
-##### 3. Pink Floyd — *Don’t Leave Me Now*
+##### 3. Pink Floyd — *Sorrow*
 
 - **ID Alternativa**: top-13-alt-2
-- **Album**: The Wall
-- **YouTube ID**: zppuIqcUsig (https://www.youtube.com/watch?v=zppuIqcUsig)
+- **Album**: A Momentary Lapse of Reason
+- **YouTube ID**: uph_1gDITUY (https://www.youtube.com/watch?v=uph_1gDITUY)
+- **Varianti video**:
+  - Album: uph_1gDITUY (https://www.youtube.com/watch?v=uph_1gDITUY)
+  - Live PULSE: JdPTec5ADFE (https://www.youtube.com/watch?v=JdPTec5ADFE)
+
+**Nota editoriale / di ascolto**:
+> Monumento sonoro di Gilmour: quel riff d'apertura colossale fu inciso suonando dentro il Los Angeles Sports Arena vuoto per sfruttare l'eco di uno stadio intero. *(Nelle versioni c'è sia l'album che la leggendaria esecuzione da PULSE!)*
 
 <details>
 <summary><strong>Testo alternativo</strong> (clicca per espandere)</summary>
 
 ```text
-Ooooh, babe
-Don't leave me now
-Don't say it's the end of the road
-Remember the flowers I sent
-I need you, babe
-To make me feel good on a Saturday night
+The sweet smell of a great sorrow lies over the land
+Plumes of smoke rise and merge into the leaden sky
+A man lies and dreams of green fields and rivers
+But awakes to a morning with no reason for waking
+He’s haunted by the memory of a lost paradise
+In his youth or a dream, he can’t be precise
+He’s chained forever to a world that’s departed
+It’s not enough, it’s not enough
 
-Ooooh, babe
-Don't leave me now
-How can you go?
-When you know how I need you
-To beat to a pulp on a Saturday night
-Ooooh, babe
-Don't leave me now
+[Guitar Solo]
 
-How can you treat me this way?
-Running away
-I need you, babe
-Why are you running away?
-Oooooh, babe...
+His blood has frozen and curdled with fright
+His knees have trembled and given way in the night
+His hand has weakened at the moment of truth
+His step has faltered
+
+One world, one soul
+Time pass, the river roll
+(It's not enough, it's not enough)
+
+And he talks to the river of lost love and dedication
+And silent replies that swirl invitation
+Flow dark and troubled to an oily sea
+A grim intimation of what is to be
+There’s an unceasing wind that blows through this night
+And there’s dust in my eyes, that blinds my sight
+And silence that speaks so much louder than words
+Of promises broken
+
+[Guitar Solo]
+```
+</details>
+
+##### 4. Pink Floyd — *Stay*
+
+- **ID Alternativa**: top-13-alt-3
+- **Album**: Obscured by Clouds
+- **YouTube ID**: Exz1nAgP2RU (https://www.youtube.com/watch?v=Exz1nAgP2RU)
+
+**Nota editoriale / di ascolto**:
+> Una gemma dolcissima e intima cantata con voce calda e fragile da Richard Wright al piano elettrico, con la chitarra a pedale di Gilmour che piange in lontananza.
+
+<details>
+<summary><strong>Testo alternativo</strong> (clicca per espandere)</summary>
+
+```text
+Stay and help me to end the day
+And if you don’t mind
+We’ll break a bottle of wine
+Stick around and maybe we’ll put one down
+'Cause I wanna find what lies behind those eyes
+
+Midnight blue
+Burning gold
+A yellow moon
+Is growing cold
+
+I rise, looking through my morning eyes
+Surprised to find you by my side
+Rack my brain and try to remember your name
+To find the words to tell you good-bye
+
+Morning dues
+Newborn day
+Midnight blue
+Turned to gray
+
+[Guitar Solo]
+
+Midnight blue
+Burning gold
+A yellow moon
+Is growing cold
+```
+</details>
+
+##### 5. Pink Floyd — *San Tropez*
+
+- **ID Alternativa**: top-13-alt-4
+- **Album**: Meddle
+- **YouTube ID**: mjNYO-OI2Fo (https://www.youtube.com/watch?v=mjNYO-OI2Fo)
+
+**Nota editoriale / di ascolto**:
+> Parentesi acustica e scanzonata da *Meddle*: un jazz/bossa nova solare scritto da Roger Waters con pianoforte da saloon e chitarra slide, come una pigra cartolina estiva.
+
+<details>
+<summary><strong>Testo alternativo</strong> (clicca per espandere)</summary>
+
+```text
+As I reach for a peach, slide a rind down behind
+The sofa in San Tropez
+Breakin' a stick with a brick on the sand
+Ridin' a wave in the wake of an old sedan
+
+Sleepin' alone in the drone of the darkness
+Scratched by the sand that fell from my love
+Deep in my dreams and I still hear her callin'
+"If you're alone, I'll come ho-ho-home"
+
+Backward and homebound, the pigeon, the dove
+Gone with the wind and the rain, on an airplane
+Born in a home with no silver spoon
+I’m drinking champagne like a good tycoon
+
+Sooner than wait for a break in the weather
+I'll gather my far-flung thoughts together
+Speeding away on the wind to a new day
+If you're alone, I'll come ho-ho-home
+
+[Slide Guitar Solo]
+
+And I pause for a while by a country stile
+And listen to the things they say
+Diggin' for gold in a hole in my hand
+Open a book, take a look at the way things stand
+
+And you're leading me down to the place by the sea
+I hear your soft voice calling to me
+Making a date for later by phone
+And if you're alone, I'll come ho-ho-home
+
+[Piano Solo]
+```
+</details>
+
+##### 6. Pink Floyd — *Julia Dream*
+
+- **ID Alternativa**: top-13-alt-5
+- **Album**: Relics
+- **YouTube ID**: kchY5ff6uqA (https://www.youtube.com/watch?v=kchY5ff6uqA)
+
+**Nota editoriale / di ascolto**:
+> Una fiaba psichedelica oscura e sognante del 1968: la voce giovanissima ed eterea di David Gilmour sussurra su una chitarra acustica acida e il mellotron flautato di Rick Wright. Una perla d'altri tempi.
+
+<details>
+<summary><strong>Testo alternativo</strong> (clicca per espandere)</summary>
+
+```text
+[Verse 1]
+Sunlight bright upon my pillow
+Lighter than an eiderdown
+Will she let the weeping willow
+Wind his branches round?
+
+[Chorus]
+Julia dream, dreamboat queen
+Queen of all my dreams
+
+[Verse 2]
+Every night I turn the light out
+Waiting for the velvet bride
+Will the scaly armadillo
+Find me where I’m hiding?
+
+[Chorus]
+Julia dream, dreamboat queen
+Queen of all my dreams
+
+[Verse 3]
+Will the misty master break me?
+Will the key unlock my mind?
+Will the following footsteps catch me?
+Am I really dying?
+
+[Chorus]
+Julia dream, dreamboat queen
+Queen of all my dreams
+
+[Outro]
+Julia dream, dreamboat queen
+Queen of all my dreams
+(Please save me!)
+Julia dream, dreamboat queen
+Queen of all my dreams
+(Please save me!)
+Julia dream, dreamboat queen
+Queen of all my dreams
+```
+</details>
+
+##### 7. Pink Floyd — *What Do You Want From Me*
+
+- **ID Alternativa**: top-13-alt-6
+- **Album**: The Division Bell
+- **YouTube ID**: 3v6Wbv-rEs0 (https://www.youtube.com/watch?v=3v6Wbv-rEs0)
+
+**Nota editoriale / di ascolto**:
+> Sempre da *The Division Bell*: un groove funk-blues avvolgente con cori gospel femminili e una chitarra tagliente, in cui Gilmour si interroga sulle aspettative impossibili del pubblico.
+
+<details>
+<summary><strong>Testo alternativo</strong> (clicca per espandere)</summary>
+
+```text
+As you look around this room tonight
+Settle in your seat and dim the lights
+Do you want my blood? Do you want my tears?
+What do you want? (What do you want from me?)
+Should I sing until I can’t sing anymore?
+Play these strings 'til my fingers are raw?
+
+You're so hard to please
+What do you want from me?
+
+Do you think that I know something you don’t know?
+(What do you want from me?)
+If I don’t promise you the answers, would you go?
+(What do you want from me?)
+Should I stand out in the rain?
+Do you want me to make a daisy chain for you?
+
+I’m not the one you need
+What do you want from me?
+
+You can have anything you want
+You can drift, you can dream, even walk on water
+Anything you want
+You can own everything you see
+Sell your soul for complete control
+Is that really what you need?
+You can lose yourself this night
+See inside, there is nothing to hide
+Turn and face the light
+
+What do you want from me?
 ```
 </details>
 
@@ -2150,7 +2372,12 @@ Con Mel Collins al sax filtrato e distorto, Robert Fripp alla chitarra tagliente
 - **YouTube ID**: 5WSulenOUb0 (https://www.youtube.com/watch?v=5WSulenOUb0)
 - **Varianti video**:
   - Live · Isle of Wight 1970: 5WSulenOUb0 (https://www.youtube.com/watch?v=5WSulenOUb0)
-  - Originale: U4P5dsPvRIA (https://www.youtube.com/watch?v=U4P5dsPvRIA)
+  - Album (Studio): U4P5dsPvRIA (https://www.youtube.com/watch?v=U4P5dsPvRIA)
+
+**Nota editoriale / di ascolto**:
+> Il brano è una critica feroce all'ipocrisia della religione istituzionalizzata: parla di come la società abbia ingabbiato Dio in una «gabbia dorata» di dogmi e convenzioni, dimenticando che la vera spiritualità è qualcosa di intimo che vive dentro ciascuno di noi (*«He's inside you and me»*).
+> 
+> La versione principale inserita qui è un live storico ed è un bel po' diversa da quella dell'album, soprattutto per tutta la parte del flauto traverso. Personalmente preferisco la versione album rispetto a questo live (quella incisa su disco ha un equilibrio e una compostezza magnifici), però ci tenevo a metterti questo video per farti vedere la pura «pazzia» e la sfrenata teatralità di Ian Anderson sul palco: tra sguardi allucinati e assoli selvaggi al flauto suonato su una gamba sola, fa capire quanto fossero folli e viscerali dal vivo. *(Tra l'altro nel selettore delle versioni puoi passare tranquillamente dal Live alla versione Album originale in studio per confrontarle).*
 
 <details>
 <summary><strong>Testo del brano</strong> (clicca per espandere)</summary>
@@ -2200,6 +2427,9 @@ To all the gods that you can count
 - **ID Alternativa**: prog-07-alt-0
 - **Album**: Aqualung
 - **YouTube ID**: lO8a369YOQk (https://www.youtube.com/watch?v=lO8a369YOQk)
+- **Varianti video**:
+  - Live · Sight & Sound In Concert 1977: lO8a369YOQk (https://www.youtube.com/watch?v=lO8a369YOQk)
+  - Album / Videoclip: N4zPu3ISCGs (https://www.youtube.com/watch?v=N4zPu3ISCGs)
 
 <details>
 <summary><strong>Testo alternativo</strong> (clicca per espandere)</summary>
@@ -2252,17 +2482,70 @@ Hey, Aqualung!
 
 ---
 
-### 08. Pink Floyd — *Have A Cigar*
+### 08. Pink Floyd — *Fat Old Sun*
 
 - **ID**: prog-08
+- **Album**: Atom Heart Mother
+- **YouTube ID**: x7ZZZxjhL3k (https://www.youtube.com/watch?v=x7ZZZxjhL3k)
+- **Varianti video**:
+  - Album: x7ZZZxjhL3k (https://www.youtube.com/watch?v=x7ZZZxjhL3k)
+  - Live BBC (1971): V0DhkRSoiCc (https://www.youtube.com/watch?v=V0DhkRSoiCc)
+
+**Nota editoriale / di ascolto**:
+> Una delle composizioni pastorali più magiche di David Gilmour da **Atom Heart Mother** (1970). I rintocchi di campana in lontananza, l'atmosfera estiva al tramonto e poi quel leggendario assolo finale di chitarra che spicca il volo.
+> 
+> Pensa che nella versione in studio Gilmour ha inciso quasi tutto lui: voce solista, chitarra acustica, chitarra elettrica, basso e persino la batteria! *(Nelle versioni video trovi sia la traccia dall'Album originale che una versione Live BBC del 1971 spettacolare e dilatata, dove il solo finale diventa una cavalcata psichedelica pazzesca).*
+
+<details>
+<summary><strong>Testo del brano</strong> (clicca per espandere)</summary>
+
+```text
+When that fat old sun in the sky is falling
+Summer evening birds are calling
+Summer Sunday and a year
+The sound of music in my ears
+
+Distant bells
+New mown grass smells so sweet
+By the river holding hands
+Roll me up and lay me down
+
+And if you see, don’t make a sound
+Pick your feet up off the ground
+And if you hear as the warm night falls
+The silver sound from a tongue so strange
+Sing to me, sing to me
+
+When that fat old sun in the sky is falling
+Summer evening birds are calling
+Children’s laughter in my ears
+The last sunlight disappears
+
+And if you see, don’t make a sound
+Pick your feet up off the ground
+And if you hear as the warm night falls
+The silver sound from a tongue so strange
+Sing to me, sing to me
+
+[Guitar Solo]
+
+(Bells ringing)
+```
+</details>
+
+#### Brani alternativi di questa traccia:
+
+##### 1. Pink Floyd — *Have A Cigar*
+
+- **ID Alternativa**: prog-08-alt-0
 - **Album**: Wish You Were Here
 - **YouTube ID**: Eq8ZiZ9xiLw (https://www.youtube.com/watch?v=Eq8ZiZ9xiLw)
 
 **Nota editoriale / di ascolto**:
-> Questa forse la conosci già, è un funk-prog caustico e tagliente che prende in giro le case discografiche («Which one's Pink?»). Nelle alternative c'è la suite monumentale di **Atom Heart Mother**, 23 minuti orchestrali da ascoltare con calma in cuffia, un viaggio unico da ascoltare solo una volta l'anno.
+> Un funk-prog caustico e tagliente che prende in giro il cinismo dell'industria discografica («Which one's Pink?»), cantato dall'ospite d'onore Roy Harper.
 
 <details>
-<summary><strong>Testo del brano</strong> (clicca per espandere)</summary>
+<summary><strong>Testo alternativo</strong> (clicca per espandere)</summary>
 
 ```text
 Come in here, dear boy, have a cigar.
@@ -2288,13 +2571,14 @@ We call it Riding the Gravy Train.
 ```
 </details>
 
-#### Brani alternativi di questa traccia:
+##### 2. Pink Floyd — *Atom Heart Mother*
 
-##### 1. Pink Floyd — *Atom Heart Mother*
-
-- **ID Alternativa**: prog-08-alt-0
+- **ID Alternativa**: prog-08-alt-1
 - **Album**: Atom Heart Mother
 - **YouTube ID**: gLhYOdTSQHA (https://www.youtube.com/watch?v=gLhYOdTSQHA)
+
+**Nota editoriale / di ascolto**:
+> La monumentale suite orchestrale da 23 minuti con ottoni e coro, un viaggio sonoro da ascoltare con calma in cuffia.
 
 <details>
 <summary><strong>Testo alternativo</strong> (clicca per espandere)</summary>
@@ -2321,6 +2605,62 @@ f. Remerge
 "Here is a loud announcement..."
 
 (Capolavoro sinfonico-progressivo dei Pink Floyd pre-Dark Side of the Moon).
+```
+</details>
+
+##### 3. Pink Floyd — *Us and Them*
+
+- **ID Alternativa**: prog-08-alt-2
+- **Album**: The Dark Side of the Moon
+- **YouTube ID**: HoLhKJuGhK0 (https://www.youtube.com/watch?v=HoLhKJuGhK0)
+
+**Nota editoriale / di ascolto**:
+> Probabilmente la conoscerai già (è uno dei picchi assoluti di *The Dark Side of the Moon*), ma se non l'hai mai ascoltata con attenzione in cuffia, fermati perché è assurda: sequenza ipnotica al piano di Wright e sax vellutato di Dick Parry.
+
+<details>
+<summary><strong>Testo alternativo</strong> (clicca per espandere)</summary>
+
+```text
+Us, and them
+And after all, we're only ordinary men
+Me, and you
+God only knows it's not what we would choose to do
+
+"Forward!" he cried from the rear
+And the front rank died
+The general sat, and the lines on the map
+Moved from side to side
+
+Black and blue
+And who knows which is which, and who is who?
+Up and down
+And in the end, it's only round and round, and round
+
+"Haven't you heard it's a battle of words?"
+The poster bearer cried
+"Listen, son," said the man with the gun
+"There's room for you inside"
+
+"I mean, they're gonna kill ya
+So like, if you give 'em a quick sh… short, sharp, shock
+They don't do it again
+Dig it? I mean, he got off light
+'Cause I could've given him a thrashin'
+I only hit him once!
+It's only a difference in right and wrong, innit?
+I mean good manners don't cost nothin', do they, eh?"
+
+[Saxophone Solo]
+
+Down and out
+It can't be helped, but there's a lot of it about
+With, without
+And who'll deny it's what the fighting's all about?
+
+Out of the way, it's a busy day
+I've got things on my mind
+For want of the price of tea and a slice
+The old man died
 ```
 </details>
 

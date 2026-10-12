@@ -255,25 +255,80 @@ const TRACK_DATA = {
       "title": "The Gunner’s Dream",
       "album": "The Final Cut",
       "youtubeId": "lIJN6WWf3Rg",
-      "note": "Da <strong>The Final Cut</strong>. Il momento in cui la voce straziata di Waters sfuma ed entra il sax ti giuro mi fa commuovere, sembra una lama.",
+      "note": "<p>Da <strong>The Final Cut</strong>. Il momento in cui la voce straziata di Waters sfuma ed entra il sax ti giuro mi fa commuovere, sembra una lama.</p><p><em>(E scusa Ari, ma non sapevo proprio come fare con i brani dei Pink Floyd... non si vede per niente che sono la mia band preferita! Anzi, ho cercato di limitarmi il più possibile per non fare un mappazzone, avrei voluto metterne altre 100. Tra l'altro stavo per metterti anche In The Flesh? e Don’t Leave Me Now da The Wall, ma quelle probabilmente le conosci già benissimo!).</em></p>",
       "alternatives": [
         {
           "artist": "Pink Floyd",
           "title": "High Hopes",
           "album": "The Division Bell",
-          "youtubeId": "pDKPz6KD8fs"
+          "youtubeId": "pDKPz6KD8fs",
+          "note": "La campana che rintocca, la slide guitar celestiale di Gilmour e la malinconia del tempo che fugge. La chiusura perfetta dell'era Floyd."
         },
         {
           "artist": "Pink Floyd",
-          "title": "In The Flesh?",
-          "album": "The Wall",
-          "youtubeId": "6Z6Je2QM6lE"
+          "title": "Biding My Time",
+          "album": "Relics",
+          "youtubeId": "UE_kwD9CMnQ",
+          "note": "Un blues lento e fumoso a 12 battute dell'era <em>Ummagumma</em> (parte della suite <em>The Man and the Journey</em>), con Rick Wright al trombone e un assolo blues grezzo di Gilmour. <em>(Nelle versioni trovi sia la traccia in studio che il rarissimo live ad Amsterdam del 1969!)</em>",
+          "youtubeVariants": [
+            {
+              "youtubeId": "UE_kwD9CMnQ",
+              "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/UE_kwD9CMnQ?si=TzjjdyX9AjhJ0BPC\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>",
+              "label": "Album"
+            },
+            {
+              "youtubeId": "XcxAvIcXeL8",
+              "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/XcxAvIcXeL8?si=1D0poSajCtzPgWOs\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>",
+              "label": "Live 1969"
+            }
+          ]
         },
         {
           "artist": "Pink Floyd",
-          "title": "Don’t Leave Me Now",
-          "album": "The Wall",
-          "youtubeId": "zppuIqcUsig"
+          "title": "Sorrow",
+          "album": "A Momentary Lapse of Reason",
+          "youtubeId": "uph_1gDITUY",
+          "note": "Monumento sonoro di Gilmour: quel riff d'apertura colossale fu inciso suonando dentro il Los Angeles Sports Arena vuoto per sfruttare l'eco di uno stadio intero. <em>(Nelle versioni c'è sia l'album che la leggendaria esecuzione da PULSE!)</em>",
+          "youtubeVariants": [
+            {
+              "youtubeId": "uph_1gDITUY",
+              "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/uph_1gDITUY?si=r3esOPhdB34oG04S\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>",
+              "label": "Album"
+            },
+            {
+              "youtubeId": "JdPTec5ADFE",
+              "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/JdPTec5ADFE?si=xxMjERQZzuXqGqmf\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>",
+              "label": "Live PULSE"
+            }
+          ]
+        },
+        {
+          "artist": "Pink Floyd",
+          "title": "Stay",
+          "album": "Obscured by Clouds",
+          "youtubeId": "Exz1nAgP2RU",
+          "note": "Una gemma dolcissima e intima cantata con voce calda e fragile da Richard Wright al piano elettrico, con la chitarra a pedale di Gilmour che piange in lontananza."
+        },
+        {
+          "artist": "Pink Floyd",
+          "title": "San Tropez",
+          "album": "Meddle",
+          "youtubeId": "mjNYO-OI2Fo",
+          "note": "Parentesi acustica e scanzonata da <em>Meddle</em>: un jazz/bossa nova solare scritto da Roger Waters con pianoforte da saloon e chitarra slide, come una pigra cartolina estiva."
+        },
+        {
+          "artist": "Pink Floyd",
+          "title": "Julia Dream",
+          "album": "Relics",
+          "youtubeId": "kchY5ff6uqA",
+          "note": "Una fiaba psichedelica oscura e sognante del 1968: la voce giovanissima ed eterea di David Gilmour sussurra su una chitarra acustica acida e il mellotron flautato di Rick Wright. Una perla d'altri tempi."
+        },
+        {
+          "artist": "Pink Floyd",
+          "title": "What Do You Want From Me",
+          "album": "The Division Bell",
+          "youtubeId": "3v6Wbv-rEs0",
+          "note": "Sempre da <em>The Division Bell</em>: un groove funk-blues avvolgente con cori gospel femminili e una chitarra tagliente, in cui Gilmour si interroga sulle aspettative impossibili del pubblico."
         }
       ]
     }
@@ -426,6 +481,7 @@ const TRACK_DATA = {
       "title": "My God",
       "album": "Aqualung",
       "youtubeId": "5WSulenOUb0",
+      "note": "<p>Il brano è una critica feroce all'ipocrisia della religione istituzionalizzata: parla di come la società abbia ingabbiato Dio in una «gabbia dorata» di dogmi e convenzioni, dimenticando che la vera spiritualità è qualcosa di intimo che vive dentro ciascuno di noi (<em>«He's inside you and me»</em>).</p><p>La versione che ho messo qui è un live storico ed è un bel po' diversa da quella dell'album, soprattutto per tutta la parte del flauto traverso. Personalmente preferisco la versione album rispetto a questo live (quella incisa su disco ha un equilibrio e una compostezza magnifici), però ci tenevo a farti vedere questo video per farti capire la pura «pazzia» e la sfrenata teatralità di Ian Anderson sul palco: tra sguardi allucinati e assoli selvaggi al flauto suonato su una gamba sola, fa capire quanto fossero folli e viscerali dal vivo.</p><p class='note-anecdote'><em>(Comunque nel selettore delle versioni puoi passare tranquillamente dal <strong>Live</strong> alla versione <strong>Album</strong> in studio per confrontarle!)</em></p>",
       "alternatives": [
         {
           "artist": "Jethro Tull",
@@ -436,12 +492,12 @@ const TRACK_DATA = {
             {
               "youtubeId": "lO8a369YOQk",
               "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/lO8a369YOQk?si=ksgbXi954K_6URc-\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>",
-              "label": "Album"
+              "label": "Live"
             },
             {
               "youtubeId": "N4zPu3ISCGs",
               "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/N4zPu3ISCGs?si=0JiuG05Db6ujJx8s\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>",
-              "label": "Video"
+              "label": "Album"
             }
           ]
         }
@@ -464,16 +520,43 @@ const TRACK_DATA = {
       "num": "08",
       "arc": "prog",
       "artist": "Pink Floyd",
-      "title": "Have A Cigar",
-      "album": "Wish You Were Here",
-      "youtubeId": "Eq8ZiZ9xiLw",
-      "note": "Questa forse la conosci già, è un funk-prog caustico e tagliente che prende in giro le case discografiche («Which one's Pink?»). Nelle alternative c'è la suite monumentale di <strong>Atom Heart Mother</strong>, 23 minuti orchestrali da ascoltare con calma in cuffia, un viaggio unico da ascoltare solo una volta l'anno.",
+      "title": "Fat Old Sun",
+      "album": "Atom Heart Mother",
+      "youtubeId": "x7ZZZxjhL3k",
+      "note": "<p>Una delle composizioni pastorali più magiche di David Gilmour da <strong>Atom Heart Mother</strong> (1970). I rintocchi di campana in lontananza, l'atmosfera estiva al tramonto e poi quel leggendario assolo finale di chitarra che spicca il volo.</p><p>Pensa che nella versione in studio Gilmour ha inciso quasi tutto lui: voce solista, chitarra acustica, chitarra elettrica, basso e persino la batteria!</p><p class='note-anecdote'><em>(Nelle versioni video trovi sia la traccia dall'<strong>Album</strong> originale che una versione <strong>Live BBC</strong> del 1971 spettacolare e dilatata, dove il solo finale diventa una cavalcata psichedelica pazzesca).</em></p>",
       "alternatives": [
+        {
+          "artist": "Pink Floyd",
+          "title": "Have A Cigar",
+          "album": "Wish You Were Here",
+          "youtubeId": "Eq8ZiZ9xiLw",
+          "note": "Un funk-prog caustico e tagliente che prende in giro il cinismo dell'industria discografica («Which one's Pink?»), cantato dall'ospite d'onore Roy Harper."
+        },
         {
           "artist": "Pink Floyd",
           "title": "Atom Heart Mother",
           "album": "Atom Heart Mother",
-          "youtubeId": "gLhYOdTSQHA"
+          "youtubeId": "gLhYOdTSQHA",
+          "note": "La monumentale suite orchestrale da 23 minuti con ottoni e coro, un viaggio sonoro da ascoltare con calma in cuffia."
+        },
+        {
+          "artist": "Pink Floyd",
+          "title": "Us and Them",
+          "album": "The Dark Side of the Moon",
+          "youtubeId": "HoLhKJuGhK0",
+          "note": "Probabilmente la conoscerai già (è uno dei picchi assoluti di <em>The Dark Side of the Moon</em>), ma se non l'hai mai ascoltata con attenzione in cuffia, fermati perché è assurda: sequenza ipnotica al piano di Wright e sax vellutato di Dick Parry."
+        }
+      ],
+      "youtubeVariants": [
+        {
+          "youtubeId": "x7ZZZxjhL3k",
+          "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/x7ZZZxjhL3k?si=APjUmzO3pRc1B-EV\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>",
+          "label": "Album"
+        },
+        {
+          "youtubeId": "V0DhkRSoiCc",
+          "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/V0DhkRSoiCc?si=_u1gwUZQIXNXCr4E\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>",
+          "label": "Live BBC"
         }
       ]
     },

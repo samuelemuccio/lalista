@@ -17,7 +17,6 @@ Questi sono brani che mi fanno impazzire e spero che ti piaceranno tanto quanto 
 
 Volevo farcene entrare dieci, ma è stato impossibile, ne ho lasciate **tredici** + qualche alternativa se magari ti ha intrigato l'artista e, in fondo, le **menzioni d’onore**. Se hai voglia e tempo, meritano tutte.
 
-
 ---
 
 ### [lettera-prog] Un appunto sul Prog
@@ -117,14 +116,28 @@ Registrato con Thom Yorke che canta letteralmente appiccicato al microfono su un
 ### [top-13] Pink Floyd — The Gunner’s Dream
 Da **The Final Cut**. Il momento in cui la voce straziata di Waters sfuma ed entra il sax ti giuro mi fa commuovere, sembra una lama.
 
+*(E scusa Ari, ma non sapevo proprio come fare con i brani dei Pink Floyd... non si vede per niente che sono la mia band preferita! Anzi, ho cercato di limitarmi il più possibile per non fare un mappazzone, avrei voluto metterne altre 100. Tra l'altro stavo per metterti anche In The Flesh? e Don’t Leave Me Now da The Wall, ma quelle probabilmente le conosci già benissimo!).*
+
 #### [top-13-alt-0] Pink Floyd — High Hopes (Alternativa 1)
-*(Nessuna nota — scrivi qui sotto per aggiungerne una)*
+La campana che rintocca, la slide guitar celestiale di Gilmour e la malinconia del tempo che fugge. La chiusura perfetta dell'era Floyd.
 
-#### [top-13-alt-1] Pink Floyd — In The Flesh? (Alternativa 2)
-*(Nessuna nota — scrivi qui sotto per aggiungerne una)*
+#### [top-13-alt-1] Pink Floyd — Biding My Time (Alternativa 2)
+Un blues lento e fumoso a 12 battute dell'era *Ummagumma* (parte della suite *The Man and the Journey*), con Rick Wright al trombone e un assolo blues grezzo di Gilmour. *(Nelle versioni video trovi sia la traccia in studio che il rarissimo live ad Amsterdam del 1969!)*
 
-#### [top-13-alt-2] Pink Floyd — Don’t Leave Me Now (Alternativa 3)
-*(Nessuna nota — scrivi qui sotto per aggiungerne una)*
+#### [top-13-alt-2] Pink Floyd — Sorrow (Alternativa 3)
+Monumento sonoro di Gilmour: quel riff d'apertura colossale fu inciso suonando dentro il Los Angeles Sports Arena vuoto per sfruttare l'eco di uno stadio intero. *(Nelle versioni c'è sia l'album che la leggendaria esecuzione da PULSE!)*
+
+#### [top-13-alt-3] Pink Floyd — Stay (Alternativa 4)
+Una gemma dolcissima e intima cantata con voce calda e fragile da Richard Wright al piano elettrico, con la chitarra a pedale di Gilmour che piange in lontananza.
+
+#### [top-13-alt-4] Pink Floyd — San Tropez (Alternativa 5)
+Parentesi acustica e scanzonata da *Meddle*: un jazz/bossa nova solare scritto da Roger Waters con pianoforte da saloon e chitarra slide, come una pigra cartolina estiva.
+
+#### [top-13-alt-5] Pink Floyd — Julia Dream (Alternativa 6)
+Una fiaba psichedelica oscura e sognante del 1968: la voce giovanissima ed eterea di David Gilmour sussurra su una chitarra acustica acida e il mellotron flautato di Rick Wright. Una perla d'altri tempi.
+
+#### [top-13-alt-6] Pink Floyd — What Do You Want From Me (Alternativa 7)
+Sempre da *The Division Bell*: un groove funk-blues avvolgente con cori gospel femminili e una chitarra tagliente, in cui Gilmour si interroga sulle aspettative impossibili del pubblico.
 
 ---
 
@@ -177,16 +190,26 @@ Da **Red**, uno dei loro dischi più monumentali, adoro il contrasto tra la part
 *(Nessuna nota — scrivi qui sotto per aggiungerne una)*
 
 ### [prog-07] Jethro Tull — My God
-*(Nessuna nota — scrivi qui sotto per aggiungerne una)*
+Il brano è una critica feroce all'ipocrisia della religione istituzionalizzata: parla di come la società abbia ingabbiato Dio in una «gabbia dorata» di dogmi e convenzioni, dimenticando che la vera spiritualità è qualcosa di intimo che vive dentro ciascuno di noi (*«He's inside you and me»*).
+
+La versione principale inserita qui è un live storico ed è un bel po' diversa da quella dell'album, soprattutto per tutta la parte del flauto traverso. Personalmente preferisco la versione album rispetto a questo live (quella incisa su disco ha un equilibrio e una compostezza magnifici), però ci tenevo a metterti questo video per farti vedere la pura «pazzia» e la sfrenata teatralità di Ian Anderson sul palco: tra sguardi allucinati e assoli selvaggi al flauto suonato su una gamba sola, fa capire quanto fossero folli e viscerali dal vivo. *(Tra l'altro nel selettore delle versioni puoi passare tranquillamente dal Live alla versione Album originale in studio per confrontarle).*
 
 #### [prog-07-alt-0] Jethro Tull — Aqualung (Alternativa 1)
 *(Nessuna nota — scrivi qui sotto per aggiungerne una)*
 
-### [prog-08] Pink Floyd — Have A Cigar
-Questa forse la conosci già, è un funk-prog caustico e tagliente che prende in giro le case discografiche («Which one's Pink?»). Nelle alternative c'è la suite monumentale di **Atom Heart Mother**, 23 minuti orchestrali da ascoltare con calma in cuffia, un viaggio unico da ascoltare solo una volta l'anno.
+### [prog-08] Pink Floyd — Fat Old Sun
+Una delle composizioni pastorali più magiche di David Gilmour da **Atom Heart Mother** (1970). I rintocchi di campana in lontananza, l'atmosfera estiva al tramonto e poi quel leggendario assolo finale di chitarra che spicca il volo.
 
-#### [prog-08-alt-0] Pink Floyd — Atom Heart Mother (Alternativa 1)
-*(Nessuna nota — scrivi qui sotto per aggiungerne una)*
+Pensa che nella versione in studio Gilmour ha inciso quasi tutto lui: voce solista, chitarra acustica, chitarra elettrica, basso e persino la batteria! *(Nelle versioni video trovi sia la traccia dall'Album originale che una versione Live BBC del 1971 spettacolare e dilatata, dove il solo finale diventa una cavalcata psichedelica pazzesca).*
+
+#### [prog-08-alt-0] Pink Floyd — Have A Cigar (Alternativa 1)
+Un funk-prog caustico e tagliente che prende in giro il cinismo dell'industria discografica («Which one's Pink?»), cantato dall'ospite d'onore Roy Harper.
+
+#### [prog-08-alt-1] Pink Floyd — Atom Heart Mother (Alternativa 2)
+La monumentale suite orchestrale da 23 minuti con ottoni e coro, un viaggio sonoro da ascoltare con calma in cuffia.
+
+#### [prog-08-alt-2] Pink Floyd — Us and Them (Alternativa 3)
+Probabilmente la conoscerai già (è uno dei picchi assoluti di *The Dark Side of the Moon*), ma se non l'hai mai ascoltata con attenzione in cuffia, fermati perché è assurda: sequenza ipnotica al piano di Wright e sax vellutato di Dick Parry.
 
 ### [prog-09] TOOL — Pneuma
 I TOOL sono una band fuori scala. In **Lateralus** (il disco del 2001) hanno composto strofe e sillabe seguendo la sequenza di Fibonacci. *Pneuma* è il loro capolavoro recente, 12 minuti di pura trance poliritmica guidati dalla batteria pazzesca di Danny Carey.
