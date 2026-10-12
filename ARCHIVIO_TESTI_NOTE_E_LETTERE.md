@@ -9,18 +9,18 @@ Questo documento raccoglie l’intero corpus editoriale del sito **Ari Playlist*
 ### Lettera di apertura — La Lista
 
 > **Ciao Ari,**
-> *ho provato a tenerla corta, davvero*
+> *giuro che ho provato a farcene entrare 10, davvero*
 >
-> Questi sono brani che mi fanno impazzire e spero che ti piaceranno tanto quanto a me. Spero tanto possa trovare qualche artista nuovo o brano nuovo che ti possa piacere, oppure un album che ti incuriosisce abbastanza da volerlo aggiungere alla tua collezione di vinili o da raccontare in un video.
+> Questi sono brani che mi fanno impazzire e spero che ti piaceranno tanto quanto a me. Spero tu possa trovare pezzi che ti colpiscano e ti facciano venire voglia di ascoltare quell'artista o quell'album, o che ti facciano scoprire cose nuove; magari troverai anche qualche ispirazione da aggiungere alla tua collezione di vinili o qualche spunto per i tuoi video.
 >
-> Volevo farcene entrare dieci, ma è stato impossibile, ne ho lasciate **tredici** e qualche alternativa se ti dovesse intrigare l'artista, e in fondo, le **menzioni d’onore**. Se hai voglia o tempo, meritano tutte.
+> Volevo farcene entrare dieci, ma è stato impossibile, ne ho lasciate **tredici** + qualche alternativa se magari ti ha intrigato l'artista e, in fondo, le **menzioni d’onore**. Se hai voglia e tempo, meritano tutte.
 
 ### Lettera d’introduzione — Un appunto sul Prog
 
-> **Un appunto sul prog**
-> *un piccolo assaggio del genere*
+> **Una nota sul prog**
+> *un piccolissimo assaggio del genere*
 >
-> Mi avevi detto che ti incuriosiva il prog, qui trovi alcune chicche tra le più fighe per approcciare il genere. È solo un assaggio, dietro ogni brano c’è un album da esplorare e un mondo di artisti, dagli Yes ai Gentle Giant. Spero che questo viaggio ti piaccia!
+> Mi avevi detto che ti incuriosiva il prog, qui trovi alcune chicche tra le più fighe per approcciare il genere. È solo un assaggio, dietro ogni brano c’è un album da esplorare e un mondo di artisti, dagli Yes ai Gentle Giant. Spero che questo viaggio ti piaccia.
 
 ---
 ## 2. LA LISTA (13 Brani + Alternative)
@@ -117,7 +117,7 @@ Ain't helping me start
 - **YouTube ID**: dGgBzSfgVsA (https://www.youtube.com/watch?v=dGgBzSfgVsA)
 
 **Nota editoriale / di ascolto**:
-> Quest'album in generale è stato una svolta totale, nessuno si aspettava da Lil Yachty un cambio di rotta del genere, tutto suonato con strumenti veri e psichedelia pura. La voce celestiale di Diana Gordon poi è la ciliegina sulla torta.
+> Quest'album in generale è stato una svolta totale, nessuno si aspettava da Lil Yachty un cambio di rotta del genere, super psichedelico. La voce celestiale di Diana Gordon poi è la ciliegina sulla torta.
 
 <details>
 <summary><strong>Testo del brano</strong> (clicca per espandere)</summary>
@@ -368,7 +368,7 @@ E tutto se ne va
 - **YouTube ID**: OONDL7c6aGU (https://www.youtube.com/watch?v=OONDL7c6aGU)
 
 **Nota editoriale / di ascolto**:
-> I Mandrill da Brooklyn nel 1971 fecero semplicemente un capolavoro funk, come tutto l'album o altri loro brani storici come Fencewalk, Ape Is High e Mango Meat.
+> I Mandrill da Brooklyn nel 1971 fecero semplicemente un capolavoro funk, come tutto l'album o altri loro brani storici come *Fencewalk*, *Ape Is High* e *Mango Meat*.
 
 <details>
 <summary><strong>Testo del brano</strong> (clicca per espandere)</summary>
@@ -414,7 +414,7 @@ As all souls rejoice
 - **YouTube ID**: JX2GkxNT-IQ (https://www.youtube.com/watch?v=JX2GkxNT-IQ)
 
 **Nota editoriale / di ascolto**:
-> Ha una voce allucinante, lontanissima dal pop di plastica. Tutto l'album è da ascoltare perché ha una cura nei dettagli e un gusto molto chic, clamoroso.
+> Ha una voce allucinante, lontanissima dal pop di plastica. Tutto l'album è da ascoltare perché ha una cura nei dettagli e un gusto molto chic glam, clamoroso.
 
 <details>
 <summary><strong>Testo del brano</strong> (clicca per espandere)</summary>
@@ -592,7 +592,7 @@ Take my parts
 - **YouTube ID**: H31Zo2Clm0E (https://www.youtube.com/watch?v=H31Zo2Clm0E)
 
 **Nota editoriale / di ascolto**:
-> Anima Latina per me è il disco più bello di Battisti in assoluto e nella lista dei miei album preferiti, ne sono totalmente innamorato. Questo pezzo ha un groove afro-brasiliano e percussioni assurde, parla di due persone diverse che si cercano e si fondono insieme.
+> **Anima Latina** per me è il disco più bello di Battisti in assoluto e nella lista dei miei album preferiti, ne sono totalmente innamorato. Questo pezzo ha un groove afro-brasiliano e percussioni assurde, parla di due persone diverse che si cercano e si fondono insieme.
 
 <details>
 <summary><strong>Testo del brano</strong> (clicca per espandere)</summary>
@@ -889,7 +889,7 @@ La faccia, arrivederci arrivederci.
 - **YouTube ID**: Jq2tcDNeSC8 (https://www.youtube.com/watch?v=Jq2tcDNeSC8)
 
 **Nota editoriale / di ascolto**:
-> Dio mio quanto è figa questa canzone.
+> Dio mio quanto è bella questa canzone.
 
 <details>
 <summary><strong>Testo del brano</strong> (clicca per espandere)</summary>
@@ -965,7 +965,7 @@ Tu come me
 - **YouTube ID**: BtdBQ1-fzXM (https://www.youtube.com/watch?v=BtdBQ1-fzXM)
 
 **Nota editoriale / di ascolto**:
-> Una prova vocale e orchestrale monumentale al Royal Albert Hall con The Heritage Orchestra, una fusione travolgente di soul viscerale, jazz orchestrale e pathos cinematografico. Un'artista pura che dal vivo lascia senza fiato. Gli inglesi ci sanno fare!
+> Una prova vocale e orchestrale monumentale alla Royal Albert Hall con The Heritage Orchestra, puro pathos cinematografico. Penso che ascoltarla dal vivo sia assurdo.
 
 <details>
 <summary><strong>Testo del brano</strong> (clicca per espandere)</summary>
@@ -1161,7 +1161,7 @@ I will overcome!
 - **YouTube ID**: yjT7C1hBFaI (https://www.youtube.com/watch?v=yjT7C1hBFaI)
 
 **Nota editoriale / di ascolto**:
-> Linea Gotica è un capolavoro della musica italiana. Questa rilettura di Battiato ha un'intensità e una delicatezza disarmante.
+> **Linea Gotica** è un capolavoro della musica italiana. Questa rilettura di Battiato ha un'intensità e una delicatezza disarmante.
 
 <details>
 <summary><strong>Testo del brano</strong> (clicca per espandere)</summary>
@@ -1301,7 +1301,7 @@ No non ora non qui, no non ora non qui
 - **YouTube ID**: QQnc-hM80UQ (https://www.youtube.com/watch?v=QQnc-hM80UQ)
 
 **Nota editoriale / di ascolto**:
-> Registrato con Thom Yorke che canta letteralmente appiccicato al microfono su un pianoforte intimo e cupo. Spero che prima o poi possano piacerti i Radiohead.
+> Registrato con Thom Yorke che canta letteralmente appiccicato al microfono su un pianoforte intimo e cupo. Spero che prima o poi possano piacerti i Radiohead. Io amo Amnesiac e Kid A, tant'è che ho il vinile con entrambi gli album insieme: non credo esista qualcosa di simile al mondo.
 
 <details>
 <summary><strong>Testo del brano</strong> (clicca per espandere)</summary>
@@ -1431,7 +1431,7 @@ Is thinking
 - **YouTube ID**: i7QC2XAe4hA (https://www.youtube.com/watch?v=i7QC2XAe4hA)
 
 **Nota editoriale / di ascolto**:
-> The Rainbow Goblins è un concept album pazzesco ispirato alla fiaba di Ul de Rico sui goblin che rubano i colori dell'arcobaleno. Questo pezzo è il finale, la chitarra racconta tutta la storia senza bisogno di parole. Takanaka è uno dei miei chitarristi preferiti in assoluto.
+> **The Rainbow Goblins** è un concept album pazzesco ispirato alla fiaba di Ul de Rico sui goblin che rubano i colori dell'arcobaleno. Questo pezzo è il finale, la chitarra racconta tutta la storia senza bisogno di parole. Takanaka è uno dei miei chitarristi preferiti in assoluto.
 
 <details>
 <summary><strong>Testo del brano</strong> (clicca per espandere)</summary>
@@ -1481,7 +1481,7 @@ They hunted the great arches across the land.
 - **YouTube ID**: lIJN6WWf3Rg (https://www.youtube.com/watch?v=lIJN6WWf3Rg)
 
 **Nota editoriale / di ascolto**:
-> Da The Final Cut. Il momento in cui la voce straziata di Waters sfuma ed entra il sax ti giuro mi fa commuovere, sembra una lama.
+> Da **The Final Cut**. Il momento in cui la voce straziata di Waters sfuma ed entra il sax ti giuro mi fa commuovere, sembra una lama.
 
 <details>
 <summary><strong>Testo del brano</strong> (clicca per espandere)</summary>
@@ -1710,7 +1710,9 @@ Ooh it's getting unbelievable, yeah
 > 
 > Un'altra perla totale degli ELP è l'album **Brain Salad Surgery** (1973), un disco incredibile con brani assurdi come *Benny the Bouncer* o la suite *Karn Evil 9*. La copertina storica fu dipinta dal maestro svizzero **H.R. Giger** ed è il manifesto assoluto dell'estetica **Biomeccanica**, una fusione tra anatomia organica, ossa, cavi e ingranaggi alieni.
 > 
-> È esattamente lo stesso artista geniale che pochi anni dopo creò il design iconico e lo Xenomorfo di **Alien** (1979) di Ridley Scott vincendo l'Oscar, un immaginario che ha segnato la storia del cinema e ha ispirato decenni dopo anche videogiochi come **Scorn**. Da citare assolutamente anche *Tarkus* con la sua celebre creatura corazzata a metà tra istrice e carro armato!
+> È esattamente lo stesso artista geniale che pochi anni dopo creò il design iconico e lo Xenomorfo di **Alien** (1979) di Ridley Scott vincendo l'Oscar, un immaginario che ha segnato la storia del cinema e ha ispirato decenni dopo anche videogiochi come **Scorn** (gioco fighissimo). Da citare assolutamente anche *Tarkus* con la sua celebre creatura corazzata a metà tra istrice e carro armato.
+> 
+>
 
 <details>
 <summary><strong>Testo del brano</strong> (clicca per espandere)</summary>
@@ -1788,7 +1790,15 @@ So, now he works for Jesus as the bouncer at St. Peter's Gate
   - Originale: hzy6sGiLGqM (https://www.youtube.com/watch?v=hzy6sGiLGqM)
 
 **Nota editoriale / di ascolto**:
-> Il sintetizzatore Moog in Italia fu introdotto proprio con questa canzone, per incidere quel leggendario riff si fecero prestare il primissimo prototipo Minimoog arrivato nel nostro Paese.Fu un suono assurdo, mai sentito prima in Italia, che rivoluzionò completamente il modo di fare musica e fece esplodere l'intera stagione del progressive rock nostrano.(E pensa che mio nonno, ispirato proprio da loro, portò un synth dall'America per suonarlo in Sicilia quando nessuno sapeva manco cosa fosse).
+> Il sintetizzatore **Moog** in Italia fu introdotto proprio con questa canzone, per incidere quel leggendario riff si fecero prestare il primissimo prototipo *Minimoog* arrivato nel nostro Paese.
+> 
+> Fu un suono assurdo, mai sentito prima in Italia, che rivoluzionò completamente il modo di fare musica e fece esplodere l'intera stagione del progressive rock nostrano.
+> 
+> <p class='note-anecdote'>*(E pensa che mio nonno, ispirato proprio da loro, portò un synth dall'America per suonarlo in Sicilia quando nessuno sapeva manco cosa fosse).*
+> 
+> 
+> 
+>
 
 <details>
 <summary><strong>Testo del brano</strong> (clicca per espandere)</summary>
@@ -1938,7 +1948,7 @@ Registrato a Berlino dopo un viaggio formativo in Egitto e Medio Oriente. Chitar
 - **YouTube ID**: sckkHW487y0 (https://www.youtube.com/watch?v=sckkHW487y0)
 
 **Nota editoriale / di ascolto**:
-> Da Islands (1971), con cori e armonie vocali che ricordano tantissimo i Beatles e un sax sporco blues pazzesco, a lei piacciono i Beatles quindi questa è perfetta. Nelle alternative trovi anche la poesia di Matte Kudasai, Fallen Angel da Red, e Peoria registrata grezza dal vivo.
+> Da *Islands* (1971), con cori e armonie vocali che ricordano tantissimo i Beatles e un sax sporco blues pazzesco. Nelle alternative trovi anche la poesia di **Matte Kudasai**, **Fallen Angel** da *Red*, e **Peoria** registrata grezza dal vivo.
 
 <details>
 <summary><strong>Testo del brano</strong> (clicca per espandere)</summary>
@@ -2249,7 +2259,7 @@ Hey, Aqualung!
 - **YouTube ID**: Eq8ZiZ9xiLw (https://www.youtube.com/watch?v=Eq8ZiZ9xiLw)
 
 **Nota editoriale / di ascolto**:
-> Questa forse la conosci già, è un funk-prog caustico e tagliente che prende in giro le case discografiche («Which one's Pink?»). Nelle alternative c'è la suite monumentale di Atom Heart Mother, 23 minuti orchestrali da ascoltare con calma in cuffia, un viaggio unico.
+> Questa forse la conosci già, è un funk-prog caustico e tagliente che prende in giro le case discografiche («Which one's Pink?»). Nelle alternative c'è la suite monumentale di **Atom Heart Mother**, 23 minuti orchestrali da ascoltare con calma in cuffia, un viaggio unico da ascoltare solo una volta l'anno.
 
 <details>
 <summary><strong>Testo del brano</strong> (clicca per espandere)</summary>
@@ -2324,7 +2334,7 @@ f. Remerge
 - **YouTube ID**: 5ClCaPmAA7s (https://www.youtube.com/watch?v=5ClCaPmAA7s)
 
 **Nota editoriale / di ascolto**:
-> I TOOL sono una band fuori scala. In Lateralus (il disco del 2001) hanno composto strofe e sillabe seguendo la sequenza di Fibonacci. Pneuma è il loro capolavoro recente, 12 minuti di pura trance poliritmica guidati dalla batteria pazzesca di Danny Carey.
+> I TOOL sono una band fuori scala. In **Lateralus** (il disco del 2001) hanno composto strofe e sillabe seguendo la sequenza di Fibonacci. *Pneuma* è il loro capolavoro recente, 12 minuti di pura trance poliritmica guidati dalla batteria pazzesca di Danny Carey.
 
 <details>
 <summary><strong>Testo del brano</strong> (clicca per espandere)</summary>
@@ -2645,7 +2655,7 @@ This is the end
 - **YouTube ID**: W6sVXK9o0Ys (https://www.youtube.com/watch?v=W6sVXK9o0Ys)
 
 **Nota editoriale / di ascolto**:
-> La gemma psichedelica e sognante dei Black Sabbath, congas ipnotiche, pianoforte jazzato, chitarra pulitissima e la voce di Ozzy Osbourne filtrata. Un proto-prog notturno favoloso.
+> La gemma psichedelica e sognante dei Black Sabbath: congas ipnotiche, pianoforte jazzato, chitarra pulitissima e la voce di Ozzy Osbourne filtrata. Un proto-prog notturno favoloso. Probabilmente la conosci già, ma ci tenevo a metterla.
 
 <details>
 <summary><strong>Testo del brano</strong> (clicca per espandere)</summary>
@@ -2680,7 +2690,7 @@ The black night sighs
 - **YouTube ID**: FCHPla9hceI (https://www.youtube.com/watch?v=FCHPla9hceI)
 
 **Nota editoriale / di ascolto**:
-> Daniela Pes è un'artista sarda che canta letteralmente in una lingua creata da lei, mescolando fonemi e suoni galluresi con l'elettronica scura di Iosonouncane. L'album SPIRA è un viaggio ancestrale assurdo.
+> Daniela Pes è un'artista sarda che canta letteralmente in una lingua creata da lei, mescolando fonemi e suoni galluresi con l'elettronica scura di Iosonouncane. L'album *SPIRA* è un viaggio ancestrale assurdo.
 
 <details>
 <summary><strong>Testo del brano</strong> (clicca per espandere)</summary>
@@ -3362,7 +3372,7 @@ Oh mother, I can feel the soil falling over my head
 - **YouTube ID**: Z0CQf3JDKAY (https://www.youtube.com/watch?v=Z0CQf3JDKAY)
 
 **Nota editoriale / di ascolto**:
-> Da CHROMAKOPIA, una ballata intima al piano con Lola Young. Tyler che affronta a cuore aperto il rapporto con suo padre, per me è uno dei suoi pezzi più toccanti e maturi in assoluto. Ma tutto l'album va ascoltato.
+> Da *CHROMAKOPIA*, una ballata intima al piano con Lola Young. Tyler che affronta a cuore aperto il rapporto con suo padre, per me è uno dei suoi pezzi più toccanti e maturi in assoluto. Ma tutto l'album va ascoltato.
 
 <details>
 <summary><strong>Testo del brano</strong> (clicca per espandere)</summary>
@@ -3532,7 +3542,7 @@ Transparency is key, be honest
 - **YouTube ID**: Kga8ZLXxXTE (https://www.youtube.com/watch?v=Kga8ZLXxXTE)
 
 **Nota editoriale / di ascolto**:
-> Da Orbit Orbit, beat denso e un testo geniale sul creare arte per salvarsi, come fa l'ostrica che prende la tossicità e il brutto e lo perlifica.
+> Da *Orbit Orbit*, beat denso e un testo geniale sul creare arte per salvarsi, come fa l'ostrica che prende la tossicità e il brutto e lo perlifica.
 
 <details>
 <summary><strong>Testo del brano</strong> (clicca per espandere)</summary>
@@ -4369,7 +4379,7 @@ Catching feelings never stumble, retracing my steps
 - **YouTube ID**: 1WEXSVk9qDQ (https://www.youtube.com/watch?v=1WEXSVk9qDQ)
 
 **Nota editoriale / di ascolto**:
-> Una figata incredibile dall'album MICHAEL (vincitore di 3 Grammy nel 2024).
+> Una figata incredibile dall'album *MICHAEL* (vincitore di 3 Grammy nel 2024).
 
 <details>
 <summary><strong>Testo del brano</strong> (clicca per espandere)</summary>

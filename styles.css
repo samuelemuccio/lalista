@@ -13,6 +13,7 @@
   --slate: #8bafbb;
   --prog: #5b7c8d;
   --serif: 'Newsreader', Georgia, serif;
+  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --mono: 'DM Mono', 'Courier New', monospace;
   --ease: 280ms cubic-bezier(.2, .75, .25, 1);
 }
@@ -41,6 +42,86 @@ button:focus-visible, a:focus-visible, summary:focus-visible, textarea:focus-vis
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb { border-radius: 999px; background: rgba(169, 147, 117, 0.45); border: 1.5px solid transparent; background-clip: padding-box; }
 ::-webkit-scrollbar-thumb:hover { background: rgba(169, 147, 117, 0.75); }
+
+/* ==========================================================================
+   PAPER TEXTURE & TACTILE FIBERS (Organic Cotton Grain - Zero KB)
+   ========================================================================== */
+.paper-surface-overlay {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 9990;
+  opacity: 0.14;
+  mix-blend-mode: multiply;
+  transform: translateZ(0);
+}
+body.cinema-mode-active .paper-surface-overlay {
+  display: none !important;
+}
+.paper-surface-overlay svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* Letterpress Deboss Typography (Caratteri a piombo su carta) */
+h1,
+.track-song-headline,
+.player-caption h2,
+.welcome-dialog h2,
+.ad-tips-title,
+.honorable-disclosure summary strong {
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.65), 0 -0.5px 0 rgba(40, 32, 24, 0.14);
+}
+
+/* Real Tactile Cotton Paper Surface on Cards & Elements */
+.track-master-card,
+.player-paper,
+.welcome-dialog-paper,
+.note-global-popover {
+  background-image: 
+    radial-gradient(ellipse at 50% 0%, rgba(255, 255, 255, 0.45) 0%, transparent 75%),
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.045'/%3E%3C/svg%3E");
+}
+
+/* Ink Wash Ripple (Acquerello espansione inchiostro visibile) */
+.ink-wash-ring {
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 100050;
+  transform: translate(-50%, -50%) scale(0.2);
+  background: radial-gradient(circle, rgba(169, 79, 50, 0.35) 0%, rgba(169, 79, 50, 0.12) 48%, transparent 74%);
+  box-shadow: 0 0 12px rgba(169, 79, 50, 0.18);
+  animation: inkWashExpand 420ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+@keyframes inkWashExpand {
+  0% {
+    transform: translate(-50%, -50%) scale(0.2);
+    opacity: 0.95;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.65);
+    opacity: 0;
+  }
+}
+
+/* Collection Panel Page Slip Transition */
+.deck-panel-view {
+  animation: panelPageSlipIn 300ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+@keyframes panelPageSlipIn {
+  from {
+    opacity: 0.35;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 .site-header {
   position: sticky; top: 0; z-index: 100;
@@ -605,6 +686,88 @@ button:hover > .note-concentric-icon .note-asterisk-glyph,
   60% { transform: scale(1.15); }
   100% { transform: scale(1.08); }
 }
+
+/* First-time onboarding hint for Note Buttons */
+.btn-track-note.has-pulse-hint {
+  animation: notePulseBeacon 1.8s ease-in-out 3;
+  position: relative;
+}
+@keyframes notePulseBeacon {
+  0%, 100% {
+    filter: drop-shadow(0 0 0 rgba(169, 79, 50, 0));
+  }
+  50% {
+    filter: drop-shadow(0 0 7px rgba(169, 79, 50, 0.85));
+  }
+}
+
+.note-first-time-hint {
+  position: absolute;
+  bottom: calc(100% + 7px);
+  left: 50%;
+  transform: translateX(-50%);
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 8px 3px 7px;
+  background: var(--terracotta);
+  color: #fff9f0;
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  border-radius: 999px;
+  white-space: nowrap;
+  pointer-events: none;
+  box-shadow: 0 4px 12px rgba(169, 79, 50, 0.4);
+  animation: noteHintFloatAbove 2.2s infinite ease-in-out;
+  z-index: 20;
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+.note-first-time-hint.is-fading-out {
+  opacity: 0;
+  transform: translateX(-50%) translateY(4px);
+}
+.note-first-time-hint::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 4px solid transparent;
+  border-top-color: var(--terracotta);
+}
+.hint-pulse-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: 0 0 6px #ffffff;
+  animation: hintDotPulse 1.2s infinite alternate;
+}
+@keyframes noteHintFloatAbove {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(-3px); }
+}
+@keyframes hintDotPulse {
+  from { opacity: 0.55; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1.35); }
+}
+
+/* Pulsing effect on mobileLyricsNoteBtn when unread */
+.player-note-pill-btn.has-unread-note {
+  animation: playerNotePulse 2s ease-in-out 3;
+}
+@keyframes playerNotePulse {
+  0%, 100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 0 rgba(169, 79, 50, 0));
+  }
+  50% {
+    transform: scale(1.14);
+    filter: drop-shadow(0 0 8px rgba(169, 79, 50, 0.65));
+  }
+}
 .note-global-backdrop {
   position: fixed;
   inset: 0;
@@ -704,7 +867,7 @@ body.has-alt-modal-open #noteGlobalPopover,
 }
 .note-popover-body {
   margin: 0;
-  padding: 2px 28px 2px 4px;
+  padding: 4px 6px;
   color: #43382c;
   font-family: var(--serif);
   font-size: 14px;
@@ -715,6 +878,9 @@ body.has-alt-modal-open #noteGlobalPopover,
   overscroll-behavior: contain;
   -webkit-overflow-scrolling: touch;
 }
+.note-global-popover.is-from-beginning .note-popover-body {
+  padding: 2px 28px 2px 4px;
+}
 .note-popover-body p { margin: 0 0 7px; line-height: 1.52; }
 .note-popover-body p:last-child { margin-bottom: 0; }
 .note-popover-body .note-anecdote {
@@ -724,7 +890,7 @@ body.has-alt-modal-open #noteGlobalPopover,
   font-size: 13px;
   color: #5c4a3b;
 }
-.note-popover-body strong { font-weight: 600; font-style: normal; color: #282019; }
+.note-popover-body strong { font-weight: 600; font-style: normal; color: var(--terracotta); }
 .note-popover-body em { font-style: normal; color: var(--terracotta); font-weight: 500; }
 .note-popover-body a { color: var(--terracotta); text-decoration: underline; text-underline-offset: 2px; font-style: normal; }
 .note-popover-body a:hover { color: var(--ink); }
@@ -986,12 +1152,76 @@ body.has-alt-modal-open #noteGlobalPopover,
 .track-artist-subline { min-width: 0; }
 .track-note { max-width: 66ch; margin: 7px 0 0; color: var(--ink-soft); font-size: 15px; font-style: italic; line-height: 1.4; }
 .track-action-dock { display: flex; justify-content: center; }
-.btn-action-play { display: inline-grid; place-items: center; width: 42px; height: 42px; padding: 0; border: 1px solid color-mix(in srgb, var(--arc) 35%, transparent); border-radius: 50%; background: color-mix(in srgb, var(--paper-light) 79%, var(--arc) 21%); color: var(--arc-ink, var(--arc)); cursor: pointer; transition: transform var(--ease), background var(--ease), color var(--ease); }
-.btn-action-play:hover { transform: scale(1.08); }
-.btn-action-play:active { transform: scale(0.92); }
-.btn-action-play svg { grid-area: 1 / 1; width: 15px; height: 15px; }
-.btn-action-play .track-icon-pause, .btn-action-play.is-playing .track-icon-play { display: none; }
-.btn-action-play.is-playing .track-icon-pause { display: block; }
+.btn-action-play {
+  position: relative;
+  overflow: hidden;
+  display: inline-grid; place-items: center; width: 42px; height: 42px; padding: 0;
+  border: 1px solid rgba(75, 52, 32, 0.09);
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--paper-light) 94%, #ffffff);
+  color: var(--ink-soft);
+  cursor: pointer;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  box-shadow: 3.5px 3.5px 7px rgba(52, 36, 20, 0.12),
+              -3.5px -3.5px 7px rgba(255, 255, 255, 0.85);
+  transition: transform 220ms cubic-bezier(.34, 1.56, .64, 1),
+              background 220ms ease,
+              color 220ms ease,
+              box-shadow 240ms cubic-bezier(0.2, 0.8, 0.2, 1),
+              border-color 220ms ease;
+}
+.btn-action-play:hover {
+  transform: translateY(-1px) scale(1.04);
+  background: color-mix(in srgb, var(--paper-light) 98%, #ffffff);
+  color: var(--terracotta);
+  box-shadow: 4.5px 4.5px 10px rgba(52, 36, 20, 0.16),
+              -4.5px -4.5px 10px rgba(255, 255, 255, 0.95);
+}
+.btn-action-play:active {
+  transform: translateY(1.2px) scale(0.96);
+  box-shadow: inset 2.5px 2.5px 5px rgba(52, 36, 20, 0.18),
+              inset -2.5px -2.5px 5px rgba(255, 255, 255, 0.8);
+  color: var(--terracotta);
+}
+.btn-action-play.is-playing {
+  transform: translateY(0.5px) scale(0.98);
+  background: color-mix(in srgb, var(--paper-light) 88%, var(--arc) 12%);
+  border-color: rgba(169, 79, 50, 0.25);
+  color: var(--terracotta);
+  box-shadow: inset 3px 3px 6px rgba(52, 36, 20, 0.2),
+              inset -3px -3px 6px rgba(255, 255, 255, 0.85);
+}
+.btn-action-play.is-playing:hover {
+  box-shadow: inset 3.5px 3.5px 7px rgba(52, 36, 20, 0.25),
+              inset -3.5px -3.5px 7px rgba(255, 255, 255, 0.9);
+  color: #934027;
+}
+.btn-action-play svg {
+  grid-area: 1 / 1;
+  width: 15px;
+  height: 15px;
+  transition: transform 240ms cubic-bezier(.34, 1.56, .64, 1), opacity 200ms ease;
+}
+.btn-action-play .track-icon-play {
+  transform: translateX(1.2px) scale(1) rotate(0deg);
+  opacity: 1;
+}
+.btn-action-play .track-icon-pause {
+  transform: scale(0.3) rotate(35deg);
+  opacity: 0;
+  pointer-events: none;
+}
+.btn-action-play.is-playing .track-icon-play {
+  transform: translateX(1.2px) scale(0.3) rotate(-35deg);
+  opacity: 0;
+  pointer-events: none;
+}
+.btn-action-play.is-playing .track-icon-pause {
+  transform: scale(1) rotate(0deg);
+  opacity: 1;
+  pointer-events: auto;
+}
 .btn-action-play span { display: none; }
 .btn-action-alt {
   display: inline-flex; align-items: center; gap: 4px; min-height: 22px; padding: 1px 7px;
@@ -1994,27 +2224,252 @@ body.has-alt-modal-open #noteGlobalPopover,
 .player-transport-button:active:not(:disabled) { transform: scale(0.92); }
 .player-transport-button:disabled { opacity: .38; cursor: default; }
 .player-transport-button svg { width: 17px; height: 17px; display: block; margin: 0; }
+/* ==========================================================================
+   VINYL TURNTABLE MORPHING PLAYER TOGGLE (#playerToggle & #miniPlayerToggle)
+   ========================================================================== */
+
+.player-transport-main,
+.mini-player-toggle {
+  position: relative !important;
+  overflow: hidden !important;
+  border-radius: 50% !important;
+  border: 1px solid rgba(135, 56, 34, 0.32) !important;
+  background: radial-gradient(circle at 50% 50%, #b45334 0%, #a2482c 68%, #8e3c22 100%) !important;
+  color: #fff9f0 !important;
+  padding: 0 !important;
+  cursor: pointer !important;
+  user-select: none !important;
+  -webkit-tap-highlight-color: transparent;
+  /* Neutral uncolored paper shadow in pause state */
+  box-shadow: 0 3px 8px rgba(45, 32, 20, 0.16),
+              0 1px 2px rgba(45, 32, 20, 0.1),
+              inset 0 0 0 1px rgba(255, 255, 255, 0.16) !important;
+  transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.25s ease,
+              border-color 0.25s ease,
+              background 0.25s ease !important;
+}
+
 .player-transport-main {
   width: 50px;
   height: 50px;
-  border-color: #a94f32;
-  background: #a94f32;
-  color: #fff8ee;
-  box-shadow: 0 3px 10px rgba(169, 79, 50, .28);
+  margin-left: 2px;
 }
-.player-transport-main:hover:not(:disabled) {
-  background: #934027;
-  border-color: #934027;
-  transform: scale(1.04);
+
+.mini-player-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  min-width: 46px;
 }
-.player-transport-main svg { width: 20px; height: 20px; }
-.player-transport-button .player-icon-pause { display: none !important; }
-.player-transport-main.is-playing .player-icon-play { display: none !important; }
-.player-transport-main.is-playing .player-icon-pause { display: block !important; }
+
+.player-transport-main:hover:not(:disabled),
+.mini-player-toggle:hover {
+  background: radial-gradient(circle at 50% 50%, #be5d3d 0%, #aa4e31 70%, #954226 100%) !important;
+  box-shadow: 0 4px 12px rgba(45, 32, 20, 0.22),
+              0 1px 3px rgba(45, 32, 20, 0.12),
+              inset 0 0 0 1px rgba(255, 255, 255, 0.24) !important;
+  transform: translateY(-1px) scale(1.03);
+}
+
+.player-transport-main:active:not(:disabled),
+.mini-player-toggle:active {
+  transform: translateY(1px) scale(0.95) !important;
+  box-shadow: 0 1px 4px rgba(45, 32, 20, 0.18),
+              inset 0 1px 2px rgba(0, 0, 0, 0.25) !important;
+}
+
+/* Idle State (Play icon - optical centering with slight right nudge) */
+.player-toggle-idle {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 200ms ease,
+              transform 220ms cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: auto;
+  z-index: 2;
+}
+
+.player-toggle-idle svg {
+  width: 20px;
+  height: 20px;
+  display: block;
+  margin: 0 auto;
+  transform: translateX(0.8px) !important;
+  filter: drop-shadow(0 1px 1.5px rgba(0, 0, 0, 0.22));
+}
+
+/* Turntable Vinyl Container */
+.player-toggle-turntable {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  opacity: 0;
+  transform: scale(0.4) rotate(-45deg);
+  transition: opacity 200ms ease,
+              transform 240ms cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+  z-index: 3;
+}
+
+/* Active State: morphing from Play to Spinning Vinyl Record Turntable
+   Controlled small dark shadow + warm luminous terracotta aura */
+.player-transport-main.is-playing,
+.mini-player-toggle.is-playing {
+  background: #111013 !important;
+  border-color: rgba(220, 205, 185, 0.35) !important;
+  box-shadow: 0 2px 6px rgba(25, 18, 14, 0.28),
+              0 0 10px rgba(169, 79, 50, 0.5),
+              0 0 20px rgba(212, 114, 76, 0.22) !important;
+}
+
+.player-transport-main.is-playing:hover:not(:disabled),
+.mini-player-toggle.is-playing:hover {
+  transform: translateY(-1.5px) scale(1.05) !important;
+  box-shadow: 0 4px 14px rgba(25, 18, 14, 0.35),
+              0 0 16px rgba(169, 79, 50, 0.72),
+              0 0 30px rgba(212, 114, 76, 0.38) !important;
+}
+
+.player-transport-main.is-playing:active:not(:disabled),
+.mini-player-toggle.is-playing:active {
+  transform: translateY(1px) scale(0.95) !important;
+  box-shadow: 0 1px 4px rgba(25, 18, 14, 0.3),
+              0 0 8px rgba(169, 79, 50, 0.4) !important;
+}
+
+.player-transport-main.is-playing .player-toggle-idle,
+.mini-player-toggle.is-playing .player-toggle-idle {
+  opacity: 0;
+  transform: scale(0.2) rotate(-30deg);
+  pointer-events: none;
+}
+
+.player-transport-main.is-playing .player-toggle-turntable,
+.mini-player-toggle.is-playing .player-toggle-turntable {
+  opacity: 1;
+  transform: scale(1) rotate(0deg);
+  pointer-events: auto;
+}
+
+/* Vinyl Disc - Ultra-Premium Hi-Fi Spec */
+.turntable-vinyl {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: radial-gradient(circle at 50% 50%, #0c0b0d 0%, #141216 26%, #1c1a1f 28%, #100f12 30%, #151317 72%, #0b0a0c 74%, #18161b 100%);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.16),
+              inset 0 0 0 2.5px rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transform-origin: 50% 50%;
+  animation: vinylTurntableSpin 2.6s linear infinite;
+  animation-play-state: paused;
+}
+
+.player-transport-main.is-playing .turntable-vinyl,
+.mini-player-toggle.is-playing .turntable-vinyl {
+  animation-play-state: running;
+}
+
+@keyframes vinylTurntableSpin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Micro-Grooves (Concentric high-density acoustic grooves) */
+.vinyl-grooves {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: repeating-radial-gradient(
+    circle at 50% 50%,
+    transparent 0px,
+    transparent 1.6px,
+    rgba(255, 255, 255, 0.052) 2.0px,
+    transparent 2.4px
+  );
+  pointer-events: none;
+}
+
+/* Specular Anisotropic Sheen with subtle sheen boost on hover */
+.vinyl-sheen {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: conic-gradient(
+    from 45deg at 50% 50%,
+    transparent 0deg,
+    rgba(255, 255, 255, 0.20) 38deg,
+    transparent 76deg,
+    transparent 180deg,
+    rgba(255, 255, 255, 0.20) 218deg,
+    transparent 256deg
+  );
+  mix-blend-mode: screen;
+  pointer-events: none;
+  transition: filter 0.25s ease, opacity 0.25s ease;
+}
+
+.player-transport-main:hover .vinyl-sheen,
+.mini-player-toggle:hover .vinyl-sheen {
+  filter: brightness(1.28);
+}
+
+/* Center Terracotta Record Label - Vintage Hi-Fi Master */
+.vinyl-center-label {
+  position: relative;
+  width: 42%;
+  height: 42%;
+  border-radius: 50%;
+  background: radial-gradient(circle at 50% 50%, #c46445 0%, #a24b2f 65%, #7e321b 100%);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.55),
+              inset 0 0 0 1px rgba(255, 255, 255, 0.25),
+              inset 0 0 0 2.5px rgba(0, 0, 0, 0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+/* Fine concentric label ring indicating printed vintage vinyl record label */
+.vinyl-label-ring {
+  position: absolute;
+  inset: 2px;
+  border-radius: 50%;
+  border: 1px dashed rgba(255, 245, 230, 0.4);
+  pointer-events: none;
+}
+
+/* Center Spindle Hole - Polished Silver Bushing */
+.vinyl-spindle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 50% 50%, #ffffff 0%, #dcd4c8 55%, #635b52 100%);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.75);
+  z-index: 1;
+}
+
 .player-queue-position-mobile { display: none; }
 
 @media (hover: hover) {
-  .btn-action-play:hover { transform: scale(1.05); background: var(--arc-ink, var(--arc)); color: #fffaf1; }
   .btn-action-alt:hover { background: color-mix(in srgb, var(--arc) 12%, transparent); }
 }
 
@@ -2170,31 +2625,7 @@ body.mobile-lyrics-open .mobile-mini-player {
   background: #c86a4b;
   border-radius: 2px;
 }
-.mini-player-toggle {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 46px;
-  height: 46px;
-  min-width: 46px;
-  padding: 0;
-  border: 1px solid rgba(255, 255, 255, 0.22);
-  border-radius: 50%;
-  background: linear-gradient(135deg, #a94f32, #8c3e26);
-  color: #fff9f0;
-  cursor: pointer;
-  box-shadow: 0 4px 14px rgba(169, 79, 50, 0.38);
-  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease, background 0.2s ease;
-}
-.mini-player-toggle:hover {
-  background: linear-gradient(135deg, #b85a3c, #96442b);
-  box-shadow: 0 6px 18px rgba(169, 79, 50, 0.45);
-}
-.mini-player-toggle svg { width: 20px; height: 20px; display: block; margin: 0; }
-.mini-player-toggle:active { transform: scale(0.92); }
-.mini-player-toggle .mini-icon-pause { display: none !important; }
-.mini-player-toggle.is-playing .mini-icon-play { display: none !important; }
-.mini-player-toggle.is-playing .mini-icon-pause { display: block !important; }
+/* mini-player-toggle styled in vinyl turntable morphing system */
 
 .player-lyrics-drawer {
   flex: 1 1 auto;
@@ -3141,7 +3572,7 @@ body.mobile-lyrics-open .mobile-mini-player {
   .welcome-copy p { font-size: 16px; }
 }
 @media (hover: none) {
-  .btn-action-play:hover { transform: none; background: color-mix(in srgb, var(--paper-light) 79%, var(--arc) 21%); color: var(--arc-ink, var(--arc)); }
+  .btn-action-play:hover { transform: none; }
   .btn-action-alt:hover { background: transparent; }
 }
 
@@ -3458,22 +3889,42 @@ body.cinema-mode-active::before {
   min-height: 58px !important;
   flex: 0 0 58px !important;
   margin: 0 !important;
-  background: linear-gradient(135deg, #a94f32, #8c3e26) !important;
-  border: 1px solid rgba(255, 255, 255, 0.22) !important;
+  background: #232029 !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
   color: #fff9f0 !important;
   border-radius: 50% !important;
-  box-shadow: 0 4px 20px rgba(169, 79, 50, .45), 0 0 24px rgba(169, 79, 50, .25) !important;
-  transition: transform .2s cubic-bezier(.16, 1, .3, 1), background-color .2s ease, box-shadow .2s ease !important;
+  box-shadow: 6px 6px 14px rgba(0, 0, 0, 0.65), -5px -5px 12px rgba(255, 255, 255, 0.07) !important;
+  transition: transform 220ms cubic-bezier(.34, 1.56, .64, 1),
+              box-shadow 240ms cubic-bezier(0.2, 0.8, 0.2, 1),
+              background 220ms ease,
+              color 220ms ease !important;
 }
 .player-paper.cinema-mode-active .player-transport-main svg {
-  width: 26px !important;
-  height: 26px !important;
+  width: 25px !important;
+  height: 25px !important;
 }
 .player-paper.cinema-mode-active .player-transport-main:hover {
-  background: linear-gradient(135deg, #b85a3c, #96442b) !important;
-  color: #ffffff !important;
-  transform: scale(1.08) !important;
-  box-shadow: 0 6px 26px rgba(169, 79, 50, .55), 0 0 32px rgba(169, 79, 50, .35) !important;
+  background: #2a2632 !important;
+  color: #ff9170 !important;
+  transform: translateY(-1px) scale(1.06) !important;
+  box-shadow: 8px 8px 18px rgba(0, 0, 0, 0.75), -6px -6px 14px rgba(255, 255, 255, 0.09) !important;
+}
+.player-paper.cinema-mode-active .player-transport-main:active {
+  transform: translateY(1.5px) scale(0.96) !important;
+  box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.75), inset -3px -3px 8px rgba(255, 255, 255, 0.08) !important;
+}
+.player-paper.cinema-mode-active .player-transport-main.is-playing {
+  background: #111013 !important;
+  border-color: rgba(220, 205, 185, 0.45) !important;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.55),
+              0 0 16px rgba(169, 79, 50, 0.6),
+              0 0 28px rgba(212, 114, 76, 0.3) !important;
+}
+.player-paper.cinema-mode-active .player-transport-main.is-playing:hover {
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.65),
+              0 0 22px rgba(169, 79, 50, 0.75),
+              0 0 36px rgba(212, 114, 76, 0.4) !important;
+  transform: scale(1.06) !important;
 }
 
 /* Cinema Navigation Track Pills (PC Cinema Mode Only, Precedente on Left, Prossimo on Right) */
@@ -4178,27 +4629,27 @@ body.is-resizing-cinema .player-paper.cinema-mode-active {
   display: block;
 }
 
-/* Cinema Note Button */
+/* Cinema Note Button - Perfectly Balanced & Symmetrical */
 .cinema-note-btn {
   position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
-  height: 38px;
-  min-height: 38px;
-  padding: 0 16px 0 11px;
+  height: 36px;
+  min-height: 36px;
+  max-height: 36px;
+  padding: 0 15px 0 4px;
   border-radius: 999px;
   border: 1px solid rgba(255, 255, 255, 0.16);
   background: rgba(255, 255, 255, 0.08);
   color: #f3efe6;
   font-family: var(--sans);
-  font-size: 13px;
-  font-weight: 500;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
   user-select: none;
   box-sizing: border-box;
+  vertical-align: middle;
 }
 .cinema-note-btn:hover {
   background: rgba(255, 255, 255, 0.16);
@@ -4213,8 +4664,10 @@ body.is-resizing-cinema .player-paper.cinema-mode-active {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 22px;
-  height: 22px;
+  width: 28px;
+  height: 28px;
+  min-width: 28px;
+  min-height: 28px;
   border: none;
   background: transparent;
   padding: 0;
@@ -4225,11 +4678,15 @@ body.is-resizing-cinema .player-paper.cinema-mode-active {
   transition: transform var(--ease);
 }
 .cinema-note-btn:hover .cinema-note-emblem {
-  transform: scale(1.08);
+  transform: scale(1.05);
 }
-.cinema-note-icon {
-  width: 100%;
-  height: 100%;
+.cinema-note-btn .cinema-note-icon,
+.cinema-note-btn svg.cinema-note-icon,
+.cinema-note-emblem svg {
+  width: 28px !important;
+  height: 28px !important;
+  min-width: 28px !important;
+  min-height: 28px !important;
   display: block;
   flex-shrink: 0;
 }
@@ -4237,10 +4694,14 @@ body.is-resizing-cinema .player-paper.cinema-mode-active {
   display: inline-flex;
   align-items: center;
   line-height: 1;
+  font-family: var(--sans);
   font-size: 13px;
   font-weight: 500;
-  color: inherit;
-  margin-top: 1.5px;
+  text-transform: lowercase;
+  color: #e5e7eb;
+  margin: 0;
+  letter-spacing: 0.03em;
+  transform: translateY(-0.5px);
 }
 .cinema-note-btn.is-note-open,
 .cinema-note-btn.is-active,
@@ -4252,8 +4713,8 @@ body.is-resizing-cinema .player-paper.cinema-mode-active {
 }
 .cinema-note-ping {
   position: absolute;
-  top: 5px;
-  right: 8px;
+  top: 4px;
+  right: 6px;
   width: 7px;
   height: 7px;
   border-radius: 50%;
@@ -4263,7 +4724,7 @@ body.is-resizing-cinema .player-paper.cinema-mode-active {
 }
 .cinema-note-btn.has-unread-note .cinema-note-ping {
   display: block;
-  animation: notePingGlow 2.2s infinite ease-in-out;
+  animation: notePingGlow 1.8s ease-in-out 3;
 }
 @keyframes notePingGlow {
   0%, 100% {
@@ -4287,6 +4748,10 @@ body.is-resizing-cinema .player-paper.cinema-mode-active {
   max-width: calc(100vw - 48px);
   z-index: 99998;
   animation: cinemaNoteIn 360ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.cinema-note-popup:has(.popover-gallery-grid, .popover-scorn-feature) {
+  width: min(520px, calc(100vw - 36px));
+  max-width: min(520px, calc(100vw - 36px));
 }
 @keyframes cinemaNoteIn {
   from { opacity: 0; transform: translateY(-16px) scale(0.95); }
@@ -4357,9 +4822,132 @@ body.is-resizing-cinema .player-paper.cinema-mode-active {
   font-size: 14.5px;
   line-height: 1.62;
   color: #ded6c8;
-  max-height: 240px;
+  max-height: min(65vh, 480px);
   overflow-y: auto;
   margin-bottom: 12px;
+}
+.cinema-note-body .popover-gallery-section {
+  margin-top: 14px;
+  padding-top: 10px;
+  border-top: 1px dashed rgba(212, 163, 115, 0.25);
+}
+.cinema-note-body .popover-gallery-header {
+  margin-bottom: 8px;
+}
+.cinema-note-body .gallery-header-title {
+  font-family: var(--mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #f4a261;
+  font-weight: 600;
+}
+.cinema-note-body .popover-gallery-grid {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  padding: 6px 4px 10px;
+  -webkit-overflow-scrolling: touch;
+}
+.cinema-note-body .popover-gallery-grid::-webkit-scrollbar {
+  height: 5px;
+}
+.cinema-note-body .popover-gallery-grid::-webkit-scrollbar-thumb {
+  background: rgba(212, 163, 115, 0.35);
+  border-radius: 4px;
+}
+.cinema-note-body .popover-gallery-item {
+  flex: 0 0 130px;
+  max-width: 130px;
+  scroll-snap-align: start;
+  text-align: center;
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cinema-note-body .popover-gallery-item .popover-img-wrap {
+  position: relative;
+  width: 100%;
+  height: 105px;
+  max-height: 105px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(212, 163, 115, 0.22);
+  border-radius: 6px;
+  overflow: hidden;
+}
+.cinema-note-body .popover-gallery-item .popover-gear-img {
+  max-width: 100%;
+  max-height: 95px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+  transition: transform 0.2s ease;
+}
+.cinema-note-body .popover-gallery-item:hover .popover-gear-img {
+  transform: scale(1.06);
+}
+.cinema-note-body .popover-gallery-item .popover-gear-caption {
+  display: block;
+  font-family: var(--sans);
+  font-size: 10.5px;
+  line-height: 1.3;
+  color: #c4b5a0;
+  margin-top: 4px;
+  text-align: center;
+}
+.cinema-note-body .popover-scorn-feature {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px dashed rgba(212, 163, 115, 0.25);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.cinema-note-body .scorn-feature-tag {
+  font-family: var(--mono);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #f4a261;
+  font-weight: 600;
+}
+.cinema-note-body .scorn-feature-title {
+  font-family: var(--serif);
+  font-size: 14.5px;
+  font-weight: 600;
+  color: #fff0db;
+}
+.cinema-note-body .scorn-video-player-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #000;
+  border: 1px solid rgba(212, 163, 115, 0.3);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.6);
+}
+.cinema-note-body .scorn-video-player-wrap iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+.cinema-note-body .scorn-feature-caption {
+  font-family: var(--sans);
+  font-size: 11px;
+  color: #b5a48e;
+  line-height: 1.35;
 }
 .cinema-note-footer {
   display: flex;
@@ -4397,6 +4985,22 @@ body.cinema-mode-active .note-global-popover {
 }
 body.cinema-mode-active .note-global-popover .note-popover-body {
   color: #ded6c8 !important;
+}
+body.cinema-mode-active .note-global-popover .note-popover-body strong,
+.cinema-note-body strong {
+  font-weight: 600 !important;
+  font-style: normal !important;
+  color: #fff0db !important;
+}
+body.cinema-mode-active .note-global-popover .note-popover-body em,
+.cinema-note-body em {
+  font-style: normal !important;
+  color: #f4a261 !important;
+  font-weight: 500 !important;
+}
+body.cinema-mode-active .note-global-popover .note-popover-body a,
+.cinema-note-body a {
+  color: #fca311 !important;
 }
 body.cinema-mode-active .note-global-popover .note-popover-close {
   color: #d4a373 !important;
@@ -4877,33 +5481,14 @@ body.cinema-mode-active .note-global-popover .note-popover-close:hover {
   to { opacity: 1; transform: scale(1) translateY(0); }
 }
 .ad-tips-close-btn {
-  position: absolute;
-  top: 14px;
-  right: 14px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 30px;
-  height: 30px;
-  padding: 0;
-  border: 1px solid rgba(73, 56, 40, 0.18);
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.7);
-  color: var(--ink-soft);
-  cursor: pointer;
-  transition: transform 200ms ease, background 200ms ease, color 200ms ease;
-}
-.ad-tips-close-btn:hover {
-  background: #ffffff;
-  color: var(--terracotta);
-  transform: scale(1.08);
+  display: none !important;
 }
 .ad-tips-head {
   display: flex;
   align-items: flex-start;
   gap: 12px;
   margin-bottom: 18px;
-  padding-right: 28px;
+  padding-right: 0;
 }
 .ad-tips-icon-wrap {
   display: inline-flex;
@@ -4992,6 +5577,7 @@ body.cinema-mode-active .note-global-popover .note-popover-close:hover {
 }
 .ad-tips-confirm-btn:active {
   transform: scale(0.96);
+}
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
 }

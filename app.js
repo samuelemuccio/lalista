@@ -94,6 +94,375 @@ const elements = {
   adTipsConfirmBtn: document.getElementById("adTipsConfirmBtn")
 };
 
+// ============================================================================
+// TACTILE & SENSORY ENGINE (Procedural Web Audio Foley + Precision Haptics)
+// Zero external assets (0 KB download), 100% synthesized physical simulation
+// ============================================================================
+const tactileEngine = (() => {
+  let audioCtx = null;
+  let isMuted = false;
+
+  function getAudioContext() {
+    if (!audioCtx && (window.AudioContext || window.webkitAudioContext)) {
+      const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+      audioCtx = new AudioContextClass();
+    }
+    if (audioCtx && audioCtx.state === "suspended") {
+      audioCtx.resume().catch(() => {});
+    }
+    return audioCtx;
+  }
+
+  let paperNoiseBuffer = null;
+  function getPaperNoiseBuffer(ctx) {
+    if (!paperNoiseBuffer) {
+      const bufferSize = Math.floor(ctx.sampleRate * 0.45);
+      paperNoiseBuffer = ctx.createBuffer(1, bufferSize, ctx.sampleRate);
+      const data = paperNoiseBuffer.getChannelData(0);
+      let b0 = 0, b1 = 0, b2 = 0, b3 = 0, b4 = 0, b5 = 0, b6 = 0;
+      for (let i = 0; i < bufferSize; i++) {
+        const white = Math.random() * 2 - 1;
+        b0 = 0.99886 * b0 + white * 0.0555179;
+        b1 = 0.99332 * b1 + white * 0.0750759;
+        b2 = 0.96900 * b2 + white * 0.1538520;
+        b3 = 0.86650 * b3 + white * 0.3104856;
+        b4 = 0.55000 * b4 + white * 0.5329522;
+        b5 = -0.7616 * b5 - white * 0.0168980;
+        data[i] = (b0 + b1 + b2 + b3 + b4 + b5 + b6 + white * 0.5362) * 0.11;
+        b6 = white * 0.115926;
+      }
+    }
+    return paperNoiseBuffer;
+  }
+
+  const initOnFirstGesture = () => {
+    getAudioContext();
+    window.removeEventListener("pointerdown", initOnFirstGesture, { capture: true });
+    window.removeEventListener("touchstart", initOnFirstGesture, { capture: true });
+    window.removeEventListener("keydown", initOnFirstGesture, { capture: true });
+  };
+  window.addEventListener("pointerdown", initOnFirstGesture, { capture: true, passive: true });
+  window.addEventListener("touchstart", initOnFirstGesture, { capture: true, passive: true });
+  window.addEventListener("keydown", initOnFirstGesture, { capture: true, passive: true });
+
+  return {
+    sweetPlaySound(volume = 0.024) {
+      if (isMuted) return;
+      try {
+        const ctx = getAudioContext();
+        if (!ctx) return;
+        const now = ctx.currentTime;
+
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.type = "sine";
+        osc.frequency.setValueAtTime(220, now);
+        osc.frequency.exponentialRampToValueAtTime(196, now + 0.075);
+
+        gain.gain.setValueAtTime(volume, now);
+        gain.gain.exponentialRampToValueAtTime(0.0001, now + 0.08);
+
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+        osc.start(now);
+        osc.stop(now + 0.082);
+
+        const subOsc = ctx.createOscillator();
+        const subGain = ctx.createGain();
+        subOsc.type = "sine";
+        subOsc.frequency.setValueAtTime(110, now);
+        subGain.gain.setValueAtTime(volume * 0.4, now);
+        subGain.gain.exponentialRampToValueAtTime(0.0001, now + 0.05);
+
+        subOsc.connect(subGain);
+        subGain.connect(ctx.destination);
+        subOsc.start(now);
+        subOsc.stop(now + 0.055);
+
+        try { navigator.vibrate?.(7); } catch (_) {}
+      } catch (_) {}
+    },
+
+    sweetSkipSound(volume = 0.02) {
+      if (isMuted) return;
+      try {
+        const ctx = getAudioContext();
+        if (!ctx) return;
+        const now = ctx.currentTime;
+        const duration = 0.04;
+
+        const noise = ctx.createBufferSource();
+        noise.buffer = getPaperNoiseBuffer(ctx);
+        const filter = ctx.createBiquadFilter();
+        filter.type = "bandpass";
+        filter.Q.setValueAtTime(1.6, now);
+        filter.frequency.setValueAtTime(1250, now);
+        filter.frequency.exponentialRampToValueAtTime(700, now + duration);
+
+        const gain = ctx.createGain();
+        gain.gain.setValueAtTime(0.0001, now);
+        gain.gain.exponentialRampToValueAtTime(volume, now + 0.008);
+        gain.gain.exponentialRampToValueAtTime(0.0001, now + duration);
+
+        noise.connect(filter);
+        filter.connect(gain);
+        gain.connect(ctx.destination);
+
+        noise.start(now);
+        noise.stop(now + duration);
+
+        try { navigator.vibrate?.(5); } catch (_) {}
+      } catch (_) {}
+    },
+
+    sweetButtonTap(volume = 0.02) {
+      if (isMuted) return;
+      try {
+        const ctx = getAudioContext();
+        if (!ctx) return;
+        const now = ctx.currentTime;
+
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.type = "triangle";
+        osc.frequency.setValueAtTime(310, now);
+        osc.frequency.exponentialRampToValueAtTime(95, now + 0.014);
+
+        gain.gain.setValueAtTime(volume, now);
+        gain.gain.exponentialRampToValueAtTime(0.0001, now + 0.016);
+
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+        osc.start(now);
+        osc.stop(now + 0.018);
+
+        try { navigator.vibrate?.(5); } catch (_) {}
+      } catch (_) {}
+    },
+
+    // Dynamic Procedural Paper Simulation (Rich, Bodies, Multi-Variational)
+    // Synthesizes physical air displacement (low-mid body) + multi-pole cellulose friction (surface texture)
+    playDynamicPaper({
+      volume = 0.04,
+      style = "turn", // "turn" (sfogliare full book page), "rustle" (fruscio fisarmonica/movimento), "slide" (scorrimento liscio)
+      weight = "book", // "book" (pagina di libro consistente), "heavy" (cartoncino spesso / drawer), "light" (velina / nota rapida)
+      speed = 1.0
+    } = {}) {
+      if (isMuted) return;
+      try {
+        const ctx = getAudioContext();
+        if (!ctx) return;
+        const now = ctx.currentTime;
+
+        // Jitter per vivacità naturale e varietà organica ad ogni tocco (nessun suono è mai identico)
+        const pitchJitter = 0.88 + Math.random() * 0.24; // ±12% variazione timbro
+        const timeJitter = 0.92 + Math.random() * 0.16;  // ±8% variazione durata
+        const grainJitter = 0.85 + Math.random() * 0.30; // texture grana
+
+        let baseDuration = 0.24;
+        let bodyFreq = 260;
+        let frictionFreq = 1100;
+        let sheenFreq = 2600;
+        let bodyGainAmount = 0.75;
+
+        if (weight === "heavy") {
+          baseDuration = 0.28;
+          bodyFreq = 210;
+          frictionFreq = 950;
+          sheenFreq = 2200;
+          bodyGainAmount = 1.15; // profondo, pieno e corposo
+        } else if (weight === "light") {
+          baseDuration = 0.16;
+          bodyFreq = 340;
+          frictionFreq = 1450;
+          sheenFreq = 3400;
+          bodyGainAmount = 0.42;
+        } else { // "book"
+          baseDuration = 0.24;
+          bodyFreq = 250;
+          frictionFreq = 1150;
+          sheenFreq = 2800;
+          bodyGainAmount = 0.88;
+        }
+
+        const duration = (baseDuration / Math.max(0.4, speed)) * timeJitter;
+        const noiseBuffer = getPaperNoiseBuffer(ctx);
+
+        // --- LAYER 1: Corpo Acustico & Spostamento d'Aria (Low-Mid Body Resonance) ---
+        // Dà al foglio la sensazione di massa fisica, spessore e pienezza ("corposo")
+        const bodyNoise = ctx.createBufferSource();
+        bodyNoise.buffer = noiseBuffer;
+        const bodyFilter = ctx.createBiquadFilter();
+        bodyFilter.type = "bandpass";
+        bodyFilter.Q.setValueAtTime(1.8, now);
+        const startBodyF = bodyFreq * pitchJitter;
+        bodyFilter.frequency.setValueAtTime(startBodyF * 1.3, now);
+        bodyFilter.frequency.exponentialRampToValueAtTime(Math.max(60, startBodyF * 0.75), now + duration);
+
+        const bodyGain = ctx.createGain();
+        const effectiveBodyVol = volume * bodyGainAmount;
+        bodyGain.gain.setValueAtTime(0.0001, now);
+        bodyGain.gain.exponentialRampToValueAtTime(effectiveBodyVol, now + duration * 0.22);
+        bodyGain.gain.exponentialRampToValueAtTime(0.0001, now + duration);
+
+        bodyNoise.connect(bodyFilter);
+        bodyFilter.connect(bodyGain);
+        bodyGain.connect(ctx.destination);
+        bodyNoise.start(now);
+        bodyNoise.stop(now + duration);
+
+        // --- LAYER 2: Sfregamento delle Fibre di Cellulosa (Friction Mid-Band) ---
+        const frictionNoise = ctx.createBufferSource();
+        frictionNoise.buffer = noiseBuffer;
+        const frictionFilter = ctx.createBiquadFilter();
+        frictionFilter.type = "bandpass";
+        frictionFilter.Q.setValueAtTime(2.2, now);
+        const startFricF = frictionFreq * pitchJitter;
+        frictionFilter.frequency.setValueAtTime(startFricF, now);
+
+        const frictionGain = ctx.createGain();
+        frictionGain.gain.setValueAtTime(0.0001, now);
+
+        if (style === "turn") {
+          // "Sfogliare": doppia cresta fisica naturale (primo tocco che solleva il foglio + scorrimento e rilascio)
+          const peak1Time = now + duration * 0.24;
+          const dipTime = now + duration * 0.52;
+          const peak2Time = now + duration * 0.72;
+
+          frictionFilter.frequency.exponentialRampToValueAtTime(startFricF * 1.85, peak1Time);
+          frictionFilter.frequency.exponentialRampToValueAtTime(startFricF * 1.1, dipTime);
+          frictionFilter.frequency.exponentialRampToValueAtTime(startFricF * 0.8, now + duration);
+
+          frictionGain.gain.exponentialRampToValueAtTime(volume * 0.85, peak1Time);
+          frictionGain.gain.exponentialRampToValueAtTime(volume * 0.42, dipTime);
+          frictionGain.gain.exponentialRampToValueAtTime(volume * 0.75, peak2Time);
+          frictionGain.gain.exponentialRampToValueAtTime(0.0001, now + duration);
+        } else if (style === "rustle") {
+          // "Fruscio": micro-oscillazioni organiche veloci
+          frictionFilter.frequency.exponentialRampToValueAtTime(startFricF * 1.6, now + duration * 0.35);
+          frictionFilter.frequency.exponentialRampToValueAtTime(startFricF * 0.85, now + duration);
+
+          frictionGain.gain.exponentialRampToValueAtTime(volume * 0.9, now + duration * 0.2);
+          frictionGain.gain.exponentialRampToValueAtTime(volume * 0.55, now + duration * 0.55);
+          frictionGain.gain.exponentialRampToValueAtTime(0.0001, now + duration);
+        } else { // "slide"
+          // Scorrimento setoso progressivo
+          frictionFilter.frequency.exponentialRampToValueAtTime(startFricF * 1.7, now + duration * 0.3);
+          frictionFilter.frequency.exponentialRampToValueAtTime(startFricF * 0.9, now + duration);
+
+          frictionGain.gain.exponentialRampToValueAtTime(volume * 0.85, now + duration * 0.28);
+          frictionGain.gain.exponentialRampToValueAtTime(0.0001, now + duration);
+        }
+
+        frictionNoise.connect(frictionFilter);
+        frictionFilter.connect(frictionGain);
+        frictionGain.connect(ctx.destination);
+        frictionNoise.start(now);
+        frictionNoise.stop(now + duration);
+
+        // --- LAYER 3: Soffio e Grana Aerea ad Alta Frequenza (Air Sheen & Texture) ---
+        const sheenNoise = ctx.createBufferSource();
+        sheenNoise.buffer = noiseBuffer;
+        const sheenFilter = ctx.createBiquadFilter();
+        sheenFilter.type = "highpass";
+        sheenFilter.frequency.setValueAtTime(sheenFreq * grainJitter, now);
+
+        const sheenGain = ctx.createGain();
+        sheenGain.gain.setValueAtTime(0.0001, now);
+        sheenGain.gain.exponentialRampToValueAtTime(volume * 0.22, now + duration * 0.2);
+        sheenGain.gain.exponentialRampToValueAtTime(0.0001, now + duration);
+
+        sheenNoise.connect(sheenFilter);
+        sheenFilter.connect(sheenGain);
+        sheenGain.connect(ctx.destination);
+        sheenNoise.start(now);
+        sheenNoise.stop(now + duration);
+
+        // Precision Haptics sincronizzati con la massa del foglio
+        try {
+          if (weight === "heavy") navigator.vibrate?.([6, 16, 6]);
+          else if (style === "turn") navigator.vibrate?.([5, 12, 5]);
+          else navigator.vibrate?.(4);
+        } catch (_) {}
+      } catch (_) {}
+    },
+
+    pageTurn(volume = 0.042, weight = "book") {
+      this.playDynamicPaper({ volume, style: "turn", weight });
+    },
+
+    paperRustle(volume = 0.038, weight = "heavy") {
+      this.playDynamicPaper({ volume, style: "rustle", weight });
+    },
+
+    paperSlide(volume = 0.036, weight = "light") {
+      this.playDynamicPaper({ volume, style: "slide", weight });
+    },
+
+    paperNote(volume = 0.032) {
+      this.playDynamicPaper({ volume, style: "slide", weight: "light" });
+    },
+
+    noteOpenSequence(event) {
+      this.sweetButtonTap(0.02);
+      triggerInkWash(event);
+      setTimeout(() => {
+        this.paperNote(0.032);
+      }, 60);
+    },
+
+    lyricsOpenSequence(event) {
+      this.sweetButtonTap(0.022);
+      triggerInkWash(event);
+      setTimeout(() => {
+        this.pageTurn(0.044, "book");
+      }, 65);
+    },
+
+    letterUnfoldSmooth(event) {
+      triggerInkWash(event);
+      this.sweetButtonTap(0.022);
+      setTimeout(() => {
+        this.pageTurn(0.048, "heavy");
+      }, 60);
+    },
+
+    // Aliases compatibilità retroattiva
+    tactileSwitch(volume) { this.sweetButtonTap(volume || 0.02); },
+    tactileTick(high, low, volume) { this.sweetButtonTap(volume || 0.02); },
+    softThump(volume) { this.sweetPlaySound(volume || 0.024); },
+    waxSealUnfold(event) { this.letterUnfoldSmooth(event); },
+
+    // Precision Haptics
+    hapticTap() { try { navigator.vibrate?.(5); } catch (_) {} },
+    hapticSoft() { try { navigator.vibrate?.(4); } catch (_) {} },
+    hapticRustle() { try { navigator.vibrate?.([5, 18, 5]); } catch (_) {} },
+    hapticThump() { try { navigator.vibrate?.(8); } catch (_) {} }
+  };
+})();
+
+function triggerInkWash(event) {
+  try {
+    if (!event) return;
+    const x = event.clientX || (event.touches && event.touches[0]?.clientX);
+    const y = event.clientY || (event.touches && event.touches[0]?.clientY);
+    if (typeof x !== "number" || typeof y !== "number" || x <= 0 || y <= 0) return;
+
+    const ring = document.createElement("span");
+    ring.className = "ink-wash-ring";
+    ring.style.left = `${x}px`;
+    ring.style.top = `${y}px`;
+    ring.style.width = "46px";
+    ring.style.height = "46px";
+    document.body.appendChild(ring);
+    setTimeout(() => ring.remove(), 440);
+  } catch (_) {}
+}
+
+function triggerInkBleed(event, container) {
+  triggerInkWash(event);
+}
+
 let youtubePlayer = null;
 let youtubePlayerReady = false;
 let pendingYoutubeTrack = null;
@@ -158,10 +527,25 @@ function renderNoteButton(title, note) {
   return `<button class="btn-track-note" type="button" aria-label="Note su ${escapeHtml(title)}" title="Note" data-title="${escapeHtml(title)}" data-note="${escapeHtml(note)}">${NOTE_ICON_CONCENTRIC_SVG}</button>`;
 }
 
+function markNoteAsRead() {
+  try {
+    localStorage.setItem("ari_has_read_note", "true");
+    localStorage.setItem("ari_note_hint_seen", "true");
+    document.querySelectorAll(".note-first-time-hint").forEach(h => {
+      h.classList.add("is-fading-out");
+      setTimeout(() => h.remove(), 360);
+    });
+    document.querySelectorAll(".has-pulse-hint").forEach(b => b.classList.remove("has-pulse-hint"));
+    document.querySelectorAll(".has-unread-note").forEach(b => b.classList.remove("has-unread-note"));
+  } catch (_) {}
+}
+
 function showNotePopover(button, title, note) {
   const popover = document.getElementById("noteGlobalPopover");
   const popBody = document.getElementById("notePopoverBody");
   if (!popover || !popBody) return;
+
+  markNoteAsRead();
 
   if (currentNoteTrigger === button && !popover.hidden && !popover.classList.contains("is-closing")) {
     hideNotePopover();
@@ -192,6 +576,12 @@ function showNotePopover(button, title, note) {
   popover.classList.add("is-visible");
 
   const rect = button.getBoundingClientRect();
+  const isFromBeginning = title.toLowerCase().includes("from the beginning");
+  const popoverClose = document.getElementById("notePopoverClose");
+  if (popoverClose) {
+    popoverClose.style.display = isFromBeginning ? "inline-flex" : "none";
+  }
+  popover.classList.toggle("is-from-beginning", isFromBeginning);
   const isLargeNote = note.includes("popover-gallery") || note.includes("popover-scorn-feature");
   popover.classList.toggle("is-large-note", isLargeNote);
 
@@ -412,7 +802,7 @@ function setupLyricsDrawer() {
 
   const playerPaper = document.querySelector(".player-paper");
 
-  const toggleLyrics = (force) => {
+  const toggleLyrics = (force, event) => {
     if (!activeVideoTrack) return;
     const lyrics = getTrackLyrics(activeVideoTrack.id);
     if (!lyrics) return;
@@ -420,6 +810,7 @@ function setupLyricsDrawer() {
     const isOpen = typeof force === "boolean" ? force : elements.playerLyricsDrawer.hidden;
 
     if (isOpen) {
+      tactileEngine.lyricsOpenSequence(event);
       renderActiveLyrics();
       elements.playerLyricsDrawer.hidden = false;
       elements.lyricsDrawerBody.scrollTop = 0;
@@ -438,6 +829,9 @@ function setupLyricsDrawer() {
       requestAnimationFrame(() => positionVariantSliderThumb(false));
       setTimeout(() => positionVariantSliderThumb(false), 260);
     } else {
+      tactileEngine.sweetButtonTap(0.018);
+      tactileEngine.paperSlide(0.024);
+      tactileEngine.hapticSoft();
       if (playerPaper?.classList.contains("has-lyrics-open") && window.innerWidth <= 720) {
         playerPaper.classList.add("is-closing-lyrics");
         document.body.classList.add("is-closing-mobile-lyrics");
@@ -470,10 +864,17 @@ function setupLyricsDrawer() {
     }
   };
 
-  elements.btnOpenLyrics.addEventListener("click", () => toggleLyrics());
-  elements.mobileLyricsCloseBtn?.addEventListener("click", () => toggleLyrics(false));
+  elements.btnOpenLyrics.addEventListener("click", (e) => {
+    toggleLyrics(undefined, e);
+  });
+  elements.mobileLyricsCloseBtn?.addEventListener("click", (e) => {
+    toggleLyrics(false, e);
+  });
   elements.mobileAltTransportBtn?.addEventListener("click", (e) => {
     e.stopPropagation();
+    tactileEngine.sweetButtonTap(0.02);
+    tactileEngine.paperSlide(0.032);
+    triggerInkWash(e);
     if (window.innerWidth > 720) {
       if (elements.playerAltDropdown) {
         const willOpen = elements.playerAltDropdown.hidden;
@@ -491,6 +892,7 @@ function setupLyricsDrawer() {
   });
   elements.mobileLyricsNoteBtn?.addEventListener("click", (e) => {
     e.stopPropagation();
+    tactileEngine.noteOpenSequence(e);
     const fam = getTrackFamily(activeVideoTrack);
     if (fam?.hasNote) {
       showNotePopover(e.currentTarget, activeVideoTrack.title, fam.currentNote);
@@ -545,6 +947,9 @@ function setupHonorableElasticAccordion() {
   summary.addEventListener("click", event => {
     event.preventDefault();
     if (isAnimating) return;
+    tactileEngine.paperRustle(0.042, "heavy");
+    tactileEngine.hapticSoft();
+    triggerInkBleed(event, summary);
 
     if (!disclosure.open) {
       isAnimating = true;
@@ -741,6 +1146,7 @@ function updateCinemaTrackControls(track) {
       elements.cinemaAltDropdown.querySelectorAll(".cinema-alt-item-note-btn").forEach(btn => {
         btn.addEventListener("click", (e) => {
           e.stopPropagation();
+          tactileEngine.noteOpenSequence(e);
           const noteTitle = btn.dataset.noteType === "main" ? family.primaryTrack.title : family.alternatives[Number(btn.dataset.altIndex)]?.title;
           const noteBody = btn.dataset.noteType === "main" ? family.primaryTrack.note : family.alternatives[Number(btn.dataset.altIndex)]?.note;
           if (!noteBody) return;
@@ -784,12 +1190,14 @@ function updateCinemaTrackControls(track) {
       elements.btnCinemaNote.setAttribute("data-note-title", track.title);
       elements.btnCinemaNote.setAttribute("data-note-body", family.currentNote);
 
-      const familyId = family.primaryTrack.id;
-      if (document.body.classList.contains("cinema-mode-active") && elements.cinemaNotePopup) {
-        if (lastAutoOpenedNoteFamilyId !== familyId) {
-          lastAutoOpenedNoteFamilyId = familyId;
-          showCinemaNotePopup(track.title, family.currentNote, true);
-        }
+      const hasReadNote = localStorage.getItem("ari_has_read_note") === "true";
+      if (!hasReadNote) {
+        elements.btnCinemaNote.classList.add("has-unread-note");
+      }
+
+      // If the note popup was already active, smoothly update content without interrupting playback
+      if (elements.cinemaNotePopup && !elements.cinemaNotePopup.hidden) {
+        showCinemaNotePopup(track.title, family.currentNote, false);
       }
     } else {
       elements.btnCinemaNote.hidden = true;
@@ -856,6 +1264,7 @@ function updateMobileLyricsControls(track) {
         elements.playerAltDropdown.querySelectorAll(".player-alt-item-note-btn").forEach(btn => {
           btn.addEventListener("click", (e) => {
             e.stopPropagation();
+            tactileEngine.noteOpenSequence(e);
             if (btn.dataset.noteType === "main") {
               showNotePopover(btn, family.primaryTrack.title, family.primaryTrack.note);
             } else {
@@ -899,9 +1308,29 @@ function updateMobileLyricsControls(track) {
       elements.mobileLyricsNoteBtn.hidden = false;
       elements.mobileLyricsNoteBtn.setAttribute("data-note-title", track.title);
       elements.mobileLyricsNoteBtn.setAttribute("data-note-body", family.currentNote);
+
+      const hasReadNote = localStorage.getItem("ari_has_read_note") === "true";
+      if (!hasReadNote) {
+        elements.mobileLyricsNoteBtn.classList.add("has-unread-note");
+      }
+
+      // ONLY auto-open if mobile focus mode / lyrics drawer is open!
+      const isMobileFocusLyricsOpen = document.body.classList.contains("mobile-lyrics-open");
+      const familyId = family.primaryTrack.id;
+      if (isMobileFocusLyricsOpen && lastAutoOpenedNoteFamilyId !== familyId) {
+        lastAutoOpenedNoteFamilyId = familyId;
+        setTimeout(() => {
+          if (document.body.classList.contains("mobile-lyrics-open") && activeVideoTrack?.id === track.id && elements.mobileLyricsNoteBtn && !elements.mobileLyricsNoteBtn.hidden) {
+            showNotePopover(elements.mobileLyricsNoteBtn, track.title, family.currentNote);
+          }
+        }, 350);
+      }
     } else {
       elements.mobileLyricsNoteBtn.hidden = true;
-      hideNotePopover();
+      elements.mobileLyricsNoteBtn.classList.remove("has-unread-note");
+      if (currentNoteTrigger === elements.mobileLyricsNoteBtn) {
+        hideNotePopover();
+      }
     }
   }
 }
@@ -1010,6 +1439,7 @@ function openMobileAltModal() {
   elements.mobileAltModalList.querySelectorAll(".mobile-alt-note-btn").forEach(btn => {
     btn.addEventListener("click", (e) => {
       e.stopPropagation();
+      tactileEngine.noteOpenSequence(e);
       if (btn.dataset.noteType === "main") {
         showNotePopover(btn, family.primaryTrack.title, family.primaryTrack.note);
       } else {
@@ -1142,12 +1572,36 @@ function setupCinemaMode() {
     }
   };
 
-  elements.btnCinemaMode.addEventListener("click", enterCinemaMode);
-  elements.btnCinemaClose?.addEventListener("click", exitCinemaMode);
-  elements.btnCinemaToggleLyrics?.addEventListener("click", toggleCinemaLyrics);
-  elements.cinemaPrevBadge?.addEventListener("click", () => skipQueueTrack(-1));
-  elements.cinemaNextBadge?.addEventListener("click", () => skipQueueTrack(1));
-  elements.cinemaVariantButton?.addEventListener("click", () => {
+  elements.btnCinemaMode.addEventListener("click", (e) => {
+    tactileEngine.sweetButtonTap(0.02);
+    tactileEngine.paperSlide(0.038);
+    triggerInkBleed(e, elements.btnCinemaMode);
+    enterCinemaMode();
+  });
+  elements.btnCinemaClose?.addEventListener("click", (e) => {
+    tactileEngine.sweetButtonTap(0.02);
+    tactileEngine.paperSlide(0.028);
+    triggerInkBleed(e, elements.btnCinemaClose);
+    exitCinemaMode();
+  });
+  elements.btnCinemaToggleLyrics?.addEventListener("click", (e) => {
+    tactileEngine.sweetButtonTap(0.02);
+    tactileEngine.paperSlide(0.03);
+    triggerInkBleed(e, elements.btnCinemaToggleLyrics);
+    toggleCinemaLyrics();
+  });
+  elements.cinemaPrevBadge?.addEventListener("click", () => {
+    tactileEngine.sweetSkipSound();
+    skipQueueTrack(-1);
+  });
+  elements.cinemaNextBadge?.addEventListener("click", () => {
+    tactileEngine.sweetSkipSound();
+    skipQueueTrack(1);
+  });
+  elements.cinemaVariantButton?.addEventListener("click", (e) => {
+    tactileEngine.sweetButtonTap(0.025);
+    tactileEngine.hapticSoft();
+    triggerInkBleed(e, elements.cinemaVariantButton);
     const track = activeVideoTrack;
     const variants = track?.youtubeVariants || [];
     if (variants.length < 2) return;
@@ -1170,6 +1624,8 @@ function setupCinemaMode() {
 
   elements.btnCinemaAlt?.addEventListener("click", (e) => {
     e.stopPropagation();
+    tactileEngine.sweetButtonTap(0.02);
+    triggerInkBleed(e, elements.btnCinemaAlt);
     if (!elements.cinemaAltDropdown) return;
     const isHidden = elements.cinemaAltDropdown.hidden;
     elements.cinemaAltDropdown.hidden = !isHidden;
@@ -1178,9 +1634,11 @@ function setupCinemaMode() {
 
   elements.btnCinemaNote?.addEventListener("click", (e) => {
     e.stopPropagation();
+    tactileEngine.noteOpenSequence(e);
     const fam = getTrackFamily(activeVideoTrack);
     if (!fam?.hasNote) return;
     elements.btnCinemaNote.classList.remove("has-unread-note");
+    markNoteAsRead();
 
     // If an alternative note popover is open, clicking the top note button closes it
     const popover = document.getElementById("noteGlobalPopover");
@@ -1197,7 +1655,10 @@ function setupCinemaMode() {
     }
   });
 
-  elements.cinemaNotePopupClose?.addEventListener("click", hideCinemaNotePopup);
+  elements.cinemaNotePopupClose?.addEventListener("click", () => {
+    tactileEngine.sweetButtonTap(0.018);
+    hideCinemaNotePopup();
+  });
 
   elements.cinemaNotePopupExpand?.addEventListener("click", () => {
     hideCinemaNotePopup();
@@ -1640,11 +2101,60 @@ function renderAllTrackLists() {
   if (honCountEl) {
     honCountEl.textContent = `${HONORABLE_MENTIONS.length} brani`;
   }
+  setupNoteFirstTimeHint();
+}
+
+function setupNoteFirstTimeHint() {
+  try {
+    const hasReadNote = localStorage.getItem("ari_has_read_note") === "true";
+    if (hasReadNote) return;
+
+    let hintVisits = parseInt(localStorage.getItem("ari_hint_visits") || "0", 10);
+    if (hintVisits >= 3) return;
+    localStorage.setItem("ari_hint_visits", String(hintVisits + 1));
+
+    const firstNoteBtn = document.querySelector(".track-master-card .btn-track-note");
+    if (!firstNoteBtn) return;
+
+    firstNoteBtn.classList.add("has-pulse-hint");
+    const hint = document.createElement("span");
+    hint.className = "note-first-time-hint";
+    hint.setAttribute("aria-hidden", "true");
+    hint.innerHTML = `<span class="hint-pulse-dot"></span><span>Tocca per la nota</span>`;
+    firstNoteBtn.appendChild(hint);
+
+    const dismissHint = (markPermanent = false) => {
+      if (markPermanent) {
+        try {
+          localStorage.setItem("ari_has_read_note", "true");
+          localStorage.setItem("ari_note_hint_seen", "true");
+        } catch (_) {}
+      }
+      if (!hint.classList.contains("is-fading-out")) {
+        hint.classList.add("is-fading-out");
+        setTimeout(() => {
+          hint.remove();
+          firstNoteBtn.classList.remove("has-pulse-hint");
+        }, 360);
+      }
+    };
+
+    const autoTimer = setTimeout(() => {
+      dismissHint(false);
+    }, 7500);
+
+    firstNoteBtn.addEventListener("click", () => {
+      clearTimeout(autoTimer);
+      dismissHint(true);
+    }, { once: true });
+  } catch (_) {}
 }
 
 function bindCardInteractions(container, tracks, source) {
   container.querySelectorAll(".btn-action-play:not(.btn-play-alt)").forEach(button => {
-    button.addEventListener("click", () => {
+    button.addEventListener("click", (e) => {
+      tactileEngine.sweetPlaySound();
+      triggerInkBleed(e, button);
       const track = tracks.find(item => item.id === button.dataset.trackId);
       if (track) playQueueSelection(track, tracks, source);
     });
@@ -1653,12 +2163,17 @@ function bindCardInteractions(container, tracks, source) {
   container.querySelectorAll(".btn-track-note").forEach(btn => {
     btn.addEventListener("click", event => {
       event.stopPropagation();
+      markNoteAsRead();
+      tactileEngine.noteOpenSequence(event);
       showNotePopover(btn, btn.dataset.title, btn.dataset.note);
     });
   });
 
   container.querySelectorAll(".btn-action-alt").forEach(button => {
-    button.addEventListener("click", () => {
+    button.addEventListener("click", (e) => {
+      tactileEngine.sweetButtonTap(0.02);
+      tactileEngine.paperSlide(0.035);
+      triggerInkBleed(e, button);
       const drawer = container.querySelector(`#drawer-${CSS.escape(button.dataset.trackId)}`);
       const open = button.getAttribute("aria-expanded") !== "true";
       button.setAttribute("aria-expanded", String(open));
@@ -1668,7 +2183,9 @@ function bindCardInteractions(container, tracks, source) {
   });
 
   container.querySelectorAll(".btn-play-alt").forEach(button => {
-    button.addEventListener("click", () => {
+    button.addEventListener("click", (e) => {
+      tactileEngine.sweetPlaySound();
+      triggerInkBleed(e, button);
       const parent = tracks.find(item => item.id === button.dataset.parentId);
       const alternative = parent?.alternatives?.[Number(button.dataset.altIndex)];
       if (alternative) {
@@ -1715,6 +2232,9 @@ function positionVariantSliderThumb(animate = true) {
 
 function setupVideoVariants() {
   elements.playerVariantButton?.addEventListener("click", (e) => {
+    tactileEngine.tactileTick(380, 110, 0.03);
+    tactileEngine.hapticSoft();
+    triggerInkBleed(e, elements.playerVariantButton);
     const track = activeVideoTrack;
     const variants = track?.youtubeVariants || [];
     if (variants.length < 2) return;
@@ -1895,16 +2415,17 @@ function togglePlayback() {
     playQueueTrack(playbackQueueIndex);
     return;
   }
+  const isCurrentlyPlaying = elements.playerToggle?.classList.contains("is-playing");
+  // Instant optimistic feedback: start vinyl morph & spin with zero input lag!
+  setMiniPlayerPlaying(!isCurrentlyPlaying);
   if (youtubePlayer) {
-    if (youtubePlayer.getPlayerState() === window.YT.PlayerState.PLAYING) youtubePlayer.pauseVideo();
+    if (isCurrentlyPlaying) youtubePlayer.pauseVideo();
     else youtubePlayer.playVideo();
     return;
   }
-  const playing = elements.playerToggle.classList.contains("is-playing");
   elements.ytVideoPlayerIframe.contentWindow?.postMessage(JSON.stringify({
-    event: "command", func: playing ? "pauseVideo" : "playVideo", args: []
+    event: "command", func: isCurrentlyPlaying ? "pauseVideo" : "playVideo", args: []
   }), "https://www.youtube.com");
-  setMiniPlayerPlaying(!playing);
 }
 
 function loadTrack(track, autoplay) {
@@ -2236,6 +2757,7 @@ function initializeYouTubePlayer() {
         if (isPlaying) {
           savedResumeSeconds = 0;
           startPlaybackClock();
+          tactileEngine.softThump(0.038);
         } else {
           stopPlaybackClock();
           savePlaybackSession();
@@ -2291,9 +2813,21 @@ function setupMobileMiniPlayer() {
   elements.miniPlayerExpand.addEventListener("click", () => {
     elements.listeningRoom.scrollIntoView({ behavior: "smooth", block: "start" });
   });
-  [elements.playerPrevious, elements.miniPlayerPrevious].filter(Boolean).forEach(button => button.addEventListener("click", () => skipQueueTrack(-1)));
-  [elements.playerNext, elements.miniPlayerNext].filter(Boolean).forEach(button => button.addEventListener("click", () => skipQueueTrack(1)));
-  [elements.playerToggle, elements.miniPlayerToggle].filter(Boolean).forEach(button => button.addEventListener("click", togglePlayback));
+  [elements.playerPrevious, elements.miniPlayerPrevious].filter(Boolean).forEach(button => button.addEventListener("click", (e) => {
+    tactileEngine.sweetSkipSound();
+    triggerInkBleed(e, button);
+    skipQueueTrack(-1);
+  }));
+  [elements.playerNext, elements.miniPlayerNext].filter(Boolean).forEach(button => button.addEventListener("click", (e) => {
+    tactileEngine.sweetSkipSound();
+    triggerInkBleed(e, button);
+    skipQueueTrack(1);
+  }));
+  [elements.playerToggle, elements.miniPlayerToggle].filter(Boolean).forEach(button => button.addEventListener("click", (e) => {
+    tactileEngine.sweetPlaySound();
+    triggerInkBleed(e, button);
+    togglePlayback();
+  }));
   window.addEventListener("scroll", updateMiniPlayerVisibility, { passive: true });
   window.addEventListener("resize", () => {
     updateMiniPlayerVisibility();
@@ -2306,20 +2840,22 @@ function setupMobileMiniPlayer() {
 function setupAdTipsModal() {
   if (!elements.btnAdTips || !elements.adTipsModal) return;
 
-  function openAdTips() {
+  function openAdTips(e) {
+    tactileEngine.sweetButtonTap(0.02);
+    triggerInkBleed(e, elements.btnAdTips);
     elements.adTipsModal.hidden = false;
     elements.btnAdTips.setAttribute("aria-expanded", "true");
     document.body.style.overflow = "hidden";
   }
 
   function closeAdTips() {
+    tactileEngine.sweetButtonTap(0.018);
     elements.adTipsModal.hidden = true;
     elements.btnAdTips.setAttribute("aria-expanded", "false");
     document.body.style.overflow = "";
   }
 
   elements.btnAdTips.addEventListener("click", openAdTips);
-  elements.adTipsCloseBtn?.addEventListener("click", closeAdTips);
   elements.adTipsConfirmBtn?.addEventListener("click", closeAdTips);
   elements.adTipsBackdrop?.addEventListener("click", closeAdTips);
 
@@ -2375,10 +2911,11 @@ function setupMobileWelcome() {
       reopen: reopenProg
     }
   };
-  const openLetter = kind => {
+  const openLetter = (kind, event) => {
     if (!isMobile() || dialog.open) return;
     currentKind = kind;
     dialog.classList.remove("is-leaving");
+    tactileEngine.letterUnfoldSmooth(event);
     const selected = letters[kind];
     document.getElementById("welcomeTitle").textContent = selected.title;
     const subtitle = dialog.querySelector(".welcome-subtitle");
@@ -2393,7 +2930,10 @@ function setupMobileWelcome() {
   showMobileLetter = openLetter;
   canShowProgLetter = () => isMobile() && !progLetterSeen;
 
-  const handleDismissDesktopLetter = (letterCard, reopenBtn) => {
+  const handleDismissDesktopLetter = (letterCard, reopenBtn, event) => {
+    tactileEngine.sweetButtonTap(0.018);
+    tactileEngine.paperSlide(0.026);
+    tactileEngine.hapticSoft();
     const dismissBtn = letterCard.querySelector(".btn-letter-dismiss");
     dismissBtn?.classList.add("is-animating");
     letterCard.classList.add("is-folding");
@@ -2409,7 +2949,8 @@ function setupMobileWelcome() {
     }, 320);
   };
 
-  const handleReopenDesktopLetter = (targetCard, reopenBtn) => {
+  const handleReopenDesktopLetter = (targetCard, reopenBtn, event) => {
+    tactileEngine.letterUnfoldSmooth(event);
     reopenBtn.classList.remove("is-visible-desktop");
     targetCard.classList.remove("is-collapsed", "is-folding");
     targetCard.classList.add("is-unfolding");
@@ -2419,22 +2960,23 @@ function setupMobileWelcome() {
     targetCard.scrollIntoView({ behavior: "smooth", block: "nearest" });
   };
 
-  const handleReopenClick = kind => {
+  const handleReopenClick = (kind, event) => {
     if (isMobile()) {
-      openLetter(kind);
+      openLetter(kind, event);
     } else {
       const targetCard = kind === "prog"
         ? document.getElementById("introLetterProg")
         : document.getElementById("introLetterLista");
       const reopenBtn = kind === "prog" ? reopenProg : reopenList;
       if (targetCard) {
-        handleReopenDesktopLetter(targetCard, reopenBtn);
+        handleReopenDesktopLetter(targetCard, reopenBtn, event);
       }
     }
   };
 
   document.querySelectorAll(".btn-letter-dismiss").forEach(btn => {
     btn.addEventListener("click", event => {
+      triggerInkBleed(event, btn);
       const letterCard = event.currentTarget.closest(".intro-letter");
       if (!letterCard) return;
       const isProg = letterCard.id === "introLetterProg";
@@ -2446,12 +2988,18 @@ function setupMobileWelcome() {
         listLetterSeen = true;
         try { localStorage.setItem("ari_letter_seen", "true"); } catch (_) {}
       }
-      handleDismissDesktopLetter(letterCard, reopenBtn);
+      handleDismissDesktopLetter(letterCard, reopenBtn, event);
     });
   });
 
-  reopenList.addEventListener("click", () => handleReopenClick("lista"));
-  reopenProg.addEventListener("click", () => handleReopenClick("prog"));
+  reopenList.addEventListener("click", (e) => {
+    triggerInkBleed(e, reopenList);
+    handleReopenClick("lista", e);
+  });
+  reopenProg.addEventListener("click", (e) => {
+    triggerInkBleed(e, reopenProg);
+    handleReopenClick("prog", e);
+  });
   dialog.addEventListener("close", () => {
     closingAnimation?.cancel();
     closingAnimation = null;
@@ -2465,7 +3013,10 @@ function setupMobileWelcome() {
       try { localStorage.setItem("ari_letter_seen", "true"); } catch (_) {}
     }
   });
-  continueButton.addEventListener("click", async () => {
+  continueButton.addEventListener("click", async (e) => {
+    tactileEngine.sweetButtonTap(0.02);
+    tactileEngine.paperSlide(0.03);
+    triggerInkBleed(e, continueButton);
     if (currentKind === "lista") {
       listLetterSeen = true;
       try { localStorage.setItem("ari_letter_seen", "true"); } catch (_) {}
@@ -2781,7 +3332,10 @@ function setupCollectionNavigation() {
   })[target];
 
   elements.collectionTabs.forEach(button => {
-    button.addEventListener("click", () => {
+    button.addEventListener("click", (e) => {
+      tactileEngine.sweetButtonTap(0.02);
+      tactileEngine.paperSlide(0.038);
+      triggerInkBleed(e, button);
       const target = button.dataset.target;
       if (target === "panelProg" && canShowProgLetter()) showMobileLetter("prog");
       if (!activeVideoTrack) {
