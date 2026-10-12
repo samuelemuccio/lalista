@@ -2080,36 +2080,60 @@ function loadTrack(track, autoplay) {
   if (autoplay) savedResumeSeconds = 0;
   elements.playerSearchLink.hidden = true;
   elements.playerEmptyState.hidden = true;
-  elements.ytVideoPlayerIframe.hidden = false;
-  elements.ytVideoPlayerIframe.removeAttribute("credentialless");
-  elements.ytVideoPlayerIframe.setAttribute("referrerpolicy", "strict-origin-when-cross-origin");
-  sanitizePlayerEnvironment();
   elements.btnDirectYt.href = `https://www.youtube.com/watch?v=${encodeURIComponent(track.youtubeId)}`;
   elements.btnDirectYt.hidden = false;
   updateMediaSession(track, Boolean(autoplay));
   pendingYoutubeTrack = { track, autoplay, startSeconds: savedResumeSeconds };
-  if (youtubePlayerReady) {
-    loadPendingYoutubeTrack();
-  } else {
-    const embedUrl = new URL(`https://www.youtube-nocookie.com/embed/${encodeURIComponent(track.youtubeId)}`);
-    const embedParams = new URLSearchParams({
-      autoplay: autoplay ? "1" : "0",
-      playsinline: "1",
-      rel: "0",
-      enablejsapi: "1",
-      modestbranding: "1",
-      iv_load_policy: "3",
-      controls: "1",
-      disablekb: "0",
-      fs: "1"
-    });
-    if (savedResumeSeconds > 0) embedParams.set("start", String(savedResumeSeconds));
-    if (window.location.origin !== "null") embedParams.set("origin", window.location.origin);
-    embedUrl.search = embedParams.toString();
-    elements.ytVideoPlayerIframe.src = embedUrl.toString();
-    if (autoplay) setMiniPlayerPlaying(true);
-    ensureYouTubeApi();
+
+  // Destroy previous player instance to completely wipe continuous watch duration & ad pod counters
+  const oldIframe = elements.ytVideoPlayerIframe || document.getElementById("ytVideoPlayerIframe");
+  const videoWindow = document.querySelector(".video-window");
+
+  if (youtubePlayer) {
+    try {
+      youtubePlayer.destroy();
+    } catch (_) {}
+    youtubePlayer = null;
   }
+  youtubePlayerReady = false;
+
+  sanitizePlayerEnvironment();
+
+  // Create and mount a brand new, clean iframe DOM node (Cold First-Impression Isolation)
+  const newIframe = document.createElement("iframe");
+  newIframe.id = "ytVideoPlayerIframe";
+  newIframe.title = "Video YouTube del brano selezionato";
+  newIframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+  newIframe.setAttribute("referrerpolicy", "strict-origin-when-cross-origin");
+  newIframe.allowFullscreen = true;
+
+  const embedUrl = new URL(`https://www.youtube-nocookie.com/embed/${encodeURIComponent(track.youtubeId)}`);
+  const embedParams = new URLSearchParams({
+    autoplay: autoplay ? "1" : "0",
+    playsinline: "1",
+    rel: "0",
+    enablejsapi: "1",
+    modestbranding: "1",
+    iv_load_policy: "3",
+    controls: "1",
+    disablekb: "0",
+    fs: "1"
+  });
+  if (savedResumeSeconds > 0) embedParams.set("start", String(savedResumeSeconds));
+  if (window.location.origin !== "null") embedParams.set("origin", window.location.origin);
+  embedUrl.search = embedParams.toString();
+  newIframe.src = embedUrl.toString();
+
+  const currentIframe = document.getElementById("ytVideoPlayerIframe") || oldIframe;
+  if (currentIframe && currentIframe.parentNode) {
+    currentIframe.parentNode.replaceChild(newIframe, currentIframe);
+  } else if (videoWindow) {
+    videoWindow.insertBefore(newIframe, elements.btnDirectYt || videoWindow.firstChild);
+  }
+  elements.ytVideoPlayerIframe = newIframe;
+
+  if (autoplay) setMiniPlayerPlaying(true);
+  ensureYouTubeApi();
   savePlaybackSession();
 }
 
@@ -2117,8 +2141,29 @@ function sanitizePlayerEnvironment() {
   try {
     for (let i = sessionStorage.length - 1; i >= 0; i--) {
       const k = sessionStorage.key(i);
-      if (k && /yt|youtube|google/i.test(k)) sessionStorage.removeItem(k);
+      if (k && /yt|youtube|google|doubleclick/i.test(k)) sessionStorage.removeItem(k);
     }
+  } catch (e) {}
+  try {
+    for (let i = localStorage.length - 1; i >= 0; i--) {
+      const k = localStorage.key(i);
+      // Evict only YouTube/Google tracking tokens, leaving app keys (ari_*) untouched
+      if (k && /^(yt|ytidb|yt-remote|yt-player|google|doubleclick)/i.test(k)) {
+        localStorage.removeItem(k);
+      }
+    }
+  } catch (e) {}
+  try {
+    const cookies = document.cookie.split(";");
+    for (let c of cookies) {
+      const name = c.split("=")[0]?.trim();
+      if (name && /^(yt|google|doubleclick|visid|gps|yva)/i.test(name)) {
+        document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`;
+      }
+    }
+  } catch (e) {}
+  try {
+    window.indexedDB?.deleteDatabase?.("ytidb");
   } catch (e) {}
 }
 
@@ -2160,19 +2205,27 @@ function initializeYouTubePlayer() {
         const queued = pendingYoutubeTrack;
         if (queued) {
           const currentUrl = event.target.getVideoUrl?.() || "";
-          const currentId = new URL(currentUrl, window.location.origin).searchParams.get("v");
+          let currentId = null;
+          try {
+            if (currentUrl) {
+              const parsed = new URL(currentUrl, window.location.origin);
+              currentId = parsed.searchParams.get("v") || parsed.pathname.split("/").pop();
+            }
+          } catch (_) {}
           const startSeconds = queued.startSeconds || savedResumeSeconds || 0;
           if (queued.autoplay) {
             if (startSeconds > 0) {
               event.target.loadVideoById({ videoId: queued.track.youtubeId, startSeconds });
-            } else {
+            } else if (currentId !== queued.track.youtubeId) {
               event.target.loadVideoById(queued.track.youtubeId);
+            } else {
+              event.target.playVideo?.();
             }
           } else {
             if (startSeconds > 0) {
               event.target.cueVideoById({ videoId: queued.track.youtubeId, startSeconds });
-            } else {
-              if (currentId !== queued.track.youtubeId) event.target.cueVideoById(queued.track.youtubeId);
+            } else if (currentId !== queued.track.youtubeId) {
+              event.target.cueVideoById(queued.track.youtubeId);
             }
           }
         }
