@@ -83,11 +83,11 @@ Dio mio quanto è bella questa canzone.
 ### [top-09] RAYE, The Heritage Orchestra — Oscar Winning Tears. (Live at The Royal Albert Hall)
 Una prova vocale e orchestrale monumentale alla Royal Albert Hall con The Heritage Orchestra, puro pathos cinematografico. Penso che ascoltarla dal vivo sia assurdo.
 
-#### [top-09-alt-0] RAYE, The Heritage Orchestra — The Thrill Is Gone. / Requiem (Live at The Royal Albert Hall) (Alternativa 1)
-*(Nessuna nota — scrivi qui sotto per aggiungerne una)*
+#### [top-09-alt-0] RAYE, London Symphony Orchestra — I Will Overcome (Live at Abbey Road Studios) (Alternativa 1)
+Registrata con la leggendaria London Symphony Orchestra agli Abbey Road Studios: un inno potentissimo scritto da RAYE in un momento di crisi, con una voce straordinaria e testo viscerale. Ascoltala.
 
-#### [top-09-alt-1] RAYE, London Symphony Orchestra — I Will Overcome (Live at Abbey Road Studios) (Alternativa 2)
-Registrata con la leggendaria London Symphony Orchestra agli Abbey Road Studios, un inno intimo e trionfale di resilienza e speranza.
+#### [top-09-alt-1] RAYE, The Heritage Orchestra — The Thrill Is Gone. / Requiem (Live at The Royal Albert Hall) (Alternativa 2)
+*(Nessuna nota — scrivi qui sotto per aggiungerne una)*
 
 ### [top-10] C.S.I. — E Ti Vengo A Cercare
 **Linea Gotica** è un capolavoro della musica italiana. Questa rilettura di Battiato ha un'intensità e una delicatezza disarmante.

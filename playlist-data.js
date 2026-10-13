@@ -164,20 +164,20 @@ const TRACK_DATA = {
       "title": "Oscar Winning Tears. (Live at The Royal Albert Hall)",
       "album": "My 21st Century Symphony.",
       "youtubeId": "BtdBQ1-fzXM",
-      "note": "Una prova vocale e orchestrale monumentale alla Royal Albert Hall con The Heritage Orchestra, puro pathos cinematografico. Penso che ascoltarla dal vivo sia assurdo.",
+      "note": "<p>Una prova vocale e orchestrale monumentale alla Royal Albert Hall con The Heritage Orchestra, puro pathos cinematografico. Penso che ascoltarla dal vivo sia assurdo.</p><p class='note-anecdote'><em>(E ti consiglio vivamente di ascoltare anche l'alternativa — <strong>I Will Overcome</strong> registrata agli Abbey Road Studios con la London Symphony Orchestra — perché merita tantissimo: RAYE ha una voce della Madonna e un gusto musicale unico, è un'artista davvero straordinaria).</em></p>",
       "alternatives": [
-        {
-          "artist": "RAYE, The Heritage Orchestra",
-          "title": "The Thrill Is Gone. / Requiem (Live at The Royal Albert Hall)",
-          "album": "My 21st Century Symphony.",
-          "youtubeId": "ob6rhoog11c"
-        },
         {
           "artist": "RAYE, London Symphony Orchestra",
           "title": "I Will Overcome (Live at Abbey Road Studios)",
           "album": "Abbey Road Sessions",
           "youtubeId": "Iy2FoVeIUXs",
-          "note": "Registrata con la leggendaria London Symphony Orchestra agli Abbey Road Studios, un inno intimo e trionfale di resilienza e speranza."
+          "note": "Registrata con la leggendaria London Symphony Orchestra agli Abbey Road Studios: un inno potentissimo scritto da RAYE in un momento di crisi, con una voce straordinaria e testo viscerale. Ascoltala."
+        },
+        {
+          "artist": "RAYE, The Heritage Orchestra",
+          "title": "The Thrill Is Gone. / Requiem (Live at The Royal Albert Hall)",
+          "album": "My 21st Century Symphony.",
+          "youtubeId": "ob6rhoog11c"
         }
       ]
     },
